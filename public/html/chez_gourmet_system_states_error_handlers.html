@@ -827,6 +827,19 @@
       
       console.log('Access granted for role:', role);
       
+      // Dynamically update user name and role in the top header
+      const allDivs = document.querySelectorAll('div, span');
+      allDivs.forEach(el => {
+        if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
+          if (el.innerText.includes('Dr. Aris Thorne') || el.innerText.includes('Chef Laurent M.')) {
+            el.innerText = data.data.name;
+          }
+          if (el.innerText.includes('Super Administrator') || el.innerText.includes('Head Station Lead')) {
+            el.innerText = data.data.role.toUpperCase();
+          }
+        }
+      });
+      
       // Setup logout button if it exists
       const logoutBtn = document.querySelector('[data-path="logout"]') || document.querySelector('.btn-logout');
       if (logoutBtn) {

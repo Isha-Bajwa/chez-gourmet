@@ -205,8 +205,70 @@ const getProfile = async (req, res) => {
   }
 };
 
+/**
+ * Handle Google Authentication Sign In / Sign Up
+ */
+const googleLogin = async (req, res) => {
+  try {
+    const { email, name, google_id, photo_url } = req.body;
+
+    if (!email) {
+      return res.status(400).json({
+        success: false,
+        message: 'Google Email is required.'
+      });
+    }
+
+    const cleanEmail = email.toLowerCase().trim();
+
+    // Check if user exists in Firestore
+    const userQuery = await db.collection('users').where('email', '==', cleanEmail).get();
+    let user;
+
+    if (userQuery.empty) {
+      const userId = google_id || `usr_google_${Date.now()}`;
+      user = {
+        user_id: userId,
+        id: userId,
+        name: (name || cleanEmail.split('@')[0]).trim(),
+        email: cleanEmail,
+        role: 'customer',
+        photo_url: photo_url || '',
+        account_status: 'active',
+        created_at: new Date().toISOString()
+      };
+      await db.collection('users').doc(userId).set(user);
+    } else {
+      user = userQuery.docs[0].data();
+    }
+
+    // Generate JWT Token
+    const token = jwt.sign(
+      { uid: user.user_id || user.id, email: user.email, role: user.role, name: user.name },
+      JWT_SECRET,
+      { expiresIn: '7d' }
+    );
+
+    const { password_hash, ...userResponse } = user;
+
+    return res.status(200).json({
+      success: true,
+      message: `Welcome, ${user.name}! Signed in via Google.`,
+      token,
+      user: userResponse
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      message: 'Google Sign-In failed.',
+      error: error.message
+    });
+  }
+};
+
 module.exports = {
   registerUser,
   loginUser,
-  getProfile
+  getProfile,
+  googleLogin
 };

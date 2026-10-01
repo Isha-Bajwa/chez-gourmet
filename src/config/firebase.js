@@ -224,5 +224,7 @@ module.exports = {
   auth: fbInstance.auth,
   isFirebaseLive: fbInstance.isFirebaseLive,
   simulatedDb,
+  DEFAULT_MENU_ITEMS,
+  DEFAULT_USERS,
   admin
 };

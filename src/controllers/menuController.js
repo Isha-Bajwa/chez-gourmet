@@ -1,4 +1,4 @@
-const { db } = require('../config/firebase');
+const { db, DEFAULT_MENU_ITEMS } = require('../config/firebase');
 
 let menuCache = null;
 let lastCacheTime = 0;
@@ -24,6 +24,9 @@ const getMenuItems = async (req, res) => {
     } else {
       const snapshot = await db.collection('menu_items').get();
       items = snapshot.docs.map(doc => doc.data());
+      if ((!items || items.length === 0) && DEFAULT_MENU_ITEMS) {
+        items = DEFAULT_MENU_ITEMS;
+      }
       menuCache = items;
       lastCacheTime = now;
     }

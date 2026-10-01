@@ -173,7 +173,7 @@ class SimulatedFirestore {
 const simulatedDb = new SimulatedFirestore();
 
 function initializeFirebase() {
-  const serviceAccountPath = process.env.FIREBASE_SERVICE_ACCOUNT_PATH 
+  const serviceAccountPath = process.env.FIREBASE_SERVICE_ACCOUNT_PATH
     ? path.resolve(process.env.FIREBASE_SERVICE_ACCOUNT_PATH)
     : path.resolve(__dirname, '../../serviceAccountKey.json');
 

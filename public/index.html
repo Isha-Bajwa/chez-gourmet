@@ -46,16 +46,35 @@
     header {
       background: #ffffff;
       border-bottom: 1px solid var(--card-border);
-      padding: 10px 24px;
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      align-items: center;
-      gap: 12px;
       position: sticky;
       top: 0;
       z-index: 100;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
-      min-height: 64px;
+    }
+
+    .header-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 24px;
+      gap: 12px;
+    }
+
+    .header-nav-row {
+      border-top: 1px solid var(--card-border);
+      padding: 0 24px;
+      background: #faf6f0;
+      display: none;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .header-nav-row::-webkit-scrollbar {
+      display: none;
+    }
+
+    .header-nav-row.visible {
+      display: flex;
     }
 
     .brand-container {
@@ -104,30 +123,28 @@
     .nav-tabs {
       display: flex;
       align-items: center;
-      gap: 4px;
-      background: #f5ede6;
-      padding: 4px 6px;
-      border-radius: 12px;
-      flex-wrap: wrap;
-      justify-content: center;
-      overflow: hidden;
+      gap: 2px;
+      flex-wrap: nowrap;
+      padding: 5px 0;
+      min-width: max-content;
     }
 
     .nav-btn {
       background: transparent;
       border: none;
       color: var(--text-muted);
-      padding: 7px 14px;
+      padding: 8px 16px;
       border-radius: 8px;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.2s;
-      font-size: 0.83rem;
+      font-size: 0.84rem;
       height: 36px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       white-space: nowrap;
+      flex-shrink: 0;
     }
 
     .nav-btn.active,
@@ -805,30 +822,33 @@
 
   <!-- HEADER NAVBAR -->
   <header>
-    <div class="brand-container" onclick="handleBrandClick()">
-      <img src="/images/logo.png" alt="Chez Gourmet Logo" class="brand-logo">
-      <div class="brand-name">Chez Gourmet</div>
-      <div class="status-pill"><span class="status-dot"></span> Kitchen Serving Normally</div>
+    <div class="header-top-row">
+      <div class="brand-container" onclick="handleBrandClick()">
+        <img src="/images/logo.png" alt="Chez Gourmet Logo" class="brand-logo">
+        <div class="brand-name">Chez Gourmet</div>
+        <div class="status-pill"><span class="status-dot"></span> Kitchen Serving Normally</div>
+      </div>
+
+      <div class="header-actions">
+        <button class="cart-trigger-btn" id="cartHeaderBtn" style="display:none;" onclick="toggleCart()">
+          Cart (<span id="cartCount">0</span>)
+        </button>
+        <div class="user-profile-badge" id="userBadge" style="display:none;">Guest Mode</div>
+      </div>
     </div>
 
-    <div class="nav-tabs" id="navTabs" style="display:none;">
-      <button class="nav-btn active" id="btnNavMenu" onclick="switchTab('menu-tab')">Menu & Order</button>
-      <button class="nav-btn" id="btnNavOrders" onclick="switchTab('orders-tab')">My Orders</button>
-      <button class="nav-btn" id="btnNavQueue" onclick="switchTab('queue-tab')">Kitchen Queue (KDS)</button>
-      <button class="nav-btn" id="btnNavVerify" onclick="switchTab('verify-tab')">Counter Handover</button>
-      <button class="nav-btn" id="btnNavAnalytics" onclick="switchTab('analytics-tab')">AI Dashboard</button>
-      <a href="/html/chez_gourmet_administrator_panel_governance_center.html" target="_blank" class="nav-btn"
-        id="btnNavAdmin" style="display:none; text-decoration:none;">Admin Panel</a>
-      <a href="/stitch/chez_gourmet_canteen_manager_dashboard/code.html"
-        target="_blank" class="nav-btn" id="btnNavManager" style="display:none; text-decoration:none;">Manager
-        Dashboard</a>
-    </div>
-
-    <div class="header-actions">
-      <button class="cart-trigger-btn" id="cartHeaderBtn" style="display:none;" onclick="toggleCart()">
-        Cart (<span id="cartCount">0</span>)
-      </button>
-      <div class="user-profile-badge" id="userBadge" style="display:none;">Guest Mode</div>
+    <div class="header-nav-row" id="headerNavRow">
+      <div class="nav-tabs" id="navTabs">
+        <button class="nav-btn active" id="btnNavMenu" onclick="switchTab('menu-tab')">Menu & Order</button>
+        <button class="nav-btn" id="btnNavOrders" onclick="switchTab('orders-tab')">My Orders</button>
+        <button class="nav-btn" id="btnNavQueue" onclick="switchTab('queue-tab')">Kitchen Queue (KDS)</button>
+        <button class="nav-btn" id="btnNavVerify" onclick="switchTab('verify-tab')">Counter Handover</button>
+        <button class="nav-btn" id="btnNavAnalytics" onclick="switchTab('analytics-tab')">AI Dashboard</button>
+        <a href="/html/chez_gourmet_administrator_panel_governance_center.html" target="_blank" class="nav-btn"
+          id="btnNavAdmin" style="display:none; text-decoration:none;">Admin Panel</a>
+        <a href="/stitch/chez_gourmet_canteen_manager_dashboard/code.html"
+          target="_blank" class="nav-btn" id="btnNavManager" style="display:none; text-decoration:none;">Manager Dashboard</a>
+      </div>
     </div>
   </header>
 
@@ -1171,7 +1191,7 @@
 
     function setupRoleLayout() {
       if (!currentUser || !authToken) {
-        document.getElementById('navTabs').style.display = 'none';
+        document.getElementById('headerNavRow').classList.remove('visible');
         document.getElementById('cartHeaderBtn').style.display = 'none';
         document.getElementById('userBadge').style.display = 'none';
         switchAuthTab('signin');
@@ -1187,7 +1207,7 @@
         `<span class="badge-name" title="${currentUser.name}">${currentUser.name}</span>` +
         `<span class="badge-role">${roleLabel}</span>` +
         `<button class="btn-logout" onclick="handleLogout()">Logout</button>`;
-      document.getElementById('navTabs').style.display = 'flex';
+      document.getElementById('headerNavRow').classList.add('visible');
 
       const role = (currentUser.role || '').toLowerCase();
 

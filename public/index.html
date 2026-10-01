@@ -1055,6 +1055,9 @@
         }
       } catch(err) {
         console.error(err);
+        alertEl.className = 'alert-box alert-error';
+        alertEl.style.display = 'block';
+        alertEl.innerHTML = `Connection error: ${err.message || 'Unable to connect to server.'}`;
       }
     }
 
@@ -1094,6 +1097,9 @@
         }
       } catch(err) {
         console.error(err);
+        alertEl.className = 'alert-box alert-error';
+        alertEl.style.display = 'block';
+        alertEl.innerHTML = `Connection error: ${err.message || 'Unable to connect to server.'}`;
       }
     }
 

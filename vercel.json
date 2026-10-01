@@ -1,31 +1,11 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "server.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/images/(.*)",
-      "dest": "/images/$1"
-    },
-    {
-      "src": "/html/(.*)",
-      "dest": "/html/$1"
-    },
-    {
-      "src": "/stitch/(.*)",
-      "dest": "/stitch_chez_gourmet_design_system/$1"
-    },
-    {
-      "src": "/manager(.*)",
-      "dest": "/stitch_chez_gourmet_design_system/chez_gourmet_canteen_manager_dashboard/code.html"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/server.js"
-    }
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/index.js" },
+    { "source": "/manager", "destination": "/api/index.js" },
+    { "source": "/html/(.*)", "destination": "/html/$1" },
+    { "source": "/images/(.*)", "destination": "/images/$1" },
+    { "source": "/stitch/(.*)", "destination": "/stitch_chez_gourmet_design_system/$1" },
+    { "source": "/(.*)", "destination": "/public/$1" }
   ]
 }

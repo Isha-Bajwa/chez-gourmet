@@ -182,18 +182,16 @@ function initializeFirebase() {
     return { db: simulatedDb, auth: null, isFirebaseLive: false };
   }
 
+  // Prevent re-initialization errors on serverless cold/warm starts
+  if (admin.apps.length > 0) {
+    db = admin.firestore();
+    auth = admin.auth();
+    return { db, auth, isFirebaseLive: true };
+  }
+
   try {
-    if (fs.existsSync(serviceAccountPath)) {
-      const serviceAccount = require(serviceAccountPath);
-      admin.initializeApp({
-        credential: admin.credential.cert(serviceAccount)
-      });
-      db = admin.firestore();
-      auth = admin.auth();
-      isFirebaseLive = true;
-      console.log('✅ Firebase Admin SDK successfully connected to Firestore live database!');
-      return { db, auth, isFirebaseLive };
-    } else if (process.env.FIREBASE_PROJECT_ID && process.env.FIREBASE_CLIENT_EMAIL && process.env.FIREBASE_PRIVATE_KEY) {
+    // 1. Check process.env variables first (highest priority for Vercel deployments)
+    if (process.env.FIREBASE_PROJECT_ID && process.env.FIREBASE_CLIENT_EMAIL && process.env.FIREBASE_PRIVATE_KEY) {
       admin.initializeApp({
         credential: admin.credential.cert({
           projectId: process.env.FIREBASE_PROJECT_ID,
@@ -205,6 +203,28 @@ function initializeFirebase() {
       auth = admin.auth();
       isFirebaseLive = true;
       console.log('✅ Firebase Admin SDK connected using environment variables!');
+      return { db, auth, isFirebaseLive };
+    } else if (process.env.FIREBASE_SERVICE_ACCOUNT_JSON) {
+      const serviceAccount = typeof process.env.FIREBASE_SERVICE_ACCOUNT_JSON === 'string'
+        ? JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_JSON)
+        : process.env.FIREBASE_SERVICE_ACCOUNT_JSON;
+      admin.initializeApp({
+        credential: admin.credential.cert(serviceAccount)
+      });
+      db = admin.firestore();
+      auth = admin.auth();
+      isFirebaseLive = true;
+      console.log('✅ Firebase Admin SDK connected using FIREBASE_SERVICE_ACCOUNT_JSON env!');
+      return { db, auth, isFirebaseLive };
+    } else if (fs.existsSync(serviceAccountPath)) {
+      const serviceAccount = require(serviceAccountPath);
+      admin.initializeApp({
+        credential: admin.credential.cert(serviceAccount)
+      });
+      db = admin.firestore();
+      auth = admin.auth();
+      isFirebaseLive = true;
+      console.log('✅ Firebase Admin SDK successfully connected using local serviceAccountKey.json!');
       return { db, auth, isFirebaseLive };
     } else {
       console.warn('⚠️ No Firebase service account file or ENV variables found. Defaulting to SIMULATED DB mode.');

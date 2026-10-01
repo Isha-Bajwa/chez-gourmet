@@ -46,21 +46,24 @@
     header {
       background: #ffffff;
       border-bottom: 1px solid var(--card-border);
-      padding: 14px 40px;
-      display: flex;
-      justify-content: space-between;
+      padding: 10px 24px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
       align-items: center;
+      gap: 12px;
       position: sticky;
       top: 0;
       z-index: 100;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+      min-height: 64px;
     }
 
     .brand-container {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 10px;
       cursor: pointer;
+      flex-shrink: 0;
     }
 
     .brand-logo {
@@ -101,26 +104,30 @@
     .nav-tabs {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 4px;
       background: #f5ede6;
       padding: 4px 6px;
       border-radius: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      overflow: hidden;
     }
 
     .nav-btn {
       background: transparent;
       border: none;
       color: var(--text-muted);
-      padding: 8px 18px;
+      padding: 7px 14px;
       border-radius: 8px;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.2s;
-      font-size: 0.88rem;
-      height: 38px;
+      font-size: 0.83rem;
+      height: 36px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      white-space: nowrap;
     }
 
     .nav-btn.active,
@@ -134,7 +141,8 @@
     .header-actions {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 10px;
+      flex-shrink: 0;
     }
 
     .cart-trigger-btn {
@@ -162,15 +170,35 @@
     .user-profile-badge {
       background: #f5ede6;
       border: 1px solid var(--card-border);
-      padding: 0 16px;
+      padding: 0 14px;
       height: 40px;
       border-radius: 20px;
-      font-size: 0.85rem;
+      font-size: 0.83rem;
       font-weight: 600;
       color: #44403c;
       display: inline-flex;
       align-items: center;
-      justify-content: center;
+      gap: 6px;
+      max-width: 220px;
+      overflow: hidden;
+    }
+
+    .user-profile-badge .badge-name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 120px;
+      display: inline-block;
+    }
+
+    .user-profile-badge .badge-role {
+      white-space: nowrap;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      background: rgba(0,0,0,0.06);
+      border-radius: 8px;
+      padding: 1px 6px;
     }
 
     .btn-logout {
@@ -1151,7 +1179,14 @@
       }
 
       document.getElementById('userBadge').style.display = 'inline-flex';
-      document.getElementById('userBadge').innerHTML = `<span style="max-width:140px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; display:inline-block; vertical-align:bottom;" title="${currentUser.name}">${currentUser.name}</span> <span style="opacity:0.7; font-weight:500; margin-left:6px; margin-right:12px;">(${currentUser.role})</span> <button class="btn-logout" onclick="handleLogout()">Logout</button>`;
+      const roleLabel = currentUser.role
+        ? currentUser.role.replace('canteen ', '').replace('kitchen ', '')
+            .split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+        : 'Guest';
+      document.getElementById('userBadge').innerHTML =
+        `<span class="badge-name" title="${currentUser.name}">${currentUser.name}</span>` +
+        `<span class="badge-role">${roleLabel}</span>` +
+        `<button class="btn-logout" onclick="handleLogout()">Logout</button>`;
       document.getElementById('navTabs').style.display = 'flex';
 
       const role = (currentUser.role || '').toLowerCase();
@@ -1476,8 +1511,8 @@
 
           list.innerHTML = displayOrders.map(order => `
             <div class="ticket">
-              <div style="flex:1; min-width:0;">
-                <div style="font-weight:700; font-size:1.1rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="${order.customer_name}">Customer: ${isStaff ? order.customer_name : 'Your Active Order'}</div>
+              <div style="flex:1;">
+                <div style="font-weight:700; font-size:1.1rem;">Customer: ${isStaff ? order.customer_name : 'Your Active Order'}</div>
                 <div style="color:var(--text-muted); font-size:0.85rem; margin-top:4px;">
                   Items: ${order.items ? order.items.map(i => `${i.quantity}x ${i.item_name}`).join(', ') : 'Order items'}
                 </div>

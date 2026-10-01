@@ -980,6 +980,7 @@
       if (typeof firebase !== 'undefined' && !firebase.apps.length) {
         try {
           firebase.initializeApp({
+            apiKey: "YOUR_FIREBASE_API_KEY", // <-- PASTE YOUR API KEY HERE
             authDomain: "chez-gourmet-f78f8.firebaseapp.com",
             projectId: "chez-gourmet-f78f8"
           });

@@ -38,7 +38,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 // System Health Check Endpoint
-app.get('/api/health', (req, res) => {
+app.get(['/api/health', '/health'], (req, res) => {
   res.status(200).json({
     status: 'online',
     service: 'Chez Gourmet Pre-Order & Queue Management System API',
@@ -47,14 +47,14 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// Mount Feature API Routes
-app.use('/api/auth', authRoutes);
-app.use('/api/menu', menuRoutes);
-app.use('/api/orders', orderRoutes);
-app.use('/api/queue', queueRoutes);
-app.use('/api/verify', verifyRoutes);
-app.use('/api/analytics', analyticsRoutes);
-app.use('/api/admin', adminRoutes);
+// Mount Feature API Routes (supports both /api/* and /* for Vercel serverless rewrites)
+app.use(['/api/auth', '/auth'], authRoutes);
+app.use(['/api/menu', '/menu'], menuRoutes);
+app.use(['/api/orders', '/orders'], orderRoutes);
+app.use(['/api/queue', '/queue'], queueRoutes);
+app.use(['/api/verify', '/verify'], verifyRoutes);
+app.use(['/api/analytics', '/analytics'], analyticsRoutes);
+app.use(['/api/admin', '/admin'], adminRoutes);
 
 // Catch 404 Route
 app.use((req, res) => {

@@ -1000,4 +1000,64 @@
       }
     });
   </script>
-</div></main></div></body></html>
+</div></main></div>
+<script>
+  async function checkAuthAndRole() {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      alert('Authentication required. Redirecting to login.');
+      window.location.href = '/';
+      return;
+    }
+    
+    try {
+      const res = await fetch('/api/auth/me', {
+        headers: { 'Authorization': 'Bearer ' + token }
+      });
+      const data = await res.json();
+      
+      if (!data.success) {
+        throw new Error('Invalid session');
+      }
+      
+      const role = data.data.role.toLowerCase();
+      
+      // Role checking logic based on page
+      const pageName = window.location.pathname.toLowerCase();
+      let requiredRoles = ['administrator']; // Default to admin only
+      
+      if (pageName.includes('ai_insights')) {
+        requiredRoles = ['administrator', 'canteen manager'];
+      }
+      
+      if (!requiredRoles.includes(role)) {
+        alert('Access Denied: You do not have the required role to view this page. Your role: ' + role);
+        window.location.href = '/';
+      }
+      
+      console.log('Access granted for role:', role);
+      
+      // Setup logout button if it exists
+      const logoutBtn = document.querySelector('[data-path="logout"]') || document.querySelector('.btn-logout');
+      if (logoutBtn) {
+        logoutBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          localStorage.removeItem('token');
+          localStorage.removeItem('user');
+          window.location.href = '/';
+        });
+      }
+      
+    } catch (err) {
+      console.error(err);
+      alert('Session error. Please login again.');
+      localStorage.removeItem('token');
+      window.location.href = '/';
+    }
+  }
+  
+  // Run on load
+  document.addEventListener('DOMContentLoaded', checkAuthAndRole);
+</script>
+</body>
+</html>

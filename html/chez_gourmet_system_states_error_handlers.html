@@ -790,4 +790,64 @@
       }
     });
   }
-</script></main><footer class="w-full bg-surface-container-low text-on-surface-variant py-space-xl shadow-[0_-1px_12px_rgba(74,44,29,0.03)]"><div class="w-full px-margin flex flex-col md:flex-row items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md"><img alt="Artisanal food and botanical leaf logo for Chez Gourmet Smart Canteen. Elegant stylized fork/spoon and fresh green leaf motif, warm deep orange #F26B21 and natural forest green #3F6B3A on transparent background, minimalist vector style, sophisticated culinary brand mark. Design context: - Primary color: #f26b21 - Font: playfairDisplay - Mode: light - Roundness: rounded-md . The logo should be visually consistent with these brand tokens." class="h-6 w-auto object-contain opacity-80" src="https://lh3.googleusercontent.com/aida/AEtjO1Vo05zV1l30OuCCZOZbn3gCKuwvOGC4lSVWuMF41PLFVCvr_AZGw1VFEkUe_hZNYCwEMZkVjTJG25VgrvdmeGO8hsxL9Su69cgz3_qX6VTh746xH0MZXd12WBr-kjGZanPe9ze7jVgs7wO-dGIiDjXA2UvWaKcmhVnQ-uqewato6cDKLn1wLBTR6cxRulNdZdnZBWASGbcLuRyMw4jL-YShKFzL0X3Vp5pboz_4mw0lqLx4fC1umB0Zr5uh"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Chez Gourmet</span><span class="font-label-caps text-label-caps text-tertiary">Smart Culinary Canteen Management</span></div></div><div class="flex flex-wrap items-center justify-center gap-space-lg font-label-md text-label-md"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="menu" href="#">Artisanal Menu</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="live-operations" href="#">Countertop Kiosk Queue</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="documentation" href="#">Culinary Docs &amp; APIs</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="system-states-&amp;-error-handlers" href="#">Kitchen Status</a></div><div class="text-right"><span class="font-body-sm text-body-sm text-tertiary">© 2024 Chez Gourmet Systems. High-trust dining operations.</span></div></div></footer></body></html>
+</script></main><footer class="w-full bg-surface-container-low text-on-surface-variant py-space-xl shadow-[0_-1px_12px_rgba(74,44,29,0.03)]"><div class="w-full px-margin flex flex-col md:flex-row items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md"><img alt="Artisanal food and botanical leaf logo for Chez Gourmet Smart Canteen. Elegant stylized fork/spoon and fresh green leaf motif, warm deep orange #F26B21 and natural forest green #3F6B3A on transparent background, minimalist vector style, sophisticated culinary brand mark. Design context: - Primary color: #f26b21 - Font: playfairDisplay - Mode: light - Roundness: rounded-md . The logo should be visually consistent with these brand tokens." class="h-6 w-auto object-contain opacity-80" src="https://lh3.googleusercontent.com/aida/AEtjO1Vo05zV1l30OuCCZOZbn3gCKuwvOGC4lSVWuMF41PLFVCvr_AZGw1VFEkUe_hZNYCwEMZkVjTJG25VgrvdmeGO8hsxL9Su69cgz3_qX6VTh746xH0MZXd12WBr-kjGZanPe9ze7jVgs7wO-dGIiDjXA2UvWaKcmhVnQ-uqewato6cDKLn1wLBTR6cxRulNdZdnZBWASGbcLuRyMw4jL-YShKFzL0X3Vp5pboz_4mw0lqLx4fC1umB0Zr5uh"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Chez Gourmet</span><span class="font-label-caps text-label-caps text-tertiary">Smart Culinary Canteen Management</span></div></div><div class="flex flex-wrap items-center justify-center gap-space-lg font-label-md text-label-md"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="menu" href="#">Artisanal Menu</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="live-operations" href="#">Countertop Kiosk Queue</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="documentation" href="#">Culinary Docs &amp; APIs</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="system-states-&amp;-error-handlers" href="#">Kitchen Status</a></div><div class="text-right"><span class="font-body-sm text-body-sm text-tertiary">© 2024 Chez Gourmet Systems. High-trust dining operations.</span></div></div></footer>
+<script>
+  async function checkAuthAndRole() {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      alert('Authentication required. Redirecting to login.');
+      window.location.href = '/';
+      return;
+    }
+    
+    try {
+      const res = await fetch('/api/auth/me', {
+        headers: { 'Authorization': 'Bearer ' + token }
+      });
+      const data = await res.json();
+      
+      if (!data.success) {
+        throw new Error('Invalid session');
+      }
+      
+      const role = data.data.role.toLowerCase();
+      
+      // Role checking logic based on page
+      const pageName = window.location.pathname.toLowerCase();
+      let requiredRoles = ['administrator']; // Default to admin only
+      
+      if (pageName.includes('ai_insights')) {
+        requiredRoles = ['administrator', 'canteen manager'];
+      }
+      
+      if (!requiredRoles.includes(role)) {
+        alert('Access Denied: You do not have the required role to view this page. Your role: ' + role);
+        window.location.href = '/';
+      }
+      
+      console.log('Access granted for role:', role);
+      
+      // Setup logout button if it exists
+      const logoutBtn = document.querySelector('[data-path="logout"]') || document.querySelector('.btn-logout');
+      if (logoutBtn) {
+        logoutBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          localStorage.removeItem('token');
+          localStorage.removeItem('user');
+          window.location.href = '/';
+        });
+      }
+      
+    } catch (err) {
+      console.error(err);
+      alert('Session error. Please login again.');
+      localStorage.removeItem('token');
+      window.location.href = '/';
+    }
+  }
+  
+  // Run on load
+  document.addEventListener('DOMContentLoaded', checkAuthAndRole);
+</script>
+</body>
+</html>

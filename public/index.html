@@ -564,6 +564,8 @@
 
     .card-img-wrap {
       position: relative;
+      min-height: 180px;
+      background: #f5ede6;
     }
 
     .card-img {
@@ -1924,7 +1926,7 @@
       grid.innerHTML = items.map(item => `
         <div class="card">
           <div class="card-img-wrap">
-            <img src="${item.image}" class="card-img" alt="${item.item_name}">
+            <img src="${item.image}" class="card-img" alt="${item.item_name}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1546549095-5b52ba776856?auto=format&fit=crop&w=500&q=80';">
             <span class="card-stock-badge ${item.status === 'Available' ? 'badge-green-bg' : 'badge-amber-bg'}" style="background:${item.status === 'Available' ? '#dcfce7' : '#fef3c7'}; color:${item.status === 'Available' ? '#15803d' : '#b45309'};">
               ${item.status} (${item.available_quantity} left)
             </span>

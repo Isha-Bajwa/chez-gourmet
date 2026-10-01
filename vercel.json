@@ -1,15 +1,11 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "server.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "server.js"
-    }
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/index.js" },
+    { "source": "/manager", "destination": "/api/index.js" },
+    { "source": "/html/(.*)", "destination": "/html/$1" },
+    { "source": "/images/(.*)", "destination": "/images/$1" },
+    { "source": "/stitch/(.*)", "destination": "/stitch_chez_gourmet_design_system/$1" },
+    { "source": "/(.*)", "destination": "/public/$1" }
   ]
 }

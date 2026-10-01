@@ -8,6 +8,19 @@ const router = express.Router();
 
 router.get('/config', getFirebaseConfig);
 
+router.get('/debug', (req, res) => {
+  const { isFirebaseLive } = require('../config/firebase');
+  res.json({
+    firebase_connected: isFirebaseLive,
+    env_vars_present: {
+      FIREBASE_PROJECT_ID: !!process.env.FIREBASE_PROJECT_ID,
+      FIREBASE_CLIENT_EMAIL: !!process.env.FIREBASE_CLIENT_EMAIL,
+      FIREBASE_PRIVATE_KEY: !!process.env.FIREBASE_PRIVATE_KEY,
+      JWT_SECRET: !!process.env.JWT_SECRET
+    }
+  });
+});
+
 router.post(
   '/register',
   [

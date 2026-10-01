@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-highest":"#ffdbcb","primary-fixed-dim":"#ffb595","background":"#fff8f6","inverse-on-surface":"#ffede6","on-primary-fixed":"#351000","surface-container-low":"#fff1eb","on-background":"#2e1508","inverse-primary":"#ffb595","on-primary-fixed-variant":"#7c2e00","on-secondary-fixed-variant":"#255022","surface-container-lowest":"#ffffff","surface-bright":"#fff8f6","on-surface-variant":"#594238","secondary-container":"#bdf0b2","tertiary":"#615e55","on-primary-container":"#511c00","tertiary-fixed-dim":"#cbc6bb","on-secondary-container":"#426f3d","tertiary-fixed":"#e8e2d6","on-tertiary":"#ffffff","primary":"#a23f00","on-tertiary-container":"#2f2d25","primary-fixed":"#ffdbcd","on-tertiary-fixed":"#1d1c14","on-tertiary-fixed-variant":"#49473e","tertiary-container":"#98948a","secondary-fixed-dim":"#a2d398","on-surface":"#2e1508","outline-variant":"#e0c0b2","inverse-surface":"#47291a","on-secondary":"#ffffff","error":"#ba1a1a","surface-container-high":"#ffe2d6","outline":"#8c7166","primary-container":"#f26b21","on-error-container":"#93000a","surface-container":"#ffeae1","secondary-fixed":"#bdf0b2","secondary":"#3d6838","error-container":"#ffdad6","on-primary":"#ffffff","surface":"#fff8f6","on-error":"#ffffff","surface-variant":"#ffdbcb","on-secondary-fixed":"#002202","surface-tint":"#a23f00","surface-dim":"#ffd0bb"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1.5rem","gutter":"1.5rem","space-sm":"0.5rem","space-xs":"0.25rem","margin-mobile":"1.25rem","margin":"2.5rem","space-xl":"2.25rem","gutter-mobile":"1rem","space-md":"1rem"},fontFamily:{"headline-md":["Playfair Display"],"headline-sm":["Playfair Display"],"label-md":["DM Sans"],"headline-lg-mobile":["Playfair Display"],"label-caps":["DM Sans"],"queue-token-lg":["DM Sans"],"display-hero-mobile":["Playfair Display"],"label-lg":["DM Sans"],"display-hero":["Playfair Display"],"body-lg":["DM Sans"],"body-md":["DM Sans"],"body-sm":["DM Sans"],"headline-lg":["Playfair Display"]},fontSize:{"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-caps":["11px",{"lineHeight":"14px","letterSpacing":"0.08em","fontWeight":"700"}],"queue-token-lg":["44px",{"lineHeight":"48px","letterSpacing":"0.02em","fontWeight":"700"}],"display-hero-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"display-hero":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"body-md":["15px",{"lineHeight":"22px","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(74,44,29,0.04)]"><div class="flex flex-col"><div class="h-20 px-space-lg flex items-center justify-between bg-surface-container"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary font-headline-sm text-headline-sm">C</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight">Chez Gourmet</span><span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Culinary KDS • v4.2</span></div></div></div><div class="px-space-md py-space-sm"><div class="px-space-md py-space-xs mb-space-xs font-label-caps text-label-caps text-on-surface-variant uppercase">Operations Station</div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container-highest text-on-primary-fixed-variant font-label-lg font-bold rounded-xl"><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="incoming-orders" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-label-lg text-label-lg">Incoming Orders</span></div><span class="font-label-caps text-label-caps px-space-xs py-0.5 rounded-full bg-surface-container-highest text-on-surface">4</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm transition-colors bg-surface-container-highest text-on-primary-fixed-variant font-label-lg font-bold rounded-xl" data-path="live-queue" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">skillet</span><span class="font-label-lg text-label-lg">Live Queue</span></div><span class="font-label-caps text-label-caps px-space-xs py-0.5 rounded-full bg-primary-container text-on-primary">14 In Progress</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="menu-availability" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-label-lg text-label-lg">Menu Availability</span></div><span class="font-label-caps text-label-caps px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface-variant">86 Stock</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="collection-desk" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">local_convenience_store</span><span class="font-label-lg text-label-lg">Collection Desk</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="station-analytics" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-label-lg text-label-lg">Station Analytics</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="report-problem" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">report_problem</span><span class="font-label-lg text-label-lg">Report Problem</span></div></a></nav></div></div><div class="p-space-md"><div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Current Shift</span><span class="w-2 h-2 rounded-full bg-secondary"></span></div><span class="font-label-lg text-label-lg text-on-surface">Chef Laurent M.</span><span class="font-body-sm text-body-sm text-on-surface-variant">Executive Hearth Lead</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(74,44,29,0.04)]"><div class="h-20 w-full px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex flex-col"><span class="font-label-caps text-label-caps text-primary uppercase">Station Location</span><span class="font-headline-sm text-headline-sm text-on-surface">South Atrium • Hearth &amp; Rotisserie Line #2</span></div><div class="h-8 w-px bg-outline-variant hidden xl:block"></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span>Station Online (18ms)</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container text-on-surface font-label-lg text-label-lg shadow-[0_1px_4px_rgba(74,44,29,0.03)]"><span class="material-symbols-outlined text-[18px] text-on-surface-variant">schedule</span><span>1:16:42 PM</span></div><div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow-[0_2px_6px_rgba(74,44,29,0.08)]"><span class="material-symbols-outlined text-[18px]">local_fire_department</span><span class="uppercase tracking-wider font-label-caps text-label-caps">Rush Mode Active</span></div><button class="flex items-center justify-center w-10 h-10 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">volume_up</span></button><div class="h-8 w-px bg-outline-variant"></div><div class="flex items-center gap-space-sm"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-lg text-label-lg text-on-surface leading-tight">Chef Laurent M.</span><span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Head of Line</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen px-space-lg py-space-lg"><div class="flex flex-col w-full gap-space-lg pb-12">
+<!-- Sub-Header & Executive Expediter Bar -->
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="font-label-caps text-label-caps uppercase px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container">Line Active • Station 02</span>
+<span class="font-label-caps text-label-caps uppercase px-2 py-0.5 rounded-full bg-surface-container-highest text-on-primary-fixed-variant">Peak Lunch Wave</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Live Kitchen Queue &amp; Expediter Board</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Real-time multi-station ticket progression, smart queue prioritization, and thermal locker dispatch pacing.</p>
+</div>
+<!-- Quick Global Actions -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-full bg-secondary text-on-secondary font-label-lg text-label-lg shadow-sm hover:opacity-95 active:scale-95 transition-all" id="batch-bump-btn">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+<span>Batch Bump Ready (2)</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-full bg-surface-container-high text-primary font-label-lg text-label-lg shadow-sm hover:bg-surface-container-highest transition-colors" id="filter-delayed-btn">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+<span>Filter Delayed Only (1)</span>
+</button>
+<div class="flex items-center gap-space-xs px-space-md py-2 rounded-full bg-surface-container-low text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px] text-secondary">notifications_active</span>
+<span>Audio Chimes Active</span>
+</div>
+</div>
+</div>
+<!-- Smart Queue Prioritization & Kitchen Telemetry Strip -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-md">
+<!-- Smart Priority Algorithm Banner -->
+<div class="xl:col-span-8 p-space-md rounded-2xl bg-surface-container-low shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md relative overflow-hidden">
+<div class="absolute -right-8 -bottom-8 w-44 h-44 rounded-full bg-primary/5 pointer-events-none blur-2xl"></div>
+<div class="flex flex-col gap-1 max-w-2xl">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-0.5 rounded-full bg-primary-container text-on-primary font-label-caps text-label-caps uppercase flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span>
+              Smart Priority Algorithm Active
+            </span>
+<span class="font-label-md text-label-md text-on-surface-variant">Automated Dispatch Engine v4.2</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug pt-1">
+<span class="font-bold text-on-surface">Dynamic Weighting Model:</span> Placement Age (<span class="text-primary font-bold">30%</span>) + Pickup Buffer (<span class="text-primary font-bold">30%</span>) + Delay Risk (<span class="text-primary font-bold">20%</span>) + Line Complexity &amp; Item Duration (<span class="text-primary font-bold">20%</span>).
+          </p>
+</div>
+<div class="flex items-center bg-surface-container p-1 rounded-full shadow-inner">
+<button class="px-space-md py-1.5 rounded-full bg-on-surface text-surface-container-lowest font-label-md text-label-md transition-all shadow-sm" id="mode-smart">Smart Prioritized</button>
+<button class="px-space-md py-1.5 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" id="mode-manual">Manual Board</button>
+</div>
+</div>
+<!-- Quick Metrics Strip -->
+<div class="xl:col-span-4 grid grid-cols-2 sm:grid-cols-4 gap-space-xs p-space-xs bg-surface-container-low rounded-2xl shadow-sm">
+<div class="flex flex-col items-center justify-center p-space-sm rounded-xl bg-surface-container-lowest">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Active Tickets</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-0.5">14</span>
+<span class="font-label-md text-label-md text-secondary mt-0.5">Normal Volume</span>
+</div>
+<div class="flex flex-col items-center justify-center p-space-sm rounded-xl bg-surface-container-lowest">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Avg Cook Time</span>
+<span class="font-headline-sm text-headline-sm text-primary mt-0.5">8.4m</span>
+<span class="font-label-md text-label-md text-secondary mt-0.5">−0.6m vs avg</span>
+</div>
+<div class="flex flex-col items-center justify-center p-space-sm rounded-xl bg-surface-container-lowest">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Pacing Deficit</span>
+<span class="font-headline-sm text-headline-sm text-error mt-0.5">−1.2m</span>
+<span class="font-label-md text-label-md text-error mt-0.5">Hearth Lag</span>
+</div>
+<div class="flex flex-col items-center justify-center p-space-sm rounded-xl bg-surface-container-lowest">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Locker Bay</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-0.5">78%</span>
+<span class="font-label-md text-label-md text-on-surface-variant mt-0.5">11 / 14 Full</span>
+</div>
+</div>
+</div>
+<!-- Station Selection Filter Pills -->
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-space-sm overflow-x-auto">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase mr-2 hidden sm:inline">Station View:</span>
+<button class="station-filter-btn px-space-md py-1.5 rounded-full bg-on-surface text-surface-container-lowest font-label-md text-label-md shadow-sm">All Stations (14)</button>
+<button class="station-filter-btn px-space-md py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container font-label-md text-label-md shadow-sm transition-colors">Hearth 1 &amp; 2 (7)</button>
+<button class="station-filter-btn px-space-md py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container font-label-md text-label-md shadow-sm transition-colors">Cold Salad Bar (4)</button>
+<button class="station-filter-btn px-space-md py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container font-label-md text-label-md shadow-sm transition-colors">Rotisserie Oven (3)</button>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span>Telemetry Stream Real-time: 120Hz</span>
+</div>
+</div>
+</div>
+<!-- Main Kanban Workspace & Expediter Diagnostic Panel -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT/MAIN: 3 Kanban Columns (8 of 12 cols, ~67-75% screen real estate) -->
+<div class="lg:col-span-8 xl:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- ==============================================
+           COLUMN 1: WAITING / FIRED
+      =============================================== -->
+<div class="flex flex-col gap-space-sm bg-surface-container-low/60 p-space-sm rounded-2xl">
+<!-- Column Header -->
+<div class="flex items-center justify-between px-space-sm py-2">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-primary-container"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Waiting / Fired</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-primary-container font-label-caps text-label-caps">5</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Target ≤ 10m</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- TICKET C-023: Delayed Urgent (Highlight orange border effect via container) -->
+<div class="ticket-card bg-surface-container-lowest rounded-2xl p-space-md shadow-md relative overflow-hidden transition-transform duration-150 hover:-translate-y-0.5">
+<!-- Alert bar accent -->
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-primary-container"></div>
+<div class="flex items-start justify-between gap-space-xs pt-1">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-outline cursor-grab active:cursor-grabbing">drag_indicator</span>
+<span class="font-headline-sm text-headline-sm text-primary tracking-wide">#C-023</span>
+<span class="font-label-caps text-label-caps px-2 py-0.5 rounded-full bg-error-container text-on-error-container uppercase">Rank #1 • Priority</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-2.5 h-2.5 rounded-full bg-error animate-ping"></span>
+<span class="font-label-caps text-label-caps text-error font-bold">+2m OVERDUE</span>
+</div>
+</div>
+<!-- Food Visual Preview Tag -->
+<div class="flex items-center gap-space-sm my-space-xs p-space-xs rounded-xl bg-surface-container-low">
+<img class="w-14 h-14 rounded-lg object-cover flex-shrink-0" data-alt="Golden crisp buttermilk fried chicken brioche burger with melted cheddar cheese, fresh dill pickle slices, creamy herb tartare sauce in soft toasted brioche sesame bun on dark bistro plate in warm restaurant interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPH-kMp2Ig_s63LhPolS4HXjKyN0pt7Syc05JdxeLC0kdpvV8DxraqIycmQG6_M2OSgg2ERFQth4CYvpHJ4eVq0_zRIdvPOmhhUdPTTC87kiMY69gXjULc3nIAZlMArsxq5OiSreZ9fEMJVqQGCrlubzzfh0ZzUTZh7I7c9JD9gzQn3q_5OrCUg0LzF9KGxqeQOrya0Jk3JxU45QYrnfeboK-DeoHY7RcQz33pUYf0YaHTes6wtf64aQ"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-bold truncate">2× Crispy Chicken Brioche</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">1× Truffle Sea Salt Fries, 1× Cold Brew</span>
+</div>
+</div>
+<!-- Telemetry Details -->
+<div class="grid grid-cols-2 gap-1 py-1 font-label-md text-label-md text-on-surface-variant bg-surface-container-low/40 p-2 rounded-lg">
+<div>Est. Prep: <strong class="text-on-surface">12 min</strong></div>
+<div>Est. Ready: <strong class="text-error">1:18 PM</strong></div>
+<div>Pickup Target: <strong class="text-on-surface">1:18 PM</strong></div>
+<div>Waiting Age: <strong class="text-error font-bold">14 min</strong></div>
+</div>
+<!-- Dietary / Allergy Alert Memo -->
+<div class="p-space-xs rounded-xl bg-surface-container text-on-primary-container my-space-xs flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary flex-shrink-0 mt-0.5">warning</span>
+<p class="font-body-sm text-body-sm font-semibold leading-tight">
+                Guest Memo: Sauce on side, extra toasted bun. <span class="text-error uppercase tracking-wider font-bold">Mild Nut Allergy</span>.
+              </p>
+</div>
+<!-- Quick Badges -->
+<div class="flex flex-wrap gap-1 mb-space-sm">
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-caps text-label-caps uppercase">Delayed +2m</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-primary-fixed-variant font-label-caps text-label-caps uppercase">Waiting Too Long</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-caps text-label-caps uppercase">Approaching Pickup</span>
+</div>
+<!-- Action Controls -->
+<div class="flex items-center gap-space-xs pt-space-xs">
+<button class="start-prep-btn flex-1 flex items-center justify-center gap-1.5 py-2 px-space-sm rounded-full bg-secondary text-on-secondary font-label-md text-label-md hover:opacity-95 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+<span>Start Preparing</span>
+</button>
+<button class="px-3 py-2 rounded-full bg-surface-container text-primary hover:bg-surface-container-high transition-colors font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>+5m</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" title="Print Kitchen Chit">
+<span class="material-symbols-outlined text-[16px]">print</span>
+</button>
+</div>
+</div>
+<!-- TICKET C-024: Next Up Quick Prep -->
+<div class="ticket-card bg-surface-container-lowest rounded-2xl p-space-md shadow-sm transition-transform duration-150 hover:-translate-y-0.5">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-outline cursor-grab">drag_indicator</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">#C-024</span>
+<span class="font-label-caps text-label-caps px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant uppercase">Rank #2</span>
+</div>
+<span class="font-label-caps text-label-caps px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container">On Schedule</span>
+</div>
+<div class="flex items-center gap-space-sm my-space-xs p-space-xs rounded-xl bg-surface-container-low">
+<img class="w-14 h-14 rounded-lg object-cover flex-shrink-0" data-alt="Vibrant healthy grain bowl with grilled rosemary marinated chicken skewers, charred bell peppers, sliced fresh avocado, steamed quinoa, and wild grains in rustic speckled ceramic bowl, natural sunlit table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIYYEOwmCGPJNVg-9kHL_2BquXypB2Rjoubd1HsU0zh6vYNm7kVlr1Ak8w-G_P4zaEOFlFilbdSbONjV4ExQAtsS0mbXMZWkXOHPtY4jKFGrTIcoFyqCrQS2uYn7Hn0b03cjS8-0fiQVEutRianwKfigWVqB-62SG0i8mnIjC0elp3QyQOuyi5R_S6hrwdNJynI8TSSWQYnfHvREt8ARf8DOxEBeHKLdyAUt1xZ61qllOofQP3hyYrMQ"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-bold truncate">1× Wild Grain Hen Bowl</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">1× Ginger Yuzu Elixir</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-1 py-1 font-label-md text-label-md text-on-surface-variant bg-surface-container-low/40 p-2 rounded-lg">
+<div>Est. Prep: <strong class="text-on-surface">6 min</strong></div>
+<div>Est. Ready: <strong class="text-on-surface">1:22 PM</strong></div>
+<div>Target: <strong class="text-on-surface">1:24 PM</strong></div>
+<div>Waiting Age: <strong class="text-on-surface">6 min</strong></div>
+</div>
+<div class="p-space-xs rounded-xl bg-surface-container-low text-on-surface-variant my-space-xs flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+<span class="font-body-sm text-body-sm">Gluten-Free sanitized cookware line required</span>
+</div>
+<div class="flex items-center gap-space-xs pt-space-xs">
+<button class="start-prep-btn flex-1 flex items-center justify-center gap-1.5 py-2 px-space-sm rounded-full bg-secondary text-on-secondary font-label-md text-label-md hover:opacity-95 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+<span>Start Preparing</span>
+</button>
+<button class="px-3 py-2 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md">
+<span>+5m</span>
+</button>
+</div>
+</div>
+<!-- TICKET C-025: Standard Queue -->
+<div class="ticket-card bg-surface-container-lowest rounded-2xl p-space-md shadow-sm transition-transform duration-150 hover:-translate-y-0.5">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-outline cursor-grab">drag_indicator</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">#C-025</span>
+<span class="font-label-caps text-label-caps px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant uppercase">Rank #3</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant font-mono">Wait: 4m</span>
+</div>
+<div class="my-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-bold block">2× Roasted Autumn Squash Bowl</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">2× Cardamom Morning Buns</span>
+</div>
+<div class="p-space-xs rounded-xl bg-surface-container-low text-on-surface-variant text-body-sm font-body-sm my-space-xs">
+<span class="text-primary font-bold">Pacing notice:</span> Fires into grill line at 1:16 PM to hit 1:30 PM pickup window.
+            </div>
+<div class="flex items-center gap-space-xs pt-space-xs">
+<button class="start-prep-btn flex-1 flex items-center justify-center gap-1.5 py-2 px-space-sm rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+<span>Pre-fire Now</span>
+</button>
+<button class="px-3 py-2 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md">Hold</button>
+</div>
+</div>
+<!-- TICKET C-026: Scheduled Future -->
+<div class="ticket-card bg-surface-container-low/40 rounded-2xl p-space-md opacity-90 hover:opacity-100 transition-opacity">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-outline cursor-grab">drag_indicator</span>
+<span class="font-headline-sm text-headline-sm text-on-surface-variant">#C-026</span>
+<span class="font-label-caps text-label-caps px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant uppercase">Pre-Order</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Target: 1:45 PM</span>
+</div>
+<div class="my-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold block">1× Loch Duart Salmon Harvest Bowl</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Prep duration: 9m</span>
+</div>
+<div class="p-space-xs rounded-xl bg-surface-container text-on-surface-variant text-body-sm font-body-sm my-space-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+<span>Auto-enters queue at 1:36 PM</span>
+</div>
+<button class="w-full py-1.5 rounded-full bg-surface-container-highest text-on-primary-fixed-variant font-label-md text-label-md hover:bg-surface-container-high transition-colors">
+              Force Early Prep
+            </button>
+</div>
+</div>
+</div>
+<!-- ==============================================
+           COLUMN 2: PREPARING / ON LINE
+      =============================================== -->
+<div class="flex flex-col gap-space-sm bg-surface-container-low/60 p-space-sm rounded-2xl">
+<!-- Column Header -->
+<div class="flex items-center justify-between px-space-sm py-2">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Preparing / On Line</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-caps text-label-caps">4</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Active Cooking</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- TICKET C-021: Flame Grill -->
+<div class="ticket-card bg-surface-container-lowest rounded-2xl p-space-md shadow-md relative overflow-hidden transition-all">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-outline cursor-grab">drag_indicator</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">#C-021</span>
+<span class="font-label-caps text-label-caps px-2 py-0.5 rounded-full bg-primary-container text-on-primary uppercase">Flame Grill</span>
+</div>
+<span class="font-label-caps text-label-caps px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container">Est. 1:19 PM</span>
+</div>
+<div class="my-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-bold block">1× Artisanal Crispy Chicken Brioche</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1× Truffle Fries • Extra Herbs</span>
+</div>
+<!-- Dynamic Cook Progress Bar -->
+<div class="flex flex-col gap-1 my-space-xs">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="text-on-surface-variant">Cooking: 7m 20s / 10m</span>
+<span class="font-bold text-primary">73% Complete</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full rounded-full bg-primary-container transition-all duration-500" style="width: 73%;"></div>
+</div>
+</div>
+<!-- Assigned Station -->
+<div class="flex items-center gap-space-xs py-1 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-primary">skillet</span>
+<span>Chef Laurent @ Hearth Line #2 (340°C)</span>
+</div>
+<div class="flex items-center gap-space-xs pt-space-xs">
+<button class="mark-ready-btn flex-1 flex items-center justify-center gap-1.5 py-2.5 px-space-sm rounded-full bg-secondary text-on-secondary font-label-md text-label-md shadow-sm hover:opacity-95 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Mark Ready → Locker</span>
+</button>
+<button class="p-2.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Mark +3m Delay">
+<span class="material-symbols-outlined text-[18px]">more_time</span>
+</button>
+</div>
+</div>
+<!-- TICKET C-022: Plating Greens -->
+<div class="ticket-card bg-surface-container-lowest rounded-2xl p-space-md shadow-sm transition-all">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-outline cursor-grab">drag_indicator</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">#C-022</span>
+<span class="font-label-caps text-label-caps px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container uppercase">Salad Bar</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant font-mono">1:20 PM</span>
+</div>
+<div class="my-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-bold block">2× Wild Grain Hen Bowl</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cold Station Finishing</span>
+</div>
+<div class="flex flex-col gap-1 my-space-xs">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="text-on-surface-variant">Plating: 5m 10s / 8m</span>
+<span class="font-bold text-secondary">65%</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full rounded-full bg-secondary transition-all duration-500" style="width: 65%;"></div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs py-1 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">eco</span>
+<span>Prep Cook Marco @ Cold Station</span>
+</div>
+<div class="flex items-center gap-space-xs pt-space-xs">
+<button class="mark-ready-btn flex-1 flex items-center justify-center gap-1.5 py-2.5 px-space-sm rounded-full bg-secondary text-on-secondary font-label-md text-label-md shadow-sm hover:opacity-95 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Mark Ready</span>
+</button>
+</div>
+</div>
+<!-- TICKET B-092: Counter Snack Express -->
+<div class="ticket-card bg-surface-container-lowest rounded-2xl p-space-md shadow-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-outline cursor-grab">drag_indicator</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">#B-092</span>
+<span class="font-label-caps text-label-caps px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant uppercase">Express</span>
+</div>
+<span class="font-label-caps text-label-caps text-secondary font-bold">Final Stage</span>
+</div>
+<div class="my-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-bold block">2× Truffle Fries + Garlic Dip</span>
+</div>
+<div class="flex flex-col gap-1 my-space-xs">
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full rounded-full bg-primary-container" style="width: 85%;"></div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs pt-space-xs">
+<button class="mark-ready-btn w-full flex items-center justify-center gap-1.5 py-2 px-space-sm rounded-full bg-secondary text-on-secondary font-label-md text-label-md shadow-sm hover:opacity-95 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Dispatch Ready</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- ==============================================
+           COLUMN 3: READY / STAGED IN LOCKER
+      =============================================== -->
+<div class="flex flex-col gap-space-sm bg-surface-container-low/60 p-space-sm rounded-2xl">
+<!-- Column Header -->
+<div class="flex items-center justify-between px-space-sm py-2">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-secondary-fixed-dim"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Ready • Pickup</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-caps text-label-caps">5</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Locker / Shelf</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- TICKET C-019: Thermal Locker Staged -->
+<div class="ticket-card bg-surface-container-lowest rounded-2xl p-space-md shadow-md transition-all">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-secondary">#C-019</span>
+<span class="font-label-caps text-label-caps px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container uppercase">Locker #B-04</span>
+</div>
+<div class="flex items-center gap-1 text-secondary font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[16px]">thermostat</span>
+<span>62.4°C Holding</span>
+</div>
+</div>
+<div class="my-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-bold block">1× Harvest Salmon Bowl + Cold Brew</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Customer: Elena Rostova (Card #8821)</span>
+</div>
+<div class="p-space-xs rounded-xl bg-surface-container-low text-on-surface flex items-center justify-between my-space-xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Locker PIN / QR:</span>
+<span class="font-headline-sm text-headline-sm font-mono tracking-widest text-primary">9 0 2 4</span>
+</div>
+<div class="text-on-surface-variant font-label-md text-label-md flex items-center gap-1 my-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">timer</span>
+<span>Holding 38m left in pickup window</span>
+</div>
+<div class="flex items-center gap-space-xs pt-space-xs">
+<button class="w-full flex items-center justify-center gap-1.5 py-2 px-space-sm rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface font-label-md text-label-md transition-colors">
+<span class="material-symbols-outlined text-[16px]">door_open</span>
+<span>Bump on Auto-Sensor</span>
+</button>
+</div>
+</div>
+<!-- TICKET C-020: Counter A Shelf Hand-off -->
+<div class="ticket-card bg-surface-container-lowest rounded-2xl p-space-md shadow-sm transition-all">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-secondary">#C-020</span>
+<span class="font-label-caps text-label-caps px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant uppercase">Counter A Shelf</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant font-mono">1:12 PM Ready</span>
+</div>
+<div class="my-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-bold block">2× Brioche Burger + 2× Sodas</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Staged on heated express shelf</span>
+</div>
+<div class="flex items-center gap-space-xs pt-space-xs">
+<button class="w-full flex items-center justify-center gap-1.5 py-2 px-space-sm rounded-full bg-secondary text-on-secondary font-label-md text-label-md shadow-sm hover:opacity-95 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px]">how_to_reg</span>
+<span>Mark Handed Off</span>
+</button>
+</div>
+</div>
+<!-- TICKET C-018: Completed Picked Up -->
+<div class="ticket-card bg-surface-container-lowest/50 rounded-2xl p-space-md opacity-70">
+<div class="flex items-start justify-between">
+<span class="font-headline-sm text-headline-sm text-outline">#C-018</span>
+<span class="font-label-caps text-label-caps px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant uppercase">Locker #B-01 • Collected</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-1">Retrieved 2m ago by customer QR</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT/EXPEDITER PANEL: Anomaly Alerts & Station Telemetry (4 of 12 cols, ~25-33% screen real estate) -->
+<div class="lg:col-span-4 xl:col-span-3 flex flex-col gap-space-md">
+<!-- Panel Container -->
+<div class="bg-surface-container-low rounded-2xl p-space-md shadow-sm flex flex-col gap-space-md">
+<!-- Header with Alert Counter -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">analytics</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Anomaly Alerts</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-caps text-label-caps uppercase flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+            3 Active
+          </span>
+</div>
+<!-- Alert 1: Unusually Long Preparation (Red / Critical) -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs relative overflow-hidden">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-error"></div>
+<div class="flex items-start justify-between pl-1">
+<div class="flex items-center gap-1 text-error font-label-lg text-label-lg font-bold">
+<span class="material-symbols-outlined text-[18px]">error</span>
+<span>Long Cook Duration</span>
+</div>
+<span class="font-label-caps text-label-caps px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-mono">+40% Dev</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface pl-1">
+<strong class="text-primary font-bold">Token #C-023</strong> has been in queue &amp; prep for <span class="font-bold text-error">14 mins</span> on Hearth Line #2 (standard target: 10 mins).
+          </p>
+<div class="bg-surface-container-low p-2 rounded-xl text-on-surface-variant font-label-md text-label-md pl-2">
+<strong class="text-on-surface">Root Cause:</strong> Brioche bun re-toast &amp; severe grill bottleneck.
+          </div>
+<div class="flex flex-col gap-1 pt-1">
+<button class="w-full py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm hover:opacity-95 active:scale-95 transition-all flex items-center justify-center gap-1" id="dispatch-delay-push">
+<span class="material-symbols-outlined text-[16px]">send</span>
+<span>Dispatch Guest Push (+4m)</span>
+</button>
+<span class="text-center font-label-caps text-label-caps text-on-surface-variant">Recommended: Divert bun to Salamander 2</span>
+</div>
+</div>
+<!-- Alert 2: Likely Delayed Pre-emptive Bottleneck (Amber / Warning) -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs relative overflow-hidden">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-primary-container"></div>
+<div class="flex items-start justify-between pl-1">
+<div class="flex items-center gap-1 text-primary font-label-lg text-label-lg font-bold">
+<span class="material-symbols-outlined text-[18px]">timelapse</span>
+<span>Pacing Deficit Risk</span>
+</div>
+<span class="font-label-caps text-label-caps px-2 py-0.5 rounded-full bg-surface-container-highest text-on-primary-fixed-variant">72% Risk</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface pl-1">
+<strong class="text-on-surface font-bold">Token #C-025</strong> requires 14 min prep for 1:30 PM pickup, but Hearth 2 has 3 active tickets ahead.
+          </p>
+<button class="w-full py-2 rounded-full bg-surface-container-highest text-on-primary-fixed-variant font-label-md text-label-md hover:bg-surface-container-high transition-colors flex items-center justify-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px]">swap_horiz</span>
+<span>Pre-heat Station 1 &amp; Re-route</span>
+</button>
+</div>
+<!-- Alert 3: Eco-Tiffin Supply Warning (Zero-Waste / Info) -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs relative overflow-hidden">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-secondary"></div>
+<div class="flex items-start justify-between pl-1">
+<div class="flex items-center gap-1 text-secondary font-label-lg text-label-lg font-bold">
+<span class="material-symbols-outlined text-[18px]">recycling</span>
+<span>Eco-Tiffin Supply Low</span>
+</div>
+<span class="font-label-caps text-label-caps px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container">6 Left</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant pl-1">
+            Circular lunch bowls at Hearth Line depleted. Runner cart dispatch queued in 8 mins from Central Dish Station.
+          </p>
+</div>
+<!-- Expediter Operational Diagnostics & Temperature Bar -->
+<div class="p-space-md rounded-2xl bg-surface-container flex flex-col gap-space-sm mt-1">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Line Quality Telemetry</span>
+<div class="flex items-center justify-between text-label-md font-label-md">
+<span class="text-on-surface-variant">Expediter Pass Rate</span>
+<span class="font-bold text-secondary">98.4%</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 98%;"></div>
+</div>
+<div class="flex items-center justify-between text-label-md font-label-md">
+<span class="text-on-surface-variant">Avg Locker Retrieval Time</span>
+<span class="font-bold text-on-surface">42 seconds</span>
+</div>
+<div class="flex items-center justify-between text-label-md font-label-md">
+<span class="text-on-surface-variant">Station Thermal Holding Avg</span>
+<span class="font-bold text-primary">63.1°C (Target &gt;60°C)</span>
+</div>
+</div>
+</div>
+<!-- Quick Shift Expediter Chit Notes -->
+<div class="bg-surface-container-low rounded-2xl p-space-md shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Chef Notes • 13:00 Service</span>
+<span class="material-symbols-outlined text-[18px] text-outline">edit_note</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+          “Rotisserie Line 1 batches ready in 6 min increments. Ensure all Nut Allergy tickets stay segregated on Hearth Line 2 Salamander.”
+        </p>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interactions for the Live Queue KDS
+  document.addEventListener('DOMContentLoaded', () => {
+    // Mode toggle between Smart Prioritized and Manual Board
+    const btnSmart = document.getElementById('mode-smart');
+    const btnManual = document.getElementById('mode-manual');
+    if (btnSmart && btnManual) {
+      btnSmart.addEventListener('click', () => {
+        btnSmart.className = "px-space-md py-1.5 rounded-full bg-on-surface text-surface-container-lowest font-label-md text-label-md transition-all shadow-sm";
+        btnManual.className = "px-space-md py-1.5 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors";
+      });
+      btnManual.addEventListener('click', () => {
+        btnManual.className = "px-space-md py-1.5 rounded-full bg-on-surface text-surface-container-lowest font-label-md text-label-md transition-all shadow-sm";
+        btnSmart.className = "px-space-md py-1.5 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors";
+      });
+    }
+
+    // Station Filters
+    const stationBtns = document.querySelectorAll('.station-filter-btn');
+    stationBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        stationBtns.forEach(b => {
+          b.className = "station-filter-btn px-space-md py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container font-label-md text-label-md shadow-sm transition-colors";
+        });
+        btn.className = "station-filter-btn px-space-md py-1.5 rounded-full bg-on-surface text-surface-container-lowest font-label-md text-label-md shadow-sm";
+      });
+    });
+
+    // Push delay action feedback
+    const pushBtn = document.getElementById('dispatch-delay-push');
+    if (pushBtn) {
+      pushBtn.addEventListener('click', () => {
+        pushBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span><span>Notification Dispatched!</span>';
+        pushBtn.classList.add('bg-secondary');
+        setTimeout(() => {
+          pushBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">send</span><span>Dispatch Guest Push (+4m)</span>';
+          pushBtn.classList.remove('bg-secondary');
+        }, 3000);
+      });
+    }
+
+    // Mark ready button simulation
+    const readyButtons = document.querySelectorAll('.mark-ready-btn');
+    readyButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const card = e.target.closest('.ticket-card');
+        if (card) {
+          card.style.transition = 'all 0.4s ease';
+          card.style.transform = 'scale(0.95)';
+          card.style.opacity = '0.5';
+          setTimeout(() => {
+            card.style.transform = 'scale(1)';
+            card.style.opacity = '1';
+          }, 600);
+        }
+      });
+    });
+
+    // Start prep buttons simulation
+    const startPrepBtns = document.querySelectorAll('.start-prep-btn');
+    startPrepBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">refresh</span><span>Moving to Line...</span>';
+        setTimeout(() => {
+          btn.innerHTML = '<span class="material-symbols-outlined text-[16px]">done</span><span>On Line</span>';
+          btn.classList.add('bg-primary-container');
+        }, 800);
+      });
+    });
+  });
+</script></main></div></body></html>

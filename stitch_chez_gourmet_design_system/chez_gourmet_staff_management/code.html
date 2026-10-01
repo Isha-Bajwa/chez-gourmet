@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"outline":"#8c7166","inverse-primary":"#ffb595","on-secondary-fixed":"#002202","tertiary-fixed-dim":"#cbc6bb","surface-container-low":"#fff1eb","on-secondary":"#ffffff","primary-fixed":"#ffdbcd","secondary-container":"#bdf0b2","on-error":"#ffffff","surface-container-lowest":"#ffffff","surface-tint":"#a23f00","on-primary":"#ffffff","outline-variant":"#e0c0b2","surface-container":"#ffeae1","secondary":"#3d6838","surface-container-highest":"#ffdbcb","inverse-surface":"#47291a","on-surface-variant":"#594238","secondary-fixed":"#bdf0b2","tertiary":"#615e55","surface-variant":"#ffdbcb","tertiary-fixed":"#e8e2d6","on-background":"#2e1508","error":"#ba1a1a","on-primary-fixed":"#351000","on-primary-fixed-variant":"#7c2e00","primary-fixed-dim":"#ffb595","on-surface":"#2e1508","secondary-fixed-dim":"#a2d398","on-secondary-container":"#426f3d","on-tertiary-container":"#2f2d25","tertiary-container":"#98948a","surface-container-high":"#ffe2d6","on-tertiary-fixed":"#1d1c14","on-error-container":"#93000a","primary-container":"#f26b21","on-tertiary-fixed-variant":"#49473e","surface-bright":"#fff8f6","on-primary-container":"#511c00","surface":"#fff8f6","background":"#fff8f6","surface-dim":"#ffd0bb","on-secondary-fixed-variant":"#255022","on-tertiary":"#ffffff","error-container":"#ffdad6","primary":"#a23f00","inverse-on-surface":"#ffede6"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1.5rem","space-xl":"2.25rem","margin":"2.5rem","space-sm":"0.5rem","gutter":"1.5rem","space-xs":"0.25rem","margin-mobile":"1.25rem","gutter-mobile":"1rem","space-md":"1rem"},fontFamily:{"display-hero-mobile":["Playfair Display"],"headline-md":["Playfair Display"],"body-md":["DM Sans"],"queue-token-lg":["DM Sans"],"headline-lg-mobile":["Playfair Display"],"headline-sm":["Playfair Display"],"display-hero":["Playfair Display"],"body-sm":["DM Sans"],"body-lg":["DM Sans"],"label-caps":["DM Sans"],"label-md":["DM Sans"],"label-lg":["DM Sans"],"headline-lg":["Playfair Display"]},fontSize:{"display-hero-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"body-md":["15px",{"lineHeight":"22px","fontWeight":"400"}],"queue-token-lg":["44px",{"lineHeight":"48px","letterSpacing":"0.02em","fontWeight":"700"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"display-hero":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"label-caps":["11px",{"lineHeight":"14px","letterSpacing":"0.08em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(74,44,29,0.06)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="px-space-lg pt-space-lg pb-space-md flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><img alt="Artisanal food and botanical leaf logo for Chez Gourmet Smart Canteen. Elegant stylized fork/spoon and fresh green leaf motif, warm deep orange #F26B21 and natural forest green #3F6B3A on transparent background, minimalist vector style, sophisticated culinary brand mark. Design context: - Primary color: #f26b21 - Font: playfairDisplay - Mode: light - Roundness: rounded-md. The logo should be visually consistent with these brand tokens." class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vo05zV1l30OuCCZOZbn3gCKuwvOGC4lSVWuMF41PLFVCvr_AZGw1VFEkUe_hZNYCwEMZkVjTJG25VgrvdmeGO8hsxL9Su69cgz3_qX6VTh746xH0MZXd12WBr-kjGZanPe9ze7jVgs7wO-dGIiDjXA2UvWaKcmhVnQ-uqewato6cDKLn1wLBTR6cxRulNdZdnZBWASGbcLuRyMw4jL-YShKFzL0X3Vp5pboz_4mw0lqLx4fC1umB0Zr5uh"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Chez Gourmet</span></div><div class="flex items-center gap-space-xs text-on-surface-variant font-label-caps text-label-caps uppercase tracking-wider pl-space-xs"><span>Staff &amp; Executive Ops</span><span class="text-outline-variant">•</span><span>South Atrium</span></div></div><div class="px-space-md py-space-xs"><div class="h-px w-full bg-surface-container-low"></div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-sm" data-active-classes="bg-surface-container text-primary font-label-lg rounded-xl shadow-[0_2px_8px_rgba(74,44,29,0.04)]"><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="incoming-orders" href="#">Incoming Orders</a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="live-queue" href="#">Live Queue</a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="menu-availability" href="#">Menu Availability</a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="collection-desk" href="#">Collection Desk</a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="manager-dashboard" href="#">Manager Dashboard</a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="menu-management" href="#">Menu Management</a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm transition-all group bg-surface-container text-primary font-label-lg rounded-xl shadow-[0_2px_8px_rgba(74,44,29,0.04)]" data-path="staff-management" href="#">Staff Management</a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="cancelled-orders" href="#">Cancelled Orders</a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="station-analytics" href="#">Station Analytics</a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="report-problem" href="#">Report Problem</a></nav></div><div class="flex flex-col p-space-md gap-space-sm bg-surface-container-low/60"><div class="p-space-sm bg-surface-container-lowest rounded-xl shadow-[0_2px_6px_rgba(74,44,29,0.03)] flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Shift Telemetry</span><span class="inline-flex items-center gap-1 font-label-caps text-label-caps text-secondary font-bold"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>Online</span></div><div class="flex flex-col"><span class="font-label-lg text-label-lg text-on-surface">Chef Laurent</span><span class="font-body-sm text-body-sm text-on-surface-variant">Lead Hearth Cook • Line #2</span></div><div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-md text-label-md"><span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">mode_heat</span>Grill: 340°C</span><span class="text-secondary font-bold">Synced</span></div></div><button class="w-full flex items-center justify-center gap-space-xs py-space-sm px-space-md rounded-xl bg-error-container text-on-error-container hover:bg-error hover:text-on-error font-label-lg text-label-lg transition-colors shadow-sm" type="button"><span class="material-symbols-outlined text-[18px]">e911_emergency</span><span>Kitchen Intercom</span></button><div class="flex items-center justify-between px-space-xs pt-space-xs"><a class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant hover:text-error transition-colors" data-path="logout" href="#"><span class="material-symbols-outlined text-[16px]">logout</span><span>Log Out</span></a><span class="font-label-caps text-label-caps text-outline">v2.4.1</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(74,44,29,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant"><span class="hover:text-on-surface cursor-pointer">Staff Ops</span><span class="text-outline-variant">/</span><span class="hover:text-on-surface cursor-pointer">Hearth Station #2</span><span class="text-outline-variant">/</span><span class="text-on-surface font-bold">Canteen Operations</span></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 bg-secondary-fixed/50 text-secondary font-label-md text-label-md rounded-full"><span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span><span>Station Online (24ms)</span></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center gap-space-xs px-space-md py-1.5 bg-surface-container-lowest rounded-full shadow-[0_1px_4px_rgba(74,44,29,0.04)] text-on-surface"><span class="material-symbols-outlined text-[16px] text-secondary">schedule</span><span class="font-label-lg text-label-lg">1:14:28 PM</span><span class="text-outline-variant">•</span><span class="font-label-md text-label-md text-primary font-bold">Lunch Service Rush</span></div><button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors shadow-[0_1px_4px_rgba(74,44,29,0.04)] font-label-md text-label-md" type="button"><span class="material-symbols-outlined text-[18px] text-primary">notifications_active</span><span class="hidden sm:inline">Chimes On</span></button><button class="w-8 h-8 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center shadow-[0_1px_4px_rgba(74,44,29,0.04)]" type="button"><span class="material-symbols-outlined text-[18px]">refresh</span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden md:flex flex-col text-left"><span class="font-label-lg text-label-lg text-on-surface leading-tight">Chef Laurent M.</span><span class="font-label-caps text-label-caps text-on-surface-variant leading-tight">Head Station Lead</span></div><button class="w-6 h-6 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">arrow_drop_down</span></button></div></div></header><main class="w-full pt-16 bg-background min-h-screen px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Page Context & Title Area -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md mb-space-xl">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-caps text-label-caps uppercase tracking-wider">
+<span class="inline-flex items-center gap-1.5 text-primary font-bold">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          Operational Roster Control
+        </span>
+<span class="text-outline-variant">•</span>
+<span>South Atrium Canteen Line 01–04</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Staff &amp; Culinary Team Management</h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Manage kitchen personnel, shift assignments, role-based access credentials, and operational permissions across South Atrium culinary stations.
+      </p>
+</div>
+<!-- Quick Export & Primary Call to Action -->
+<div class="flex items-center gap-space-sm self-start lg:self-auto shrink-0">
+<button class="group flex items-center gap-space-xs px-space-md py-2.5 rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container-low transition-all shadow-sm font-label-lg text-label-lg" id="btn-export-roster" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary group-hover:text-primary transition-colors">download</span>
+<span>Export Staff Roster</span>
+<span class="font-label-caps text-[10px] uppercase bg-surface-container px-1.5 py-0.5 rounded text-on-surface-variant">CSV/XLSX</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-lg py-2.5 rounded-full bg-primary-container text-on-primary hover:bg-primary transition-all shadow-[0_4px_16px_rgba(242,107,33,0.3)] active:scale-95 font-label-lg text-label-lg" id="btn-open-drawer" type="button">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+<span>+ Add New Staff</span>
+</button>
+</div>
+</div>
+<!-- Top Summary Metric Bento Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-xl">
+<!-- Card 1: Total Personnel -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-[0_4px_16px_rgba(74,44,29,0.04)] relative overflow-hidden group hover:shadow-[0_8px_24px_rgba(74,44,29,0.08)] transition-all">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-primary-fixed/20 pointer-events-none group-hover:scale-125 transition-transform duration-500"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">Total Personnel</span>
+<span class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+</span>
+</div>
+<div class="flex items-baseline gap-space-xs mb-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">24</span>
+<span class="font-label-lg text-label-lg text-on-surface-variant">Roster Count</span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+<span>+3 seasonal relief covers active</span>
+</div>
+</div>
+<!-- Card 2: Active On Shift -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-[0_4px_16px_rgba(74,44,29,0.04)] relative overflow-hidden group hover:shadow-[0_8px_24px_rgba(74,44,29,0.08)] transition-all">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-secondary-fixed/30 pointer-events-none group-hover:scale-125 transition-transform duration-500"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">Active On Shift</span>
+<span class="w-8 h-8 rounded-full bg-secondary-container/50 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">timer</span>
+</span>
+</div>
+<div class="flex items-baseline gap-space-xs mb-space-xs">
+<span class="font-headline-lg text-headline-lg text-secondary tracking-tight font-bold">14</span>
+<span class="font-label-lg text-label-lg text-on-surface-variant">Cooks &amp; Clerks</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-md text-label-md truncate">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="truncate">Hearth, Salad Lab, Bakery &amp; Lockers</span>
+</div>
+</div>
+<!-- Card 3: Role Distribution -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-[0_4px_16px_rgba(74,44,29,0.04)] relative overflow-hidden group hover:shadow-[0_8px_24px_rgba(74,44,29,0.08)] transition-all">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">Role Distribution</span>
+<span class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">pie_chart</span>
+</span>
+</div>
+<!-- Mini stacked visual distribution bar -->
+<div class="w-full h-2 rounded-full bg-surface-container flex overflow-hidden mb-space-sm">
+<div class="h-full bg-primary" style="width: 17%;" title="4 Leads"></div>
+<div class="h-full bg-primary-container" style="width: 50%;" title="12 Line Cooks"></div>
+<div class="h-full bg-secondary" style="width: 21%;" title="5 Collection Desk"></div>
+<div class="h-full bg-tertiary" style="width: 12%;" title="3 Managers"></div>
+</div>
+<div class="grid grid-cols-2 gap-x-2 gap-y-1 font-label-caps text-[10px] text-on-surface-variant uppercase">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>4 Leads</span>
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>12 Prep Cooks</span>
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>5 Collection Clerks</span>
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>3 Managers</span>
+</div>
+</div>
+<!-- Card 4: Pending Invites -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-[0_4px_16px_rgba(74,44,29,0.04)] relative overflow-hidden group hover:shadow-[0_8px_24px_rgba(74,44,29,0.08)] transition-all">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-surface-container pointer-events-none group-hover:scale-125 transition-transform duration-500"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">SSO Verification</span>
+<span class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">domain_verification</span>
+</span>
+</div>
+<div class="flex items-baseline gap-space-xs mb-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">2</span>
+<span class="font-label-lg text-label-lg text-on-surface-variant">Pending Acceptance</span>
+</div>
+<div class="flex items-center gap-1.5 text-outline font-label-md text-label-md">
+<span class="material-symbols-outlined text-[15px]">mail</span>
+<span>Institutional domain @campus.edu</span>
+</div>
+</div>
+</div>
+<!-- Filter & Controls Toolbar -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-[0_4px_16px_rgba(74,44,29,0.04)] mb-space-lg flex flex-col xl:flex-row gap-space-md xl:items-center justify-between">
+<!-- Search Bar with Live Clear -->
+<div class="relative flex-1 min-w-[280px]">
+<span class="absolute left-space-md top-1/2 -translate-y-1/2 material-symbols-outlined text-outline text-[20px] pointer-events-none">search</span>
+<input class="w-full pl-11 pr-space-md py-2.5 rounded-full bg-surface-container-low/70 text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all" id="staff-search-input" placeholder="Search by staff name, email, or badge ID..." type="text"/>
+</div>
+<!-- Dropdown Filters Group -->
+<div class="flex flex-wrap sm:flex-nowrap items-center gap-space-sm">
+<!-- Station Filter -->
+<div class="relative shrink-0">
+<select class="appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md px-4 py-2.5 pr-8 rounded-full hover:bg-surface-container transition-colors focus:outline-none cursor-pointer" id="filter-station">
+<option value="all">All Culinary Lines</option>
+<option value="hearth">Woodfire Hearth</option>
+<option value="salad">Botanical Salad Lab</option>
+<option value="bakery">Artisanal Bakery</option>
+<option value="lockers">Smart Locker Desk</option>
+</select>
+<span class="material-symbols-outlined text-[16px] text-outline absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none">arrow_drop_down</span>
+</div>
+<!-- Role Filter -->
+<div class="relative shrink-0">
+<select class="appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md px-4 py-2.5 pr-8 rounded-full hover:bg-surface-container transition-colors focus:outline-none cursor-pointer" id="filter-role">
+<option value="all">All Roles</option>
+<option value="lead">Executive / Station Lead</option>
+<option value="cook">Line Cook / Prep Chef</option>
+<option value="clerk">Collection Desk Expediter</option>
+<option value="manager">Shift Manager</option>
+</select>
+<span class="material-symbols-outlined text-[16px] text-outline absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none">arrow_drop_down</span>
+</div>
+<!-- Status Filter -->
+<div class="relative shrink-0">
+<select class="appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md px-4 py-2.5 pr-8 rounded-full hover:bg-surface-container transition-colors focus:outline-none cursor-pointer" id="filter-status">
+<option value="all">All Statuses</option>
+<option value="active">Active On Shift</option>
+<option value="break">On Break</option>
+<option value="offline">Offline</option>
+<option value="pending">Pending Invite</option>
+<option value="suspended">Suspended</option>
+</select>
+<span class="material-symbols-outlined text-[16px] text-outline absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none">arrow_drop_down</span>
+</div>
+<!-- Reset / Filter Clear -->
+<button class="w-9 h-9 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center justify-center transition-colors" id="btn-reset-filters" title="Reset all filters" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+</button>
+</div>
+</div>
+<!-- Main Staff Management Data Table Card -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-[0_4px_16px_rgba(74,44,29,0.04)] overflow-hidden flex flex-col mb-space-xl">
+<!-- Active Table Action Bar (shown when rows selected) -->
+<div class="hidden px-space-lg py-space-sm bg-surface-container-high items-center justify-between transition-all" id="batch-action-bar">
+<div class="flex items-center gap-space-md">
+<span class="font-label-caps text-label-caps uppercase text-primary font-bold"><span id="selected-count">0</span> Staff Selected</span>
+<div class="h-4 w-px bg-outline-variant"></div>
+<button class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">sync_alt</span> Reassign Shift
+        </button>
+<button class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">verified</span> HACCP Audit Renewal
+        </button>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps uppercase" id="batch-dismiss" type="button">Dismiss</button>
+</div>
+<!-- Data Table Container -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-caps text-label-caps uppercase tracking-wider">
+<th class="py-space-md pl-space-lg pr-space-sm w-12">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" id="select-all-checkbox" type="checkbox"/>
+</th>
+<th class="py-space-md px-space-md">Staff Member</th>
+<th class="py-space-md px-space-md">Campus Identity</th>
+<th class="py-space-md px-space-md">Role &amp; Culinary Station</th>
+<th class="py-space-md px-space-md">Assigned Shift</th>
+<th class="py-space-md px-space-md">Status</th>
+<th class="py-space-md px-space-md">Safety / HACCP</th>
+<th class="py-space-md pr-space-lg pl-space-md text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-sm text-body-sm text-on-surface" id="staff-table-body">
+<!-- Row 1: Chef Laurent Moreau -->
+<tr class="hover:bg-surface-bright/70 transition-colors group" data-role="lead" data-station="hearth" data-status="active">
+<td class="py-space-md pl-space-lg pr-space-sm">
+<input class="row-checkbox w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary font-headline-sm flex items-center justify-center font-bold shrink-0 shadow-sm">
+                  LM
+                </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-bold group-hover:text-primary transition-colors">Chef Laurent Moreau</span>
+<div class="flex items-center gap-1 font-label-caps text-label-caps text-outline">
+<span>#CG-STF-014</span>
+<span>•</span>
+<span class="text-secondary font-bold">Shift Supervisor</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">laurent.m@campus.edu</span>
+<span class="inline-flex items-center gap-1 text-[11px] text-secondary font-label-caps uppercase">
+<span class="material-symbols-outlined text-[13px]">verified_user</span> SSO Linked
+                </span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1 items-start">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-primary font-label-caps text-[11px] font-bold">
+                  Executive Hearth Lead
+                </span>
+<span class="text-on-surface-variant font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">local_fire_department</span>
+                  Woodfire Hearth #2
+                </span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">07:00 – 15:30</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Morning &amp; Lunch Rush</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container/60 text-secondary font-label-md text-label-md font-bold">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+                Active On Shift
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+<span>HACCP L3 Lead</span>
+</span>
+</td>
+<td class="py-space-md pr-space-lg pl-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="w-8 h-8 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center" title="Edit Permissions" type="button">
+<span class="material-symbols-outlined text-[18px]">manage_accounts</span>
+</button>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-secondary transition-colors flex items-center justify-center" title="Reassign Station" type="button">
+<span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+</button>
+<button class="w-8 h-8 rounded-full hover:bg-error-container/40 text-on-surface-variant hover:text-error transition-colors flex items-center justify-center" title="Deactivate" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Chef Yoko Tanaka -->
+<tr class="hover:bg-surface-bright/70 transition-colors group" data-role="lead" data-station="salad" data-status="active">
+<td class="py-space-md pl-space-lg pr-space-sm">
+<input class="row-checkbox w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary text-on-secondary font-headline-sm flex items-center justify-center font-bold shrink-0 shadow-sm">
+                  YT
+                </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-bold group-hover:text-primary transition-colors">Chef Yoko Tanaka</span>
+<div class="flex items-center gap-1 font-label-caps text-label-caps text-outline">
+<span>#CG-STF-022</span>
+<span>•</span>
+<span class="text-secondary font-bold">Nutrition Lead</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">yoko.t@campus.edu</span>
+<span class="inline-flex items-center gap-1 text-[11px] text-secondary font-label-caps uppercase">
+<span class="material-symbols-outlined text-[13px]">verified_user</span> SSO Linked
+                </span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1 items-start">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed/40 text-secondary font-label-caps text-[11px] font-bold">
+                  Botanical Salad Lead
+                </span>
+<span class="text-on-surface-variant font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">spa</span>
+                  Salad Lab &amp; Cold Prep
+                </span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">08:30 – 16:30</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Core Station Shift</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container/60 text-secondary font-label-md text-label-md font-bold">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                Active On Shift
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+<span>HACCP L2 Verified</span>
+</span>
+</td>
+<td class="py-space-md pr-space-lg pl-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="w-8 h-8 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center" title="Edit Permissions" type="button">
+<span class="material-symbols-outlined text-[18px]">manage_accounts</span>
+</button>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-secondary transition-colors flex items-center justify-center" title="Reassign Station" type="button">
+<span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+</button>
+<button class="w-8 h-8 rounded-full hover:bg-error-container/40 text-on-surface-variant hover:text-error transition-colors flex items-center justify-center" title="Deactivate" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Baker Marie Dupont -->
+<tr class="hover:bg-surface-bright/70 transition-colors group" data-role="lead" data-station="bakery" data-status="break">
+<td class="py-space-md pl-space-lg pr-space-sm">
+<input class="row-checkbox w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary-fixed text-primary font-headline-sm flex items-center justify-center font-bold shrink-0 shadow-sm">
+                  MD
+                </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-bold group-hover:text-primary transition-colors">Baker Marie Dupont</span>
+<div class="flex items-center gap-1 font-label-caps text-label-caps text-outline">
+<span>#CG-STF-008</span>
+<span>•</span>
+<span class="text-on-surface-variant font-bold">Artisan Pastry</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">marie.d@campus.edu</span>
+<span class="inline-flex items-center gap-1 text-[11px] text-secondary font-label-caps uppercase">
+<span class="material-symbols-outlined text-[13px]">verified_user</span> SSO Linked
+                </span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1 items-start">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-label-caps text-[11px] font-bold">
+                  Pastry &amp; Bakery Lead
+                </span>
+<span class="text-on-surface-variant font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">bakery_dining</span>
+                  Hearth Deck Oven
+                </span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">05:00 – 13:00</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dawn Bake Rush</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-bold">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                On Break (30m)
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+<span>HACCP L2 Verified</span>
+</span>
+</td>
+<td class="py-space-md pr-space-lg pl-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="w-8 h-8 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center" title="Edit Permissions" type="button">
+<span class="material-symbols-outlined text-[18px]">manage_accounts</span>
+</button>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-secondary transition-colors flex items-center justify-center" title="Reassign Station" type="button">
+<span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+</button>
+<button class="w-8 h-8 rounded-full hover:bg-error-container/40 text-on-surface-variant hover:text-error transition-colors flex items-center justify-center" title="Deactivate" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Marco Valenti -->
+<tr class="hover:bg-surface-bright/70 transition-colors group" data-role="cook" data-station="salad" data-status="active">
+<td class="py-space-md pl-space-lg pr-space-sm">
+<input class="row-checkbox w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container text-on-surface font-headline-sm flex items-center justify-center font-bold shrink-0 shadow-sm">
+                  MV
+                </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-bold group-hover:text-primary transition-colors">Marco Valenti</span>
+<div class="flex items-center gap-1 font-label-caps text-label-caps text-outline">
+<span>#CG-STF-031</span>
+<span>•</span>
+<span class="text-on-surface-variant">Cold Prep Line</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">marco.v@campus.edu</span>
+<span class="inline-flex items-center gap-1 text-[11px] text-secondary font-label-caps uppercase">
+<span class="material-symbols-outlined text-[13px]">verified_user</span> SSO Linked
+                </span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1 items-start">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-caps text-[11px] font-bold">
+                  Line Cook / Prep Chef
+                </span>
+<span class="text-on-surface-variant font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">grass</span>
+                  Cold Salad Bar &amp; Bowls
+                </span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">09:00 – 17:00</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Full Day Prep</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container/60 text-secondary font-label-md text-label-md font-bold">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                Active On Shift
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+<span>HACCP L1 Basic</span>
+</span>
+</td>
+<td class="py-space-md pr-space-lg pl-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="w-8 h-8 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center" title="Edit Permissions" type="button">
+<span class="material-symbols-outlined text-[18px]">manage_accounts</span>
+</button>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-secondary transition-colors flex items-center justify-center" title="Reassign Station" type="button">
+<span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+</button>
+<button class="w-8 h-8 rounded-full hover:bg-error-container/40 text-on-surface-variant hover:text-error transition-colors flex items-center justify-center" title="Deactivate" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Samira Khan -->
+<tr class="hover:bg-surface-bright/70 transition-colors group" data-role="clerk" data-station="lockers" data-status="active">
+<td class="py-space-md pl-space-lg pr-space-sm">
+<input class="row-checkbox w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed text-secondary font-headline-sm flex items-center justify-center font-bold shrink-0 shadow-sm">
+                  SK
+                </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-bold group-hover:text-primary transition-colors">Samira Khan</span>
+<div class="flex items-center gap-1 font-label-caps text-label-caps text-outline">
+<span>#CG-STF-019</span>
+<span>•</span>
+<span class="text-secondary font-bold">Fast Expedite</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">samira.k@campus.edu</span>
+<span class="inline-flex items-center gap-1 text-[11px] text-secondary font-label-caps uppercase">
+<span class="material-symbols-outlined text-[13px]">verified_user</span> SSO Linked
+                </span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1 items-start">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container/40 text-secondary font-label-caps text-[11px] font-bold">
+                  Collection Desk Expediter
+                </span>
+<span class="text-on-surface-variant font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">inventory_2</span>
+                  Hub Alpha &amp; Locker Wall #1
+                </span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">11:00 – 15:00</span>
+<span class="font-body-sm text-body-sm text-primary font-bold">Lunch Rush Slot</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container/60 text-secondary font-label-md text-label-md font-bold">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                Active On Shift
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-primary">terminal</span>
+<span>SmartLocker Relays</span>
+</span>
+</td>
+<td class="py-space-md pr-space-lg pl-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="w-8 h-8 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center" title="Edit Permissions" type="button">
+<span class="material-symbols-outlined text-[18px]">manage_accounts</span>
+</button>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-secondary transition-colors flex items-center justify-center" title="Reassign Station" type="button">
+<span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+</button>
+<button class="w-8 h-8 rounded-full hover:bg-error-container/40 text-on-surface-variant hover:text-error transition-colors flex items-center justify-center" title="Deactivate" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Lucas Vance (Suspended) -->
+<tr class="hover:bg-error-container/10 transition-colors group" data-role="cook" data-station="hearth" data-status="suspended">
+<td class="py-space-md pl-space-lg pr-space-sm">
+<input class="row-checkbox w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-error-container text-error font-headline-sm flex items-center justify-center font-bold shrink-0 shadow-sm">
+                  LV
+                </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-bold group-hover:text-error transition-colors">Lucas Vance</span>
+<div class="flex items-center gap-1 font-label-caps text-label-caps text-outline">
+<span>#CG-STF-045</span>
+<span>•</span>
+<span class="text-error font-bold">Safety Audit Required</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">lucas.v@campus.edu</span>
+<span class="inline-flex items-center gap-1 text-[11px] text-error font-label-caps uppercase">
+<span class="material-symbols-outlined text-[13px]">gpp_maybe</span> Flagged Lock
+                </span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1 items-start">
+<span class="px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-caps text-[11px] font-bold">
+                  Line Cook (Restricted)
+                </span>
+<span class="text-on-surface-variant font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-error">microwave</span>
+                  Fryer &amp; Rotisserie
+                </span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-outline">10:30 – 18:30</span>
+<span class="font-body-sm text-body-sm text-error">Roster Suspended</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-error-container text-on-error-container font-label-md text-label-md font-bold">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+                Suspended (Review)
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container/50 text-error font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+<span>Audit Pending</span>
+</span>
+</td>
+<td class="py-space-md pr-space-lg pl-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="w-8 h-8 rounded-full hover:bg-secondary-container text-secondary flex items-center justify-center transition-colors" title="Reactivate Account" type="button">
+<span class="material-symbols-outlined text-[18px]">lock_reset</span>
+</button>
+<button class="w-8 h-8 rounded-full hover:bg-error-container text-error flex items-center justify-center transition-colors" title="Revoke Access completely" type="button">
+<span class="material-symbols-outlined text-[18px]">person_remove</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 7: Ananya Patel (Pending) -->
+<tr class="hover:bg-surface-bright/70 transition-colors group" data-role="clerk" data-station="lockers" data-status="pending">
+<td class="py-space-md pl-space-lg pr-space-sm">
+<input class="row-checkbox w-4 h-4 rounded accent-primary cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface-variant font-headline-sm flex items-center justify-center font-bold shrink-0 shadow-sm border border-dashed border-outline-variant">
+                  AP
+                </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-bold group-hover:text-primary transition-colors">Ananya Patel</span>
+<div class="flex items-center gap-1 font-label-caps text-label-caps text-outline">
+<span>#CG-STF-NEW</span>
+<span>•</span>
+<span class="text-primary font-bold">Onboarding</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">a.patel@campus.edu</span>
+<span class="inline-flex items-center gap-1 text-[11px] text-outline font-label-caps uppercase">
+<span class="material-symbols-outlined text-[13px]">pending</span> Sent 2h ago
+                </span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1 items-start">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-[11px] font-bold">
+                  Junior Expediter
+                </span>
+<span class="text-on-surface-variant font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-tertiary">storefront</span>
+                  Collection Desk
+                </span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Shift Pending</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Orientation Scheduled</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-bold">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+                Pending Acceptance
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-outline font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">school</span>
+<span>In Training</span>
+</span>
+</td>
+<td class="py-space-md pr-space-lg pl-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="w-8 h-8 rounded-full hover:bg-surface-container text-primary flex items-center justify-center transition-colors" title="Resend Invite Email" type="button">
+<span class="material-symbols-outlined text-[18px]">forward_to_inbox</span>
+</button>
+<button class="w-8 h-8 rounded-full hover:bg-error-container/40 text-on-surface-variant hover:text-error flex items-center justify-center transition-colors" title="Revoke Invitation" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination & Selection Summary Footer -->
+<div class="px-space-lg py-space-md bg-surface-container-lowest flex flex-col sm:flex-row items-center justify-between gap-space-md text-on-surface-variant font-label-md text-label-md">
+<div class="flex items-center gap-space-sm">
+<span>Showing <strong class="text-on-surface font-bold">1–7</strong> of 24 culinary team members</span>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1">
+<span>Rows per page:</span>
+<select class="bg-transparent text-on-surface font-bold cursor-pointer focus:outline-none">
+<option>10</option>
+<option>25</option>
+<option>50</option>
+</select>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="w-8 h-8 rounded-full bg-surface-container-low text-outline cursor-not-allowed flex items-center justify-center" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-primary text-on-primary font-bold flex items-center justify-center" type="button">
+          1
+        </button>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container text-on-surface flex items-center justify-center transition-colors" type="button">
+          2
+        </button>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container text-on-surface flex items-center justify-center transition-colors" type="button">
+          3
+        </button>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container text-on-surface flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Visual Station Workload / Allocation Strip -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mb-space-lg">
+<!-- Card 1: Hearth Station Load -->
+<div class="p-space-md rounded-2xl bg-surface-container-low/70 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">local_fire_department</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Woodfire Hearth Line</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">5 Cooks Assigned • 100% Filled</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-container/60 text-secondary font-label-caps text-label-caps uppercase font-bold">Optimal</span>
+</div>
+<!-- Card 2: Salad Lab Load -->
+<div class="p-space-md rounded-2xl bg-surface-container-low/70 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">psychiatry</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Botanical Salad Lab</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">4 Cooks Assigned • 1 Cover needed</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-caps text-label-caps uppercase font-bold">Relief Alert</span>
+</div>
+<!-- Card 3: Collection Desk Load -->
+<div class="p-space-md rounded-2xl bg-surface-container-low/70 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-[20px]">dock</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Smart Lockers &amp; Expediters</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">5 Clerks Active • Fast Flow</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-container/60 text-secondary font-label-caps text-label-caps uppercase font-bold">Sync Good</span>
+</div>
+</div>
+<!-- Slide-Over Drawer Backdrop & Drawer: "Add New Team Member" -->
+<div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-sm z-50 transition-opacity duration-300 opacity-0 pointer-events-none" id="drawer-backdrop"></div>
+<div class="fixed top-0 right-0 h-full w-full max-w-lg bg-surface-container-lowest shadow-[0_16px_40px_rgba(74,44,29,0.18)] z-50 transform translate-x-full transition-transform duration-300 ease-out flex flex-col" id="staff-drawer">
+<!-- Drawer Header -->
+<div class="p-space-lg bg-surface-container-low/80 flex items-center justify-between shrink-0">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 text-primary font-label-caps text-label-caps uppercase tracking-wider mb-1 font-bold">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+<span>Culinary Credentialing</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Add New Team Member</h2>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" id="btn-close-drawer" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Drawer Form Body -->
+<form class="flex-1 overflow-y-auto p-space-lg flex flex-col gap-space-lg" id="add-staff-form">
+<!-- Full Name Field -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-bold" for="new-staff-name">Full Legal Name</label>
+<input class="w-full px-space-md py-2.5 rounded-xl bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all" id="new-staff-name" placeholder="e.g. Chef Diane Boucher" required="" type="text"/>
+</div>
+<!-- Campus Institutional Email Field -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-bold flex items-center justify-between" for="new-staff-email">
+<span>Institutional SSO Email</span>
+<span class="font-label-caps text-[11px] text-secondary lowercase">@campus.edu domain only</span>
+</label>
+<div class="relative">
+<input class="w-full pl-10 pr-space-md py-2.5 rounded-xl bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all" id="new-staff-email" placeholder="e.g. d.boucher@campus.edu" required="" type="email"/>
+<span class="material-symbols-outlined text-[18px] text-outline absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none">mail</span>
+</div>
+</div>
+<!-- Role Selection & Primary Station Assignment Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Role Dropdown -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-bold" for="new-staff-role">Designated Role</label>
+<div class="relative">
+<select class="w-full appearance-none px-space-md py-2.5 pr-8 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest cursor-pointer" id="new-staff-role">
+<option value="lead">Station Lead / Head Cook</option>
+<option selected="" value="cook">Line Cook / Prep Chef</option>
+<option value="clerk">Collection Desk Expediter</option>
+<option value="manager">Shift Operations Manager</option>
+</select>
+<span class="material-symbols-outlined text-[16px] text-outline absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">arrow_drop_down</span>
+</div>
+</div>
+<!-- Station Dropdown -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-bold" for="new-staff-station">Assigned Culinary Line</label>
+<div class="relative">
+<select class="w-full appearance-none px-space-md py-2.5 pr-8 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest cursor-pointer" id="new-staff-station">
+<option value="Woodfire Hearth #1">Woodfire Hearth Line</option>
+<option value="Salad Lab &amp; Bowls">Botanical Salad Lab</option>
+<option value="Hearth Bakery">Artisanal Bakery &amp; Ovens</option>
+<option value="Collection Desk Hub Alpha">Collection Desk &amp; Lockers</option>
+</select>
+<span class="material-symbols-outlined text-[16px] text-outline absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">arrow_drop_down</span>
+</div>
+</div>
+</div>
+<!-- Shift Schedule Pickers -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-bold">Standard Shift Hours</label>
+<div class="grid grid-cols-2 gap-space-md">
+<div class="relative">
+<input class="w-full px-space-md py-2.5 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none cursor-pointer" id="shift-start" type="time" value="08:00"/>
+</div>
+<div class="relative">
+<input class="w-full px-space-md py-2.5 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none cursor-pointer" id="shift-end" type="time" value="16:30"/>
+</div>
+</div>
+</div>
+<!-- Permission Matrix Toggles -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant font-bold">Operational Permissions</span>
+<!-- Toggle 1: 86 Items -->
+<label class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low/70 hover:bg-surface-container-low cursor-pointer transition-colors">
+<div class="flex flex-col pr-2">
+<span class="font-label-md text-label-md text-on-surface font-bold">Station 86 / Mark Out-of-Stock</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Can instantly mark station ingredients unavailable</span>
+</div>
+<input checked="" class="w-5 h-5 rounded text-primary focus:ring-0 accent-primary cursor-pointer" type="checkbox"/>
+</label>
+<!-- Toggle 2: Edit Live Menus -->
+<label class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low/70 hover:bg-surface-container-low cursor-pointer transition-colors">
+<div class="flex flex-col pr-2">
+<span class="font-label-md text-label-md text-on-surface font-bold">Modify Menu Item Details</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Update item narratives, calories, and botanical tags</span>
+</div>
+<input class="w-5 h-5 rounded text-primary focus:ring-0 accent-primary cursor-pointer" type="checkbox"/>
+</label>
+<!-- Toggle 3: Approve Refunds -->
+<label class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low/70 hover:bg-surface-container-low cursor-pointer transition-colors">
+<div class="flex flex-col pr-2">
+<span class="font-label-md text-label-md text-on-surface font-bold">Approve Order Voids &amp; Refunds</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Authorize student card credit adjustments</span>
+</div>
+<input class="w-5 h-5 rounded text-primary focus:ring-0 accent-primary cursor-pointer" type="checkbox"/>
+</label>
+<!-- Toggle 4: SmartLocker Manual Override -->
+<label class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low/70 hover:bg-surface-container-low cursor-pointer transition-colors">
+<div class="flex flex-col pr-2">
+<span class="font-label-md text-label-md text-on-surface font-bold">Emergency SmartLocker Override</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Manual solenoid release keys on pickup towers</span>
+</div>
+<input checked="" class="w-5 h-5 rounded text-primary focus:ring-0 accent-primary cursor-pointer" type="checkbox"/>
+</label>
+</div>
+<!-- Safety & HACCP Certification Status -->
+<div class="p-space-sm rounded-xl bg-secondary-fixed/30 flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-secondary mt-0.5">verified_user</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-secondary font-bold">Automated HACCP Sync</span>
+<p class="font-body-sm text-[12px] text-on-surface-variant leading-tight">
+            Upon accepting the invitation, the member will be routed to confirm their campus food handler credentials and cold-chain compliance certificate.
+          </p>
+</div>
+</div>
+</form>
+<!-- Drawer Footer Actions -->
+<div class="p-space-lg bg-surface-container-low flex items-center justify-end gap-space-sm shrink-0">
+<button class="px-space-md py-2.5 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-colors font-label-lg text-label-lg" id="btn-cancel-drawer" type="button">
+        Cancel
+      </button>
+<button class="flex items-center gap-1.5 px-space-lg py-2.5 rounded-full bg-primary-container text-on-primary hover:bg-primary transition-all shadow-[0_4px_16px_rgba(242,107,33,0.3)] active:scale-95 font-label-lg text-label-lg" id="btn-submit-staff" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Save &amp; Send Invite</span>
+</button>
+</div>
+</div>
+<!-- Notification Toast Component for Feedback -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 flex items-center gap-space-sm px-space-md py-3 rounded-2xl bg-on-surface text-surface shadow-[0_8px_24px_rgba(74,44,29,0.2)]" id="toast-notification">
+<span class="material-symbols-outlined text-[20px] text-secondary" id="toast-icon">check_circle</span>
+<span class="font-label-md text-label-md" id="toast-message">Staff roster record updated successfully.</span>
+</div>
+</div>
+<script>
+  (function initStaffManagement() {
+    // Elements
+    const openDrawerBtn = document.getElementById('btn-open-drawer');
+    const closeDrawerBtn = document.getElementById('btn-close-drawer');
+    const cancelDrawerBtn = document.getElementById('btn-cancel-drawer');
+    const drawer = document.getElementById('staff-drawer');
+    const backdrop = document.getElementById('drawer-backdrop');
+    const submitStaffBtn = document.getElementById('btn-submit-staff');
+    const exportBtn = document.getElementById('btn-export-roster');
+    
+    // Filters & Search
+    const searchInput = document.getElementById('staff-search-input');
+    const stationFilter = document.getElementById('filter-station');
+    const roleFilter = document.getElementById('filter-role');
+    const statusFilter = document.getElementById('filter-status');
+    const resetFiltersBtn = document.getElementById('btn-reset-filters');
+    const tableBody = document.getElementById('staff-table-body');
+    const rows = tableBody ? tableBody.querySelectorAll('tr') : [];
+    
+    // Batch Selection
+    const selectAllBox = document.getElementById('select-all-checkbox');
+    const rowCheckboxes = document.querySelectorAll('.row-checkbox');
+    const batchBar = document.getElementById('batch-action-bar');
+    const batchCount = document.getElementById('selected-count');
+    const batchDismiss = document.getElementById('batch-dismiss');
+
+    // Toast
+    const toast = document.getElementById('toast-notification');
+    const toastMsg = document.getElementById('toast-message');
+
+    function showToast(text, isError = false) {
+      if (!toast) return;
+      toastMsg.textContent = text;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 3500);
+    }
+
+    // Drawer Management
+    function openDrawer() {
+      drawer.classList.remove('translate-x-full');
+      backdrop.classList.remove('opacity-0', 'pointer-events-none');
+      backdrop.classList.add('opacity-100', 'pointer-events-auto');
+    }
+
+    function closeDrawer() {
+      drawer.classList.add('translate-x-full');
+      backdrop.classList.remove('opacity-100', 'pointer-events-auto');
+      backdrop.classList.add('opacity-0', 'pointer-events-none');
+    }
+
+    if (openDrawerBtn) openDrawerBtn.addEventListener('click', openDrawer);
+    if (closeDrawerBtn) closeDrawerBtn.addEventListener('click', closeDrawer);
+    if (cancelDrawerBtn) cancelDrawerBtn.addEventListener('click', closeDrawer);
+    if (backdrop) backdrop.addEventListener('click', closeDrawer);
+
+    // Form Submission
+    if (submitStaffBtn) {
+      submitStaffBtn.addEventListener('click', () => {
+        const nameInput = document.getElementById('new-staff-name');
+        const emailInput = document.getElementById('new-staff-email');
+
+        if (!nameInput.value.trim()) {
+          showToast('Please specify a staff member name', true);
+          nameInput.focus();
+          return;
+        }
+
+        if (!emailInput.value.trim() || !emailInput.value.includes('@campus.edu')) {
+          showToast('Must use an institutional @campus.edu address', true);
+          emailInput.focus();
+          return;
+        }
+
+        closeDrawer();
+        showToast(`Invitation successfully dispatched to ${emailInput.value}`);
+        nameInput.value = '';
+        emailInput.value = '';
+      });
+    }
+
+    // Export Action
+    if (exportBtn) {
+      exportBtn.addEventListener('click', () => {
+        showToast('Staff roster CSV compilation exported.');
+      });
+    }
+
+    // Filtering Logic
+    function filterTable() {
+      const query = (searchInput.value || '').toLowerCase().trim();
+      const station = stationFilter.value;
+      const role = roleFilter.value;
+      const status = statusFilter.value;
+
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        const rowStation = row.getAttribute('data-station');
+        const rowRole = row.getAttribute('data-role');
+        const rowStatus = row.getAttribute('data-status');
+
+        const matchQuery = !query || text.includes(query);
+        const matchStation = station === 'all' || rowStation === station;
+        const matchRole = role === 'all' || rowRole === role;
+        const matchStatus = status === 'all' || rowStatus === status;
+
+        if (matchQuery && matchStation && matchRole && matchStatus) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
+    if (searchInput) searchInput.addEventListener('input', filterTable);
+    if (stationFilter) stationFilter.addEventListener('change', filterTable);
+    if (roleFilter) roleFilter.addEventListener('change', filterTable);
+    if (statusFilter) statusFilter.addEventListener('change', filterTable);
+
+    if (resetFiltersBtn) {
+      resetFiltersBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        stationFilter.value = 'all';
+        roleFilter.value = 'all';
+        statusFilter.value = 'all';
+        filterTable();
+        showToast('All roster filters reset.');
+      });
+    }
+
+    // Batch Selection Logic
+    function updateBatchBar() {
+      const selected = Array.from(rowCheckboxes).filter(cb => cb.checked);
+      if (selected.length > 0) {
+        batchBar.classList.remove('hidden');
+        batchBar.classList.add('flex');
+        batchCount.textContent = selected.length;
+      } else {
+        batchBar.classList.remove('flex');
+        batchBar.classList.add('hidden');
+      }
+    }
+
+    if (selectAllBox) {
+      selectAllBox.addEventListener('change', (e) => {
+        rowCheckboxes.forEach(cb => {
+          cb.checked = e.target.checked;
+        });
+        updateBatchBar();
+      });
+    }
+
+    rowCheckboxes.forEach(cb => {
+      cb.addEventListener('change', () => {
+        if (!cb.checked && selectAllBox.checked) {
+          selectAllBox.checked = false;
+        }
+        updateBatchBar();
+      });
+    });
+
+    if (batchDismiss) {
+      batchDismiss.addEventListener('click', () => {
+        if (selectAllBox) selectAllBox.checked = false;
+        rowCheckboxes.forEach(cb => cb.checked = false);
+        updateBatchBar();
+      });
+    }
+  })();
+</script></main></div></body></html>

@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-container":"#f26b21","tertiary-fixed":"#e8e2d6","surface-container":"#ffeae1","on-tertiary-fixed-variant":"#49473e","primary-fixed-dim":"#ffb595","tertiary":"#615e55","secondary":"#3d6838","surface-container-low":"#fff1eb","on-surface":"#2e1508","on-secondary-fixed":"#002202","on-primary-fixed-variant":"#7c2e00","secondary-fixed-dim":"#a2d398","surface-bright":"#fff8f6","on-tertiary-fixed":"#1d1c14","on-secondary-container":"#426f3d","surface-container-lowest":"#ffffff","on-error":"#ffffff","on-background":"#2e1508","surface-dim":"#ffd0bb","outline-variant":"#e0c0b2","surface":"#fff8f6","surface-tint":"#a23f00","surface-variant":"#ffdbcb","surface-container-high":"#ffe2d6","inverse-primary":"#ffb595","secondary-container":"#bdf0b2","outline":"#8c7166","inverse-surface":"#47291a","error":"#ba1a1a","tertiary-container":"#98948a","on-primary-fixed":"#351000","on-tertiary":"#ffffff","on-primary-container":"#511c00","error-container":"#ffdad6","on-error-container":"#93000a","on-tertiary-container":"#2f2d25","inverse-on-surface":"#ffede6","surface-container-highest":"#ffdbcb","secondary-fixed":"#bdf0b2","on-primary":"#ffffff","tertiary-fixed-dim":"#cbc6bb","on-surface-variant":"#594238","primary-fixed":"#ffdbcd","primary":"#a23f00","on-secondary-fixed-variant":"#255022","on-secondary":"#ffffff","background":"#fff8f6"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{gutter:"1.5rem","space-sm":"0.5rem",margin:"2.5rem","space-xl":"2.25rem","margin-mobile":"1.25rem","space-xs":"0.25rem","space-lg":"1.5rem","gutter-mobile":"1rem","space-md":"1rem"},fontFamily:{"headline-lg":["Playfair Display"],"display-hero-mobile":["Playfair Display"],"body-sm":["DM Sans"],"display-hero":["Playfair Display"],"headline-sm":["Playfair Display"],"label-lg":["DM Sans"],"label-caps":["DM Sans"],"headline-md":["Playfair Display"],"body-lg":["DM Sans"],"label-md":["DM Sans"],"body-md":["DM Sans"],"queue-token-lg":["DM Sans"],"headline-lg-mobile":["Playfair Display"]},fontSize:{"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.01em",fontWeight:"600"}],"display-hero-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}],"display-hero":["48px",{lineHeight:"56px",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-sm":["20px",{lineHeight:"28px",fontWeight:"600"}],"label-lg":["14px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"600"}],"label-caps":["11px",{lineHeight:"14px",letterSpacing:"0.08em",fontWeight:"700"}],"headline-md":["24px",{lineHeight:"32px",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"28px",fontWeight:"400"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"body-md":["15px",{lineHeight:"22px",fontWeight:"400"}],"queue-token-lg":["44px",{lineHeight:"48px",letterSpacing:"0.02em",fontWeight:"700"}],"headline-lg-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.01em",fontWeight:"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(74,44,29,0.06)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="px-space-lg pt-space-lg pb-space-md flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><img alt="Artisanal food and botanical leaf logo for Chez Gourmet Smart Canteen. Elegant stylized fork/spoon and fresh green leaf motif, warm deep orange #F26B21 and natural forest green #3F6B3A on transparent background, minimalist vector style, sophisticated culinary brand mark. Design context: - Primary color: #f26b21 - Font: playfairDisplay - Mode: light - Roundness: rounded-md. The logo should be visually consistent with these brand tokens." class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vo05zV1l30OuCCZOZbn3gCKuwvOGC4lSVWuMF41PLFVCvr_AZGw1VFEkUe_hZNYCwEMZkVjTJG25VgrvdmeGO8hsxL9Su69cgz3_qX6VTh746xH0MZXd12WBr-kjGZanPe9ze7jVgs7wO-dGIiDjXA2UvWaKcmhVnQ-uqewato6cDKLn1wLBTR6cxRulNdZdnZBWASGbcLuRyMw4jL-YShKFzL0X3Vp5pboz_4mw0lqLx4fC1umB0Zr5uh"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Chez Gourmet</span></div><div class="flex items-center gap-space-xs text-on-surface-variant font-label-caps text-label-caps uppercase tracking-wider pl-space-xs"><span>Staff Ops Portal</span><span class="text-outline-variant">•</span><span>South Atrium</span></div></div><div class="px-space-md py-space-xs"><div class="h-px w-full bg-surface-container-low"></div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-sm" data-active-classes="bg-surface-container text-primary font-label-lg rounded-xl shadow-[0_2px_8px_rgba(74,44,29,0.04)]"><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="incoming-orders" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span>Incoming Orders</span></div><span class="px-space-sm py-0.5 bg-primary-container text-on-primary font-label-caps text-label-caps rounded-full shadow-sm">4 New</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="live-queue" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">soup_kitchen</span><span>Live Queue</span></div><span class="px-space-sm py-0.5 bg-secondary-container text-secondary font-label-caps text-label-caps rounded-full">12 In Prep</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="menu-availability" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span>Menu Availability</span></div><span class="px-space-sm py-0.5 bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps rounded-full">86 Stock</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="collection-desk" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">shelves</span><span>Collection Desk</span></div><span class="material-symbols-outlined text-outline-variant text-[16px]">chevron_right</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="report-problem" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">flag</span><span>Report Problem</span></div><span class="material-symbols-outlined text-outline-variant text-[16px]">chevron_right</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="activity-log" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">history</span><span>Activity Log</span></div><span class="material-symbols-outlined text-outline-variant text-[16px]">chevron_right</span></a></nav></div><div class="flex flex-col p-space-md gap-space-sm bg-surface-container-low/60"><div class="p-space-sm bg-surface-container-lowest rounded-xl shadow-[0_2px_6px_rgba(74,44,29,0.03)] flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Shift Telemetry</span><span class="inline-flex items-center gap-1 font-label-caps text-label-caps text-secondary font-bold"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>Online</span></div><div class="flex flex-col"><span class="font-label-lg text-label-lg text-on-surface">Chef Laurent</span><span class="font-body-sm text-body-sm text-on-surface-variant">Lead Hearth Cook • Line #2</span></div><div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-md text-label-md"><span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">mode_heat</span>Grill: 340°C</span><span class="text-secondary font-bold">Synced</span></div></div><button class="w-full flex items-center justify-center gap-space-xs py-space-sm px-space-md rounded-xl bg-error-container text-on-error-container hover:bg-error hover:text-on-error font-label-lg text-label-lg transition-colors shadow-sm" type="button"><span class="material-symbols-outlined text-[18px]">e911_emergency</span><span>Kitchen Intercom</span></button><div class="flex items-center justify-between px-space-xs pt-space-xs"><a class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant hover:text-error transition-colors" data-path="logout" href="#"><span class="material-symbols-outlined text-[16px]">logout</span><span>Log Out</span></a><span class="font-label-caps text-label-caps text-outline">v2.4.1</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(74,44,29,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant"><span class="hover:text-on-surface cursor-pointer">Staff Ops</span><span class="text-outline-variant">/</span><span class="hover:text-on-surface cursor-pointer">Hearth Station #2</span><span class="text-outline-variant">/</span><span class="text-on-surface font-bold">Incoming Ticket Queue</span></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 bg-secondary-fixed/50 text-secondary font-label-md text-label-md rounded-full"><span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span><span>Station Online (24ms)</span></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center gap-space-xs px-space-md py-1.5 bg-surface-container-lowest rounded-full shadow-[0_1px_4px_rgba(74,44,29,0.04)] text-on-surface"><span class="material-symbols-outlined text-[16px] text-secondary">schedule</span><span class="font-label-lg text-label-lg">1:14:28 PM</span><span class="text-outline-variant">•</span><span class="font-label-md text-label-md text-primary font-bold">Lunch Service Rush</span></div><button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors shadow-[0_1px_4px_rgba(74,44,29,0.04)] font-label-md text-label-md" type="button"><span class="material-symbols-outlined text-[18px] text-primary">notifications_active</span><span class="hidden sm:inline">Chimes On</span></button><button class="w-8 h-8 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center shadow-[0_1px_4px_rgba(74,44,29,0.04)]" type="button"><span class="material-symbols-outlined text-[18px]">refresh</span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden md:flex flex-col text-left"><span class="font-label-lg text-label-lg text-on-surface leading-tight">Chef Laurent M.</span><span class="font-label-caps text-label-caps text-on-surface-variant leading-tight">Head Station Lead</span></div><button class="w-6 h-6 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">arrow_drop_down</span></button></div></div></header><main class="w-full pt-16 bg-background min-h-screen px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Screen Context / Title Banner -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between pb-space-lg gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm mb-1">
+<span class="px-space-sm py-0.5 rounded-full bg-primary-container text-on-primary font-label-caps text-label-caps uppercase tracking-wider shadow-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+          Live Dispatch Station
+        </span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Bay #4 &amp; Smart Hub Alpha</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Collection Desk &amp; Handover Terminal</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5 max-w-3xl">
+        Optical QR validation, contactless token verification, duplicate handover safeguards, and locker override telemetry.
+      </p>
+</div>
+<!-- State Switcher Bar for Staff Demos & Quick Triage -->
+<div class="flex items-center gap-space-xs bg-surface-container p-1 rounded-xl shadow-inner self-start lg:self-auto flex-wrap">
+<span class="font-label-caps text-label-caps text-on-surface-variant px-space-xs uppercase">Simulate:</span>
+<button class="px-space-sm py-1 rounded-lg text-on-surface font-label-md text-label-md bg-surface-container-lowest shadow-sm hover:bg-surface-bright transition-all flex items-center gap-1" id="btn-state-valid" onclick="setScreenState('valid')">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>Token C-023
+      </button>
+<button class="px-space-sm py-1 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md hover:bg-surface-container-lowest transition-all flex items-center gap-1" id="btn-state-duplicate" onclick="setScreenState('duplicate')">
+<span class="w-2 h-2 rounded-full bg-error"></span>Duplicate C-018
+      </button>
+<button class="px-space-sm py-1 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md hover:bg-surface-container-lowest transition-all flex items-center gap-1" id="btn-state-invalid" onclick="setScreenState('invalid')">
+<span class="w-2 h-2 rounded-full bg-outline"></span>Invalid X-999
+      </button>
+<button class="px-space-sm py-1 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md hover:bg-surface-container-lowest transition-all flex items-center gap-1" id="btn-state-overdue" onclick="setScreenState('overdue')">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>Overdue &gt;30m
+      </button>
+</div>
+</div>
+<!-- Section 1: Top Metrics & Shift Handover Telemetry Strip -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Card 1: Completed Orders -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex items-center justify-between relative overflow-hidden">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Handed Over Today</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">138</span>
+<span class="font-label-md text-label-md text-secondary font-bold flex items-center">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>+18% rush
+          </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Avg collection speed: <strong>28s</strong></span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-secondary-container/40 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">check_circle</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-secondary"></div>
+</div>
+<!-- Card 2: Staged in Smart Lockers -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex items-center justify-between relative overflow-hidden">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Staged in Smart Lockers</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">8</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Active Bays</span>
+</div>
+<div class="flex items-center gap-2 mt-0.5 font-body-sm text-body-sm text-on-surface-variant">
+<span class="inline-flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Hub B: 4</span>
+<span>•</span>
+<span class="inline-flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Hub C: 4</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-primary-fixed/60 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">lock</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-primary-container"></div>
+</div>
+<!-- Card 3: Counter Hot Shelf -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex items-center justify-between relative overflow-hidden">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Counter Pickup Queue</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">3</span>
+<span class="font-label-caps text-label-caps text-secondary font-bold">Optimal Wait</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Hot-Plate Temp: <strong>68°C</strong> steady</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">room_service</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-outline-variant"></div>
+</div>
+<!-- Card 4: Overdue Alert -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex items-center justify-between relative overflow-hidden">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-error font-bold tracking-wider">Overdue (&gt;30m Uncollected)</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-lg text-headline-lg text-error">2</span>
+<span class="font-label-md text-label-md text-error bg-error-container/60 px-space-xs py-0.5 rounded">Action Req</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Flagged for Zero-Waste Rescue</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">alarm_on</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-error"></div>
+</div>
+</div>
+<!-- Section 2: Main Two-Column Dispatch Console -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN (5 Columns): Scan & Verification Center -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- Optical QR Scanner Viewport Box -->
+<div class="bg-surface-container-lowest p-space-md rounded-3xl shadow-md flex flex-col relative overflow-hidden">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">qr_code_scanner</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Optical Reader</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1 font-label-caps text-label-caps text-secondary font-bold">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>Live Focus
+            </span>
+<button class="w-7 h-7 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" title="Toggle Beep Tone">
+<span class="material-symbols-outlined text-[16px]">volume_up</span>
+</button>
+</div>
+</div>
+<!-- Camera Feed / Viewfinder Canvas -->
+<div class="relative w-full aspect-[4/3] rounded-2xl bg-on-surface flex items-center justify-center overflow-hidden shadow-inner group">
+<!-- Realistic viewfinder background: patron presenting mobile app with QR -->
+<div class="absolute inset-0 bg-cover bg-center opacity-85 group-hover:scale-105 transition-transform duration-700" data-alt="First person point of view showing a diner holding a modern smartphone screen displaying an artisanal Chez Gourmet QR pass badge with orange and olive botanical logo, natural sunlight streaming into a warm contemporary canteen dining hall, warm editorial lighting, high resolution." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBkHwsq1L2PgirLQKSclngZe9sQeDF7Sd2i0OCERDOtJaYHl2sdstzJa9neSJw9Ma-tNX_qrC4_UcH8iaI0Ql_PpP6whjcz3clDHn7xy2cuiY9c-S5ivsB16QmIfo60bh1JkTfU4ckH5gQ4IQifnIsoILm5YGyyi1Ae-9d44ntd2D-taIDJkTavx1Ekn2w1P-GOoERrHhjmuQOQlzG4VaBQ5mMGfjhgsAO_cmE9jQi1_cKKygqQ3P9WRA')"></div>
+<!-- Scan HUD Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-on-surface/40 flex flex-col justify-between p-space-md pointer-events-none">
+<!-- Top Camera Info -->
+<div class="flex items-center justify-between text-surface font-label-md text-label-md">
+<span class="flex items-center gap-1 bg-on-surface/60 px-space-xs py-0.5 rounded backdrop-blur">
+<span class="material-symbols-outlined text-[14px] text-secondary-fixed">videocam</span> Counter Overhead #1 (60 FPS)
+              </span>
+<span class="bg-primary/80 text-on-primary px-space-xs py-0.5 rounded font-label-caps uppercase">Auto-Detect</span>
+</div>
+<!-- Central Scanning Bracket Target -->
+<div class="relative self-center w-52 h-52 flex items-center justify-center">
+<!-- Corner Brackets -->
+<div class="absolute top-0 left-0 w-8 h-8 rounded-tl-xl border-t-4 border-l-4 border-primary-container"></div>
+<div class="absolute top-0 right-0 w-8 h-8 rounded-tr-xl border-t-4 border-r-4 border-primary-container"></div>
+<div class="absolute bottom-0 left-0 w-8 h-8 rounded-bl-xl border-b-4 border-l-4 border-primary-container"></div>
+<div class="absolute bottom-0 right-0 w-8 h-8 rounded-br-xl border-b-4 border-r-4 border-primary-container"></div>
+<!-- Laser Sweep Bar -->
+<div class="w-full h-1 bg-gradient-to-r from-transparent via-primary-container to-transparent shadow-[0_0_12px_#f26b21] animate-pulse"></div>
+<!-- Reticle Target -->
+<div class="w-20 h-20 rounded-full border border-surface/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-surface/50 text-[28px]">crop_free</span>
+</div>
+</div>
+<!-- Bottom HUD Status -->
+<div class="flex items-center justify-between text-surface font-body-sm text-body-sm">
+<span class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed animate-pulse"></span>
+<span>Scan target aligned (12cm dist)</span>
+</span>
+<span class="font-label-caps text-label-caps text-surface/80">LATENCY: 14MS</span>
+</div>
+</div>
+</div>
+<!-- Scanner Controls & Hardware Switch -->
+<div class="flex items-center justify-between mt-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span class="font-label-md text-label-md text-on-surface">Laser &amp; LED Ring Active</span>
+</div>
+<button class="text-primary hover:text-on-primary-container font-label-md text-label-md flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">switch_camera</span> Switch to Handheld Wand
+          </button>
+</div>
+</div>
+<!-- Manual Input & PIN / Token Keypad -->
+<div class="bg-surface-container-lowest p-space-md rounded-3xl shadow-md flex flex-col">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[20px]">pin</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Manual Lookup</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">STUDENT CARD / PIN / TOKEN</span>
+</div>
+<!-- Input Box -->
+<div class="relative flex items-center mb-space-sm">
+<span class="absolute left-space-md text-outline font-headline-sm text-headline-sm select-none">#</span>
+<input class="w-full pl-9 pr-24 py-space-sm bg-surface-container-low rounded-2xl text-on-surface font-headline-sm text-headline-sm tracking-wider focus:outline-none focus:bg-surface-container-high transition-colors" id="token-input-field" placeholder="Enter Token or PIN..." type="text" value="C-023"/>
+<button class="absolute right-1.5 top-1.5 bottom-1.5 px-space-md bg-primary hover:bg-on-primary-container text-on-primary rounded-xl font-label-lg text-label-lg shadow-sm transition-all flex items-center gap-1" id="verify-token-btn" onclick="verifyTokenManual()">
+<span>Verify</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+<!-- Quick 12-Button Keypad for High-Speed Touch Screens -->
+<div class="grid grid-cols-4 gap-2 pt-space-xs">
+<button class="p-space-sm bg-surface-container hover:bg-surface-container-high rounded-xl font-label-lg text-label-lg text-on-surface transition-transform active:scale-95 shadow-sm text-center" onclick="pressKey('C')">C</button>
+<button class="p-space-sm bg-surface-container hover:bg-surface-container-high rounded-xl font-label-lg text-label-lg text-on-surface transition-transform active:scale-95 shadow-sm text-center" onclick="pressKey('B')">B</button>
+<button class="p-space-sm bg-surface-container hover:bg-surface-container-high rounded-xl font-label-lg text-label-lg text-on-surface transition-transform active:scale-95 shadow-sm text-center" onclick="pressKey('A')">A</button>
+<button class="p-space-sm bg-error-container/70 hover:bg-error hover:text-on-error rounded-xl font-label-lg text-label-lg text-on-error-container transition-colors active:scale-95 shadow-sm flex items-center justify-center" onclick="clearKey()">
+<span class="material-symbols-outlined text-[18px]">backspace</span>
+</button>
+<button class="p-space-sm bg-surface-container-low hover:bg-surface-container rounded-xl font-headline-sm text-headline-sm text-on-surface transition-transform active:scale-95 shadow-sm text-center" onclick="pressKey('1')">1</button>
+<button class="p-space-sm bg-surface-container-low hover:bg-surface-container rounded-xl font-headline-sm text-headline-sm text-on-surface transition-transform active:scale-95 shadow-sm text-center" onclick="pressKey('2')">2</button>
+<button class="p-space-sm bg-surface-container-low hover:bg-surface-container rounded-xl font-headline-sm text-headline-sm text-on-surface transition-transform active:scale-95 shadow-sm text-center" onclick="pressKey('3')">3</button>
+<button class="p-space-sm bg-surface-container-low hover:bg-surface-container rounded-xl font-headline-sm text-headline-sm text-on-surface transition-transform active:scale-95 shadow-sm text-center" onclick="pressKey('4')">4</button>
+<button class="p-space-sm bg-surface-container-low hover:bg-surface-container rounded-xl font-headline-sm text-headline-sm text-on-surface transition-transform active:scale-95 shadow-sm text-center" onclick="pressKey('5')">5</button>
+<button class="p-space-sm bg-surface-container-low hover:bg-surface-container rounded-xl font-headline-sm text-headline-sm text-on-surface transition-transform active:scale-95 shadow-sm text-center" onclick="pressKey('6')">6</button>
+<button class="p-space-sm bg-surface-container-low hover:bg-surface-container rounded-xl font-headline-sm text-headline-sm text-on-surface transition-transform active:scale-95 shadow-sm text-center" onclick="pressKey('7')">7</button>
+<button class="p-space-sm bg-surface-container-low hover:bg-surface-container rounded-xl font-headline-sm text-headline-sm text-on-surface transition-transform active:scale-95 shadow-sm text-center" onclick="pressKey('8')">8</button>
+</div>
+<!-- Recent Dispatches Mini Stream -->
+<div class="mt-space-md pt-space-sm">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs font-label-caps text-label-caps uppercase">
+<span>Recent Dispatches (Last 10m)</span>
+<span>Status</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between p-2 rounded-xl bg-surface-container-low/70 text-on-surface font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="font-bold font-headline-sm text-[15px] text-on-surface">#B-119</span>
+<span class="text-on-surface-variant">Marcus Thorne</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-md text-label-md text-secondary">
+<span class="material-symbols-outlined text-[14px]">done_all</span> Locker #C-02 Handover
+              </span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-xl bg-surface-container-low/70 text-on-surface font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="font-bold font-headline-sm text-[15px] text-on-surface">#C-021</span>
+<span class="text-on-surface-variant">Aria Chen</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-md text-label-md text-secondary">
+<span class="material-symbols-outlined text-[14px]">done_all</span> Counter Handover
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN (7 Columns): Verified Order & Dynamic Handover Console -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Dynamic Alert Banner 1: DUPLICATE HANDOVER SAFEGUARD (Hidden by default, triggered by demo switcher) -->
+<div class="hidden bg-error-container text-on-error-container p-space-md rounded-3xl shadow-md transition-all" id="alert-duplicate">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-2xl bg-error text-on-error flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[28px]">gpp_bad</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-error-container font-bold">Duplicate Handover Prevented!</span>
+<span class="px-space-sm py-0.5 bg-error text-on-error font-label-caps text-label-caps rounded-full">Security Flag #DUP-404</span>
+</div>
+<p class="font-body-md text-body-md mt-1 text-on-error-container/90">
+              Order <strong>Token #C-018</strong> has already been fulfilled and marked collected at <strong>1:12:08 PM</strong> (6 mins ago) via Optical QR Scan at <strong>Smart Locker Hub Bay B-01</strong> by registered diner Elena Rostova.
+            </p>
+<div class="mt-space-sm flex items-center gap-space-md flex-wrap pt-space-xs">
+<button class="px-space-md py-1.5 bg-error text-on-error hover:bg-on-error-container rounded-xl font-label-md text-label-md transition-all shadow-sm flex items-center gap-1" onclick="openProblemModal('Duplicate Collection Dispute: Token #C-018')">
+<span class="material-symbols-outlined text-[16px]">report_problem</span> Log Dispute &amp; Review CCTV
+              </button>
+<button class="text-on-error-container font-label-md text-label-md underline hover:opacity-80" onclick="setScreenState('valid')">
+                Dismiss and Return to C-023
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Dynamic Alert Banner 2: INVALID TOKEN (Hidden by default) -->
+<div class="hidden bg-surface-container-highest p-space-md rounded-3xl shadow-md transition-all" id="alert-invalid">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-2xl bg-outline text-surface-container-lowest flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">search_off</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Token #X-999 Not Found</span>
+<span class="px-space-sm py-0.5 bg-surface-container text-on-surface-variant font-label-caps text-label-caps rounded-full">404 Ticket</span>
+</div>
+<p class="font-body-md text-body-md mt-1 text-on-surface-variant">
+              No active, scheduled, or completed ticket matches identifier <strong>#X-999</strong> for today's lunch rotation. Please check the diner's mobile pass, student ID barcode, or search customer name in the master ledger.
+            </p>
+<div class="mt-space-sm flex items-center gap-space-md">
+<button class="px-space-md py-1.5 bg-primary text-on-primary rounded-xl font-label-md text-label-md shadow-sm" onclick="setScreenState('valid')">
+                Reload Current Queue
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Primary Verified Order Handover Card (Token #C-023) -->
+<div class="bg-surface-container-lowest p-space-lg rounded-3xl shadow-lg flex flex-col relative overflow-hidden transition-all" id="handover-main-card">
+<!-- Header: Prominent Order Token and Staging Status -->
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-space-md gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="px-space-md py-2 rounded-2xl bg-surface-container flex flex-col items-center justify-center shadow-inner">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Token Number</span>
+<span class="font-headline-lg text-headline-lg text-primary font-bold tracking-tight" id="display-token-id">#C-023</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md font-bold flex items-center gap-1" id="display-status-badge">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Ready for Pickup
+                </span>
+<span class="px-space-sm py-0.5 rounded-full bg-primary-fixed text-primary font-label-caps text-label-caps uppercase font-bold">
+                  Split Bay Staged
+                </span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-1 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[20px] text-primary">sensor_door</span>
+                Locker #B-04 &amp; Counter Hot-Plate Shelf
+              </span>
+</div>
+</div>
+<!-- Live Bay Overdue / Timer Indicator -->
+<div class="flex items-center gap-space-sm self-start md:self-auto bg-surface-container-low px-space-md py-2 rounded-2xl">
+<div class="flex flex-col text-right">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Staged Duration</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-mono" id="display-timer">04m 18s</span>
+</div>
+<div class="w-8 h-8 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">timer</span>
+</div>
+</div>
+</div>
+<div class="h-px w-full bg-surface-container-low my-space-xs"></div>
+<!-- Customer Identity & Telemetry Strip -->
+<div class="py-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-bright p-space-md rounded-2xl my-space-xs">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-high flex items-center justify-center text-primary relative overflow-hidden">
+<span class="material-symbols-outlined text-[32px]">face_3</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Elena Rostova</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface font-label-caps text-label-caps uppercase">Campus Scholar</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 mt-0.5">
+<span class="material-symbols-outlined text-[14px] text-secondary">contactless</span>
+                SmartCard #CID-882190 • Pre-paid (10% Subsidy Applied)
+              </span>
+</div>
+</div>
+<!-- Allergen & Packaging Highlights -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="flex items-center gap-1 px-space-sm py-1 bg-surface-container rounded-xl text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-primary">lunch_dining</span>
+<span>2x Eco-Tiffin (#TK-41, #TK-42)</span>
+</div>
+<div class="flex items-center gap-1 px-space-sm py-1 bg-error-container/60 text-on-error-container rounded-xl font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-[16px] text-error">warning</span>
+<span>Mild Nut Sensitivity</span>
+</div>
+</div>
+</div>
+<!-- Order Items Detail List -->
+<div class="pt-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between text-on-surface-variant font-label-caps text-label-caps uppercase">
+<span>Verified Tray Items (3 Items)</span>
+<span>Station Origin</span>
+</div>
+<!-- Item 1: Burger with food thumbnail -->
+<div class="flex items-center justify-between p-space-md rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-xl overflow-hidden shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Close up artisanal culinary gourmet crispy brioche burger on textured stoneware plate with melted aged cheddar and microgreens, natural kitchen lighting, professional food photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc-UCRn4WxKdcJmm7UG-8PA6ggU6c24fJfswTUxC-UYJ-Nwj__sHNL13PurXpbGk0U6l9Xc-FLQtq_TGPHF57wcQEO8lAb-bUI67XRR_966RDiIlmPE2iV-ok4CHQmgl0sSwxjSVQ0-23XL11MQQZIUBJfZSh3gYY4PMGwO1V-djwp9Zl82nCMrWp8vxVYZUJ1gsOkg8jPOU3SzSmnu4_01rQGaZYBR4q5b31p4AgXF6DDPemX8zl0ew"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-lg bg-surface-container-highest text-on-surface font-label-caps font-bold flex items-center justify-center">2x</span>
+<span class="font-headline-sm text-[17px] text-on-surface font-semibold">Crispy Chicken Brioche Burger</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Hokkaido bun, aged cheddar, artisanal garlic aioli, pickles separate in cup
+                </span>
+<span class="font-label-caps text-label-caps text-secondary font-bold mt-1">Staged in Locker #B-04 (Insulated Heated Deck)</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-lg text-label-lg text-on-surface">$17.80</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Hearth Line #2</span>
+</div>
+</div>
+<!-- Item 2: Truffle Fries -->
+<div class="flex items-center justify-between p-space-md rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-xl overflow-hidden shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Rustic basket of hand cut golden crisp truffle fries with coarse sea salt, chopped rosemary and grated parmesan cheese, appetizing bistro presentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDvNqTlxVe1eL95K7VsDpT06Pxbpm-UuWuu7LwSxo8kXutbdA_ZhCSTrzI1rIx-dGd8sCKufTgJCBOdMFf5XQz_cITC4iK3CRAjoashej-ZSzdeJ8MxfWuvT-881Mh_dNvjUg45jlKhgz0goued_StVRBI1sQJqWr_M2tUVUYZ1DbDmgROFRK_8nxgwEzLoZ0DhPCk8eLoij7z6qiEbmLRLBT1hwOrKq3Yf-gXqDFFmuUqvhR873sB_g"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-lg bg-surface-container-highest text-on-surface font-label-caps font-bold flex items-center justify-center">1x</span>
+<span class="font-headline-sm text-[17px] text-on-surface font-semibold">Truffle Herb Sea Salt Fries</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Hand-cut russet potatoes, white truffle oil infusion, fresh rosemary
+                </span>
+<span class="font-label-caps text-label-caps text-secondary font-bold mt-1">Staged on Counter Heat-Plate #2</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-lg text-label-lg text-on-surface">$5.50</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Fryer Station</span>
+</div>
+</div>
+<!-- Item 3: Botanical Cold Brew -->
+<div class="flex items-center justify-between p-space-md rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-xl overflow-hidden shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Refreshing tall glass bottle of artisanal cold brew with a sprig of fresh mint and citrus peel, condensation drops, warm organic bistro environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7UgcAzRjU8vo0FjrdkzcgBV690jkT2Iv5E6n-sqmx4EqARnUCqQaUX0_LgAn-c6-J1EIJzxLCnUH6CQpdX-rbzXgALlAZBf2-pwMXJ0A5vK3j66gM7pIhfKzFHQTM2i5-DgRkeWIQetWFYIy6p60dYTVBXU8j1nFlMGZf7hq9Gw7mritkT9whmoH7hNyX99-sKAd6kvHXszu8z_Ba6Z75L7a6ytOLuQoZotUKSO16vvdPG1HB43s3HQ"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-lg bg-surface-container-highest text-on-surface font-label-caps font-bold flex items-center justify-center">1x</span>
+<span class="font-headline-sm text-[17px] text-on-surface font-semibold">Botanical Sparkling Cold Brew</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Single-origin Ethiopian roast, tonic fizz, dehydrated blood orange wheel
+                </span>
+<span class="font-label-caps text-label-caps text-secondary font-bold mt-1">Chilled Locker Slot #B-04B</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-lg text-label-lg text-on-surface">$4.50</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Beverage Bar</span>
+</div>
+</div>
+</div>
+<!-- Packaging Deposit & Verification Metadata -->
+<div class="mt-space-md p-space-md rounded-2xl bg-surface-container/60 flex flex-col md:flex-row md:items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]">recycling</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Circular Packaging Protocol Active</span>
+<span>2 Reusable Tiffins assigned to #CID-882190. Deposit ($3.00) automatically refunded upon locker return deposit.</span>
+</div>
+</div>
+<div class="flex items-center gap-2 font-mono text-on-surface">
+<span>TXN: #CG-99214</span>
+<span>•</span>
+<span>PASS VALIDATED</span>
+</div>
+</div>
+<!-- Action Controls Tray (Tactile primary actions) -->
+<div class="mt-space-lg pt-space-sm flex flex-col sm:flex-row items-center gap-space-md">
+<!-- Master Primary CTA: Confirm & Hand Over -->
+<button class="w-full sm:flex-1 py-space-md px-space-lg rounded-2xl bg-secondary hover:bg-secondary/90 text-on-secondary font-label-lg text-label-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-space-sm active:scale-[0.99]" id="btn-confirm-handover" onclick="completeHandover()">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+<span>✓ Confirm Collection &amp; Release Lockers</span>
+</button>
+<!-- Problem Modal Trigger -->
+<button class="w-full sm:w-auto py-space-md px-space-md rounded-2xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-all flex items-center justify-center gap-space-xs" onclick="openProblemModal('Order Issue: Token #C-023')">
+<span class="material-symbols-outlined text-[20px] text-error">flag</span>
+<span>Report Problem</span>
+</button>
+<!-- Not Collected / Rescue Button -->
+<button class="w-full sm:w-auto py-space-md px-space-md rounded-2xl bg-surface-container hover:bg-error-container text-on-surface-variant hover:text-on-error-container font-label-lg text-label-lg transition-all flex items-center justify-center gap-space-xs" id="btn-uncollected" onclick="markUncollected()">
+<span class="material-symbols-outlined text-[20px]">assignment_return</span>
+<span>Route to Rescue</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive "Report Order Problem / Handover Incident" Modal -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-center justify-center p-space-md transition-opacity" id="problem-modal">
+<div class="bg-surface-container-lowest max-w-xl w-full rounded-3xl shadow-2xl p-space-lg flex flex-col relative animate-in fade-in zoom-in-95 duration-200">
+<!-- Modal Header -->
+<div class="flex items-start justify-between pb-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">emergency_home</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Report Handover Incident</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Instant notification routes directly to Head Chef Laurent &amp; Line #2</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant" onclick="closeProblemModal()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Pre-filled Token Meta -->
+<div class="p-space-sm bg-surface-container rounded-2xl mb-space-md flex items-center justify-between font-label-md text-label-md text-on-surface">
+<span class="flex items-center gap-1.5 font-bold">
+<span class="material-symbols-outlined text-primary text-[18px]">receipt</span>
+<span id="modal-token-ref">TOKEN #C-023</span>
+</span>
+<span class="text-on-surface-variant">Diner: Elena Rostova (#CID-882190)</span>
+</div>
+<!-- Incident Classification Options -->
+<div class="flex flex-col gap-space-xs mb-space-md">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant">Select Incident Type</label>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+<label class="flex items-center gap-2 p-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="accent-primary" name="incident_type" type="radio" value="missing"/>
+<span class="font-label-md text-label-md text-on-surface">Missing Item / Kitchen Omission</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input class="accent-primary" name="incident_type" type="radio" value="cold"/>
+<span class="font-label-md text-label-md text-on-surface">Thermal Drop (&lt; 60°C)</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input class="accent-primary" name="incident_type" type="radio" value="tampered"/>
+<span class="font-label-md text-label-md text-on-surface">Locker Latch Malfunction</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input class="accent-primary" name="incident_type" type="radio" value="spill"/>
+<span class="font-label-md text-label-md text-on-surface">Packaging Spilled / Damaged</span>
+</label>
+</div>
+</div>
+<!-- Staff Resolution Notes -->
+<div class="flex flex-col gap-space-xs mb-space-lg">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant">Expediter Resolution &amp; Notes</label>
+<textarea class="w-full p-space-sm bg-surface-container-low rounded-xl text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-high transition-colors" id="modal-notes" placeholder="Customer noted 1 portion of Truffle Fries missing from bag. Expediter firing urgent replacement on Hearth Fryer #2." rows="3"></textarea>
+</div>
+<!-- Modal Footer CTAs -->
+<div class="flex items-center justify-end gap-space-md pt-space-xs">
+<button class="px-space-md py-2 rounded-xl text-on-surface-variant hover:bg-surface-container font-label-lg text-label-lg transition-colors" onclick="closeProblemModal()" type="button">
+          Cancel
+        </button>
+<button class="px-space-lg py-2 rounded-xl bg-primary hover:bg-on-primary-container text-on-primary font-label-lg text-label-lg shadow-sm flex items-center gap-2 transition-all" onclick="submitProblemReport()" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Submit Kitchen Chit &amp; Log Incident</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Notification Toast Floating Container -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-space-sm px-space-md py-space-sm rounded-2xl bg-inverse-surface text-inverse-on-surface shadow-2xl font-label-md text-label-md" id="toast-banner">
+<span class="material-symbols-outlined text-[20px] text-secondary-fixed">check_circle</span>
+<span id="toast-message">Collection confirmed. Lockers B-04 opened.</span>
+</div>
+</div>
+<script>
+  // UI State Switcher & Simulation Functions
+  function setScreenState(state) {
+    const alertDup = document.getElementById('alert-duplicate');
+    const alertInv = document.getElementById('alert-invalid');
+    const cardMain = document.getElementById('handover-main-card');
+    const tokenDisplay = document.getElementById('display-token-id');
+    const tokenInput = document.getElementById('token-input-field');
+    const statusBadge = document.getElementById('display-status-badge');
+    const timerDisplay = document.getElementById('display-timer');
+
+    // Reset visibility
+    alertDup.classList.add('hidden');
+    alertInv.classList.add('hidden');
+    cardMain.classList.remove('opacity-40', 'pointer-events-none');
+
+    // Update state pill stylings
+    ['valid', 'duplicate', 'invalid', 'overdue'].forEach(s => {
+      const b = document.getElementById('btn-state-' + s);
+      if (b) {
+        if (s === state) {
+          b.className = "px-space-sm py-1 rounded-lg text-on-surface font-label-md text-label-md bg-surface-container-lowest shadow-sm flex items-center gap-1";
+        } else {
+          b.className = "px-space-sm py-1 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md hover:bg-surface-container-lowest transition-all flex items-center gap-1";
+        }
+      }
+    });
+
+    if (state === 'valid') {
+      tokenDisplay.innerText = '#C-023';
+      tokenInput.value = 'C-023';
+      statusBadge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Ready for Pickup';
+      statusBadge.className = 'px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md font-bold flex items-center gap-1';
+      timerDisplay.innerText = '04m 18s';
+      timerDisplay.className = 'font-headline-sm text-headline-sm text-on-surface font-mono';
+      showToast('Loaded active ticket #C-023');
+    } else if (state === 'duplicate') {
+      alertDup.classList.remove('hidden');
+      tokenDisplay.innerText = '#C-018';
+      tokenInput.value = 'C-018';
+      cardMain.classList.add('opacity-40', 'pointer-events-none');
+      showToast('⚠️ Duplicate Handover Alert Triggered');
+    } else if (state === 'invalid') {
+      alertInv.classList.remove('hidden');
+      tokenDisplay.innerText = '#X-999';
+      tokenInput.value = 'X-999';
+      cardMain.classList.add('opacity-40', 'pointer-events-none');
+      showToast('❌ Token #X-999 Not Found');
+    } else if (state === 'overdue') {
+      tokenDisplay.innerText = '#C-009';
+      tokenInput.value = 'C-009';
+      statusBadge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Overdue Staged (&gt;35 mins)';
+      statusBadge.className = 'px-space-sm py-0.5 rounded-full bg-error-container text-on-error-container font-label-md text-label-md font-bold flex items-center gap-1';
+      timerDisplay.innerText = '36m 42s';
+      timerDisplay.className = 'font-headline-sm text-headline-sm text-error font-mono animate-pulse';
+      showToast('Overdue Order #C-009 flagged for zero-waste routing');
+    }
+  }
+
+  // Keypad simulation
+  function pressKey(val) {
+    const input = document.getElementById('token-input-field');
+    input.value += val;
+  }
+
+  function clearKey() {
+    const input = document.getElementById('token-input-field');
+    input.value = input.value.slice(0, -1);
+  }
+
+  function verifyTokenManual() {
+    const val = document.getElementById('token-input-field').value.trim().toUpperCase();
+    if (val.includes('018')) {
+      setScreenState('duplicate');
+    } else if (val.includes('999') || val.includes('X')) {
+      setScreenState('invalid');
+    } else if (val.includes('009')) {
+      setScreenState('overdue');
+    } else {
+      setScreenState('valid');
+    }
+  }
+
+  // Handover confirmation
+  function completeHandover() {
+    const btn = document.getElementById('btn-confirm-handover');
+    btn.innerHTML = '<span class="material-symbols-outlined text-[24px] animate-spin">refresh</span> Dispatching & Opening Lockers...';
+    setTimeout(() => {
+      btn.innerHTML = '<span class="material-symbols-outlined text-[24px]">task_alt</span> Handover Completed Successfully';
+      btn.className = 'w-full sm:flex-1 py-space-md px-space-lg rounded-2xl bg-secondary text-on-secondary font-label-lg text-label-lg shadow-md flex items-center justify-center gap-space-sm';
+      showToast('✓ Locker Bay B-04 Latch Released & Receipt Printed');
+      setTimeout(() => {
+        btn.innerHTML = '<span class="material-symbols-outlined text-[24px]">verified_user</span> <span>✓ Confirm Collection & Release Lockers</span>';
+      }, 4000);
+    }, 800);
+  }
+
+  function markUncollected() {
+    showToast('Order flagged as Uncollected. Kitchen Zero-Waste dispatch chit printed.');
+  }
+
+  // Problem Modal Handlers
+  function openProblemModal(title) {
+    const modal = document.getElementById('problem-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    if (title) {
+      document.getElementById('modal-token-ref').innerText = title;
+    }
+  }
+
+  function closeProblemModal() {
+    const modal = document.getElementById('problem-modal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  function submitProblemReport() {
+    closeProblemModal();
+    showToast('🚨 Kitchen Incident logged. Chef Laurent notified at Line #2.');
+  }
+
+  // Toast Trigger
+  function showToast(msg) {
+    const toast = document.getElementById('toast-banner');
+    const msgEl = document.getElementById('toast-message');
+    msgEl.innerText = msg;
+    toast.classList.remove('translate-y-24', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+    setTimeout(() => {
+      toast.classList.add('translate-y-24', 'opacity-0');
+      toast.classList.remove('translate-y-0', 'opacity-100');
+    }, 3500);
+  }
+</script></main></div></body></html>

@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "background": "#fff8f6", "on-primary-fixed-variant": "#7c2e00", "tertiary-fixed": "#e8e2d6", "outline": "#8c7166", "on-primary-fixed": "#351000", "surface-container-high": "#ffe2d6", "on-surface-variant": "#594238", "error-container": "#ffdad6", "on-secondary-container": "#426f3d", "on-primary-container": "#511c00", "on-tertiary-fixed-variant": "#49473e", "secondary-fixed-dim": "#a2d398", "surface-container": "#ffeae1", "on-secondary-fixed": "#002202", "tertiary-fixed-dim": "#cbc6bb", "on-surface": "#2e1508", "on-tertiary-container": "#2f2d25", "secondary": "#3d6838", "on-secondary": "#ffffff", "on-error-container": "#93000a", "surface-bright": "#fff8f6", "on-secondary-fixed-variant": "#255022", "inverse-surface": "#47291a", "surface-container-highest": "#ffdbcb", "surface-variant": "#ffdbcb", "secondary-fixed": "#bdf0b2", "on-tertiary-fixed": "#1d1c14", "inverse-on-surface": "#ffede6", "primary-fixed": "#ffdbcd", "surface-container-lowest": "#ffffff", "on-error": "#ffffff", "primary-container": "#f26b21", "surface-tint": "#a23f00", "primary": "#a23f00", "inverse-primary": "#ffb595", "surface-container-low": "#fff1eb", "on-background": "#2e1508", "on-tertiary": "#ffffff", "on-primary": "#ffffff", "secondary-container": "#bdf0b2", "primary-fixed-dim": "#ffb595", "surface": "#fff8f6", "outline-variant": "#e0c0b2", "surface-dim": "#ffd0bb", "tertiary-container": "#98948a", "error": "#ba1a1a", "tertiary": "#615e55" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "space-xl": "2.25rem", "space-sm": "0.5rem", "margin-mobile": "1.25rem", "space-xs": "0.25rem", "gutter": "1.5rem", "gutter-mobile": "1rem", "space-md": "1rem", "margin": "2.5rem" }, "fontFamily": { "display-hero-mobile": [ "Playfair Display" ], "queue-token-lg": [ "DM Sans" ], "body-lg": [ "DM Sans" ], "body-sm": [ "DM Sans" ], "display-hero": [ "Playfair Display" ], "headline-lg": [ "Playfair Display" ], "body-md": [ "DM Sans" ], "headline-md": [ "Playfair Display" ], "headline-lg-mobile": [ "Playfair Display" ], "label-lg": [ "DM Sans" ], "label-md": [ "DM Sans" ], "label-caps": [ "DM Sans" ], "headline-sm": [ "Playfair Display" ] }, "fontSize": { "display-hero-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "queue-token-lg": [ "44px", { "lineHeight": "48px", "letterSpacing": "0.02em", "fontWeight": "700" } ], "body-lg": [ "18px", { "lineHeight": "28px", "fontWeight": "400" } ], "body-sm": [ "13px", { "lineHeight": "18px", "fontWeight": "400" } ], "display-hero": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-md": [ "15px", { "lineHeight": "22px", "fontWeight": "400" } ], "headline-md": [ "24px", { "lineHeight": "32px", "fontWeight": "600" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "label-caps": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(74,44,29,0.04)]"><div class="h-20 w-full px-margin flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md"><img alt="Artisanal food and botanical leaf logo for Chez Gourmet Smart Canteen. Elegant stylized fork/spoon and fresh green leaf motif, warm deep orange #F26B21 and natural forest green #3F6B3A on transparent background, minimalist vector style, sophisticated culinary brand mark. Design context: - Primary color: #f26b21 - Font: playfairDisplay - Mode: light - Roundness: rounded-md . The logo should be visually consistent with these brand tokens." class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vo05zV1l30OuCCZOZbn3gCKuwvOGC4lSVWuMF41PLFVCvr_AZGw1VFEkUe_hZNYCwEMZkVjTJG25VgrvdmeGO8hsxL9Su69cgz3_qX6VTh746xH0MZXd12WBr-kjGZanPe9ze7jVgs7wO-dGIiDjXA2UvWaKcmhVnQ-uqewato6cDKLn1wLBTR6cxRulNdZdnZBWASGbcLuRyMw4jL-YShKFzL0X3Vp5pboz_4mw0lqLx4fC1umB0Zr5uh"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Chez Gourmet</span></div><nav class="hidden xl:flex items-center gap-space-md bg-surface-container-low/60 p-space-xs rounded-full shadow-[0_1px_6px_rgba(74,44,29,0.03)]" data-active-classes="bg-primary-container text-on-primary font-label-lg text-label-lg rounded-full px-space-md py-space-xs shadow-[0_2px_8px_rgba(242,107,33,0.2)]"><a class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="design-system-components" href="#">Design System Components</a><a class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="live-operations" href="#">Live Operations</a><a class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="menu" href="#">Menu</a><a class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" data-path="documentation" href="#">Documentation</a><a aria-current="page" class="transition-all bg-primary-container text-on-primary font-label-lg text-label-lg rounded-full px-space-md py-space-xs shadow-[0_2px_8px_rgba(242,107,33,0.2)]" data-path="system-states-&amp;-error-handlers" href="#">System States &amp; Error Handlers</a></nav><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs bg-surface-container px-space-md py-space-xs rounded-full text-secondary font-label-caps text-label-caps"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>Service Operational</div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-220px)]"><div class="flex flex-col w-full">
+<!-- TOP OVERVIEW HERO BANNER -->
+<section class="w-full px-margin pt-space-xl pb-space-lg bg-surface-container-low/50">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<!-- Overline & System Title -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-primary font-label-caps text-label-caps">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+              SPEC V2.4 • SYSTEM RUNTIME UX
+            </span>
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-caps text-label-caps">
+              100% COVERAGE AUDIT
+            </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface">
+            System States &amp; Operational Exception Handlers
+          </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+            A comprehensive reference specification for edge conditions, asynchronous lifecycle indicators, capacity constraints, and transactional friction points across the Chez Gourmet smart dining ecosystem.
+          </p>
+</div>
+<!-- Token Legend Pill Box -->
+<div class="flex flex-wrap md:flex-col lg:flex-row items-start md:items-end gap-space-sm bg-surface-container-lowest p-space-sm rounded-xl shadow-sm">
+<div class="flex items-center gap-2 px-2.5 py-1 rounded-lg bg-surface-container">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span class="font-label-md text-label-md text-on-surface">Terracotta (Primary/Prompt)</span>
+</div>
+<div class="flex items-center gap-2 px-2.5 py-1 rounded-lg bg-secondary-container/50">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md text-on-secondary-container">Botanical (Safe/Success)</span>
+</div>
+<div class="flex items-center gap-2 px-2.5 py-1 rounded-lg bg-error-container/60">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<span class="font-label-md text-label-md text-on-error-container">Critical (Halt/Error)</span>
+</div>
+</div>
+</div>
+<!-- Filter Tabs Bar (Interactive) -->
+<div class="flex items-center gap-2 overflow-x-auto pb-2" id="state-filter-nav">
+<button class="state-filter-btn px-4 py-2 rounded-full font-label-lg text-label-lg bg-primary text-on-primary shadow-sm transition-all" onclick="filterStateGroup('all', this)">
+          All States (12)
+        </button>
+<button class="state-filter-btn px-4 py-2 rounded-full font-label-lg text-label-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" onclick="filterStateGroup('loading', this)">
+          Loading &amp; Skeletons
+        </button>
+<button class="state-filter-btn px-4 py-2 rounded-full font-label-lg text-label-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" onclick="filterStateGroup('empty', this)">
+          Empty &amp; Zero States
+        </button>
+<button class="state-filter-btn px-4 py-2 rounded-full font-label-lg text-label-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" onclick="filterStateGroup('capacity', this)">
+          Capacity &amp; Availability
+        </button>
+<button class="state-filter-btn px-4 py-2 rounded-full font-label-lg text-label-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" onclick="filterStateGroup('errors', this)">
+          Errors &amp; Warnings
+        </button>
+<button class="state-filter-btn px-4 py-2 rounded-full font-label-lg text-label-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" onclick="filterStateGroup('modals', this)">
+          Modals &amp; Permissions
+        </button>
+<button class="state-filter-btn px-4 py-2 rounded-full font-label-lg text-label-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" onclick="filterStateGroup('toasts', this)">
+          Toasts &amp; Feedback
+        </button>
+</div>
+</div>
+</section>
+<!-- MAIN SYSTEM STATES CATALOGUE -->
+<main class="w-full px-margin py-space-xl">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+<!-- ========================================== -->
+<!-- GROUP 1: LOADING & SKELETON STATES (Pattern 1) -->
+<!-- ========================================== -->
+<section class="state-card-item flex flex-col gap-space-md" data-category="loading">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-3">
+<span class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center font-label-caps text-label-caps text-primary">01</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Loading Skeletons &amp; Pulsing Placeholders</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Continuous shimmer waves for asynchronous payload rendering with zero layout shift (CLS: 0.00).</p>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container font-label-caps text-label-caps text-on-surface-variant">Pattern #SKEL-01</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<!-- Menu Item Card Skeleton -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex flex-col gap-space-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Menu Card Skeleton</span>
+<span class="text-xs px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps">16:10 Aspect</span>
+</div>
+<!-- Shimmering Box -->
+<div class="w-full h-40 bg-surface-container rounded-xl relative overflow-hidden animate-pulse">
+<div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-surface-container-lowest/60 to-transparent animate-[shimmer_2s_infinite]"></div>
+</div>
+<div class="space-y-2">
+<div class="h-6 w-3/4 bg-surface-container rounded-md animate-pulse"></div>
+<div class="h-4 w-full bg-surface-container-low rounded-md animate-pulse"></div>
+<div class="h-4 w-2/3 bg-surface-container-low rounded-md animate-pulse"></div>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="h-7 w-20 bg-surface-container rounded-full animate-pulse"></div>
+<div class="h-9 w-24 bg-surface-container-high rounded-full animate-pulse"></div>
+</div>
+</div>
+<!-- Order Queue Row Skeleton -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex flex-col gap-space-md justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant">KDS Queue Row Skeleton</span>
+<span class="text-xs px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps">Live Queue Stream</span>
+</div>
+<div class="space-y-3">
+<!-- Row 1 -->
+<div class="p-3 bg-surface-container-low rounded-xl flex items-center justify-between animate-pulse">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container"></div>
+<div class="space-y-1.5">
+<div class="h-4 w-24 bg-surface-container rounded"></div>
+<div class="h-3 w-16 bg-surface-container-high rounded"></div>
+</div>
+</div>
+<div class="h-6 w-16 bg-surface-container rounded-full"></div>
+</div>
+<!-- Row 2 -->
+<div class="p-3 bg-surface-container-low rounded-xl flex items-center justify-between animate-pulse">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container"></div>
+<div class="space-y-1.5">
+<div class="h-4 w-28 bg-surface-container rounded"></div>
+<div class="h-3 w-20 bg-surface-container-high rounded"></div>
+</div>
+</div>
+<div class="h-6 w-14 bg-surface-container rounded-full"></div>
+</div>
+<!-- Row 3 -->
+<div class="p-3 bg-surface-container-low rounded-xl flex items-center justify-between animate-pulse">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container"></div>
+<div class="space-y-1.5">
+<div class="h-4 w-20 bg-surface-container rounded"></div>
+<div class="h-3 w-14 bg-surface-container-high rounded"></div>
+</div>
+</div>
+<div class="h-6 w-16 bg-surface-container rounded-full"></div>
+</div>
+</div>
+<div class="flex items-center gap-2 text-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] animate-spin text-primary">sync</span>
+              Syncing WebSocket kitchen line status...
+            </div>
+</div>
+<!-- Manager Metric Card Skeleton -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Analytics Pulse Skeleton</span>
+<span class="text-xs px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps">Thermal Bays</span>
+</div>
+<div class="space-y-3">
+<div class="h-4 w-32 bg-surface-container rounded animate-pulse"></div>
+<div class="flex items-baseline gap-3">
+<div class="h-10 w-28 bg-surface-container-high rounded-lg animate-pulse"></div>
+<div class="h-4 w-16 bg-surface-container rounded animate-pulse"></div>
+</div>
+<!-- Sparkline Bar chart placeholder -->
+<div class="pt-4 flex items-end gap-2 h-20 w-full">
+<div class="w-1/6 h-[30%] bg-surface-container rounded-t animate-pulse"></div>
+<div class="w-1/6 h-[60%] bg-surface-container rounded-t animate-pulse"></div>
+<div class="w-1/6 h-[40%] bg-surface-container rounded-t animate-pulse"></div>
+<div class="w-1/6 h-[85%] bg-surface-container-high rounded-t animate-pulse"></div>
+<div class="w-1/6 h-[50%] bg-surface-container rounded-t animate-pulse"></div>
+<div class="w-1/6 h-[75%] bg-surface-container-high rounded-t animate-pulse"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="h-3 w-28 bg-surface-container rounded"></div>
+<div class="h-3 w-12 bg-surface-container rounded"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- GROUP 2: ZERO & EMPTY STATES (Patterns 2 & 3) -->
+<!-- ========================================== -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg" data-category="empty">
+<!-- Pattern 2: Empty Cart -->
+<section class="state-card-item bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-md">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-surface-container text-primary font-label-caps text-label-caps flex items-center justify-center">02</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Zero State: Canteen Tray</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-low font-label-caps text-label-caps text-secondary">
+              Passive Conversion
+            </span>
+</div>
+<div class="flex flex-col items-center text-center py-space-lg px-space-md max-w-md mx-auto">
+<!-- Artisanal Ceramic Bowl Graphic Motif -->
+<div class="relative w-28 h-28 mb-space-md flex items-center justify-center">
+<div class="absolute inset-0 bg-surface-container-high rounded-full opacity-60 scale-95"></div>
+<div class="relative w-24 h-24 rounded-full bg-surface-container flex items-center justify-center shadow-inner">
+<svg class="w-14 h-14 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 48 48">
+<!-- Ceramic bowl curve -->
+<path d="M6 22C6 34 14 40 24 40C34 40 42 34 42 22H6Z" fill="#ffdbcb" fill-opacity="0.4"></path>
+<!-- Steaming botanical leaf -->
+<path d="M24 10C24 10 26 15 30 16C30 16 28 20 24 20C20 20 18 16 18 16C22 15 24 10 24 10Z" fill="#3d6838"></path>
+<!-- Spoon / Fork subtle flourish -->
+<path d="M12 14L16 21" stroke-linecap="round"></path>
+<path d="M36 14L32 21" stroke-linecap="round"></path>
+</svg>
+</div>
+<span class="absolute -top-1 -right-1 w-7 h-7 bg-surface-container-lowest rounded-full shadow flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">eco</span>
+</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">
+              Your Canteen Tray is Empty
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-lg">
+              Explore today's organic woodfire specials and build your meal. Orders placed now arrive hot in Thermal Locker Bay B in ~8 mins.
+            </p>
+<div class="flex flex-col sm:flex-row items-center gap-space-sm w-full sm:w-auto">
+<button class="w-full sm:w-auto px-6 py-2.5 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg shadow hover:bg-primary transition-all">
+                Browse Today's Menu
+              </button>
+<button class="w-full sm:w-auto px-5 py-2.5 rounded-full text-on-surface font-label-lg text-label-lg hover:bg-surface-container transition-all">
+                View Past Favorites
+              </button>
+</div>
+</div>
+<div class="pt-space-md flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm bg-surface-container-low px-4 py-2.5 rounded-xl">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+              SmartCard Dining Subsidy Active
+            </span>
+<span class="font-label-caps text-label-caps text-tertiary">Bay B Queue: Low</span>
+</div>
+</section>
+<!-- Pattern 3: No Orders Yet (Empty History) -->
+<section class="state-card-item bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-md">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-surface-container text-primary font-label-caps text-label-caps flex items-center justify-center">03</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Zero State: Order Ledger</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-low font-label-caps text-label-caps text-tertiary">
+              First-Time User View
+            </span>
+</div>
+<!-- Parchment Receipt Style Card -->
+<div class="flex flex-col items-center text-center py-space-md px-space-md max-w-md mx-auto">
+<div class="w-24 h-28 bg-surface-container-low rounded-xl relative p-3 flex flex-col justify-between mb-space-md shadow-sm">
+<div class="space-y-1.5">
+<div class="h-2 w-12 bg-outline-variant rounded mx-auto"></div>
+<div class="h-1.5 w-16 bg-outline-variant/60 rounded mx-auto"></div>
+<div class="h-1.5 w-10 bg-outline-variant/40 rounded mx-auto"></div>
+</div>
+<div class="py-1">
+<span class="material-symbols-outlined text-[28px] text-primary/70">receipt_long</span>
+</div>
+<div class="flex justify-between items-center px-1">
+<div class="h-1.5 w-6 bg-outline-variant/40 rounded"></div>
+<div class="h-1.5 w-6 bg-outline-variant/60 rounded"></div>
+</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">
+              No Orders Placed Yet
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-lg">
+              You haven't ordered from Chez Gourmet today. Pre-order before the 12:15 PM peak rush to skip the South Atrium queue.
+            </p>
+<button class="px-7 py-2.5 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg shadow hover:bg-primary transition-all mb-3">
+              Order Lunch Now
+            </button>
+<span class="font-label-md text-label-md text-secondary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">percent</span>
+              Eligible for 10% Campus SmartCard subsidy at checkout
+            </span>
+</div>
+<div class="pt-space-md flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm bg-surface-container-low px-4 py-2.5 rounded-xl">
+<span>Next rush window starts in <strong>42 mins</strong></span>
+<span class="font-label-caps text-label-caps text-primary">Pre-Order Window Open</span>
+</div>
+</section>
+</div>
+<!-- ========================================== -->
+<!-- GROUP 3: CAPACITY & AVAILABILITY (Patterns 4 & 5) -->
+<!-- ========================================== -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg" data-category="capacity">
+<!-- Pattern 4: Sold-Out Item (86'd State) -->
+<section class="state-card-item bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-surface-container text-primary font-label-caps text-label-caps flex items-center justify-center">04</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Inventory Depletion: 86'd Menu Item</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-caps text-label-caps">
+              Sold Out Notice
+            </span>
+</div>
+<!-- Product Card with Overlay -->
+<div class="relative rounded-2xl overflow-hidden bg-surface-container mt-2">
+<!-- Simulated Food Imagery -->
+<div class="relative h-44 w-full bg-surface-container-high flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover filter grayscale contrast-125 opacity-40" data-alt="Artisanal crispy chicken brioche burger with fresh heirloom lettuce, pickled onions, and smoked spicy aioli on a toasted glazed brioche bun, studio culinary food photograph with warm tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK5ufbhOGyr1CAZRWI6H2j_nDEJJ1nYnXOveAZh8DlV_3h0rhO239q6papzzXQ4rR03FzzC6n_ZW2pEhBOxnDEK2vXzSYrxzvIU95sQ4KL8KoZySToVFJGbM-CanT7iFwCf85kf9Q_eXDD4Up0rZL1mHiG-kGgLhB9n7kcVxaLybEeZ5qhJ1R7BQKVlujdJVunIMou-8FEX_JeZsorPP9fuqj3lWjxODS4TTMltijhDZhYcDJBngENWQ"/>
+<!-- Dark Terracotta Warm Scrim Overlay -->
+<div class="absolute inset-0 bg-inverse-surface/75 backdrop-blur-[2px] flex flex-col items-center justify-center p-space-md text-center">
+<!-- 86'd Stamp -->
+<div class="px-4 py-1.5 rounded-full bg-error text-on-error font-label-caps text-label-caps tracking-widest shadow-md uppercase mb-2 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">do_not_disturb_on</span>
+                  86'd • Sold Out (1:12 PM)
+                </div>
+<p class="font-label-lg text-label-lg text-inverse-on-surface">Artisanal Crispy Chicken Brioche Burger</p>
+<p class="font-body-sm text-body-sm text-surface-container-highest max-w-xs mt-1">
+                  All 45 portions allocated for lunch rush. Next batch fires tomorrow at 11:30 AM.
+                </p>
+</div>
+</div>
+<!-- Alternative Action Bar -->
+<div class="p-space-md bg-surface-container-lowest flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<button class="w-full sm:w-auto px-4 py-2 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-all flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">notifications</span>
+                Notify Me When Restocked
+              </button>
+<button class="w-full sm:w-auto px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all flex items-center justify-center gap-1.5">
+<span>Browse Hearth Grill Alternatives (2)</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="pt-space-md text-on-surface-variant font-body-sm text-body-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">restaurant_menu</span>
+            Recommended Swap: <em>Woodfired Halloumi &amp; Pesto Ciabatta ($11.50)</em>
+</div>
+</section>
+<!-- Pattern 5: Pickup Slot Full (Capacity Throttling) -->
+<section class="state-card-item bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-surface-container text-primary font-label-caps text-label-caps flex items-center justify-center">05</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Capacity Throttling: Thermal Locker</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-label-caps text-label-caps">
+              Locker Bay B
+            </span>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container-low flex flex-col gap-space-md">
+<!-- Capacity Meter Window -->
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-tertiary">Target Collection Slot</span>
+<div class="font-headline-sm text-headline-sm text-on-surface">1:00 PM – 1:15 PM Rush Window</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-primary text-on-primary font-label-caps text-label-caps">
+                100% Capped
+              </span>
+</div>
+<!-- Capacity Meter Bar -->
+<div class="space-y-1.5">
+<div class="flex justify-between font-label-caps text-label-caps">
+<span class="text-error font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+                  20 of 20 Thermal Lockers Claimed
+                </span>
+<span class="text-on-surface-variant">0 Bays Available</span>
+</div>
+<div class="w-full h-3 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full w-full"></div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              To ensure safe food temperatures and zero waiting at pickup lockers, this 15-minute slot is capped.
+            </p>
+<!-- Fast-Track Suggestion Box -->
+<div class="p-space-sm bg-surface-container-lowest rounded-xl flex items-center justify-between gap-space-sm shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface">Fast-Track to 1:15 PM – 1:30 PM</div>
+<div class="font-body-sm text-body-sm text-secondary">6 lockers available right now</div>
+</div>
+</div>
+<button class="px-4 py-2 rounded-full bg-secondary text-on-secondary font-label-md text-label-md hover:opacity-90 transition-all shrink-0">
+                Select &amp; Confirm
+              </button>
+</div>
+</div>
+<div class="pt-space-md text-on-surface-variant font-body-sm text-body-sm flex items-center justify-between">
+<span>Peak rush cooldown begins at 1:30 PM</span>
+<a class="font-label-md text-label-md text-primary hover:underline" href="#">View All Locker Bays</a>
+</div>
+</section>
+</div>
+<!-- ========================================== -->
+<!-- GROUP 4: TRANSACTION & NETWORK RESILIENCE (Patterns 6, 7 & 8) -->
+<!-- ========================================== -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg" data-category="errors">
+<!-- Pattern 6: Order Submission Failed with Retry -->
+<section class="state-card-item bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-surface-container text-primary font-label-caps text-label-caps flex items-center justify-center">06</span>
+<span class="font-label-caps text-label-caps text-error">KDS Dispatch Timeout</span>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-error animate-ping"></span>
+</div>
+<div class="w-12 h-12 rounded-2xl bg-error-container/60 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[28px]">wifi_off</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Order Dispatch Interrupted</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 leading-relaxed">
+                Payment pre-authorized via Campus SmartCard (<code class="bg-surface-container px-1 py-0.5 rounded text-xs">#CID-882190</code>), but the South Atrium Kitchen Display System (KDS Line #2) timed out.
+              </p>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl font-label-caps text-label-caps text-tertiary">
+              DIAGNOSTIC: ERR_KDS_SOCKET_TIMEOUT (504)
+            </div>
+</div>
+<div class="pt-space-md space-y-2">
+<button class="w-full py-2.5 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg shadow flex items-center justify-center gap-2 hover:bg-primary transition-all">
+<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span>
+              Retry Dispatch (Attempt 1 of 3)
+            </button>
+<button class="w-full py-2 rounded-full text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-all">
+              Contact Dispatch Desk (Ext. #4402)
+            </button>
+</div>
+</section>
+<!-- Pattern 7: Duplicate Submission Prevented -->
+<section class="state-card-item bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-surface-container text-primary font-label-caps text-label-caps flex items-center justify-center">07</span>
+<span class="font-label-caps text-label-caps text-secondary">Idempotency Guard</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">verified_user</span>
+</div>
+<div class="w-12 h-12 rounded-2xl bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[28px]">lock_clock</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Duplicate Order Prevented</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 leading-relaxed">
+                An identical ticket (<strong class="text-on-surface">Token #C-023 • $23.30</strong>) was confirmed 18 seconds ago. To prevent accidental double charges to your campus dining account, this submission was paused.
+              </p>
+</div>
+<div class="p-3 bg-surface-container rounded-xl flex items-center gap-2.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-body-sm text-body-sm text-on-surface">Original ticket is already firing in Kitchen Station #2.</span>
+</div>
+</div>
+<div class="pt-space-md space-y-2">
+<button class="w-full py-2.5 rounded-full bg-secondary text-on-secondary font-label-lg text-label-lg shadow hover:opacity-90 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+              View Confirmed Order #C-023
+            </button>
+<button class="w-full py-2 rounded-full text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-all">
+              No, I Intended to Order Again
+            </button>
+</div>
+</section>
+<!-- Pattern 8: Form Validation Errors (Multi-Field Inline & Summary) -->
+<section class="state-card-item bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-surface-container text-primary font-label-caps text-label-caps flex items-center justify-center">08</span>
+<span class="font-label-caps text-label-caps text-error">Form Friction State</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-caps text-label-caps">3 Issues</span>
+</div>
+<!-- Top Summary Alert -->
+<div class="p-2.5 rounded-xl bg-error-container/50 text-on-error-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-error">error</span>
+<span class="font-label-md text-label-md">3 fields require attention before continuing</span>
+</div>
+<!-- Field 1: SSO Email -->
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between">
+<span>Campus SSO Email</span>
+<span class="text-error font-body-sm text-xs">Invalid Domain</span>
+</label>
+<div class="relative">
+<input class="w-full px-3 py-2 rounded-xl bg-error-container/20 text-on-surface font-body-sm text-body-sm outline-none shadow-sm" readonly="" type="text" value="scholar@gmail.com"/>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-error text-[18px]">cancel</span>
+</div>
+<p class="font-body-sm text-xs text-error">Must use a valid institutional domain (@campus.edu or @hospital.org)</p>
+</div>
+<!-- Field 2: Dietary Conflict (Amber Banner) -->
+<div class="p-2 rounded-xl bg-surface-container-high/60 space-y-1">
+<div class="flex items-center gap-1.5 text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">no_meals</span>
+                Dietary &amp; Allergen Conflict
+              </div>
+<p class="font-body-sm text-xs text-on-surface-variant leading-snug">
+                Gluten-Free selected, but your cart contains <em>'Crispy Brioche'</em>—please review dish modifications.
+              </p>
+</div>
+<!-- Field 3: SmartCard PIN (Shake Treatment) -->
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between">
+<span>SmartCard 4-Digit PIN</span>
+<span class="text-error font-body-sm text-xs">3 attempts left</span>
+</label>
+<div class="flex gap-2">
+<input class="w-1/4 text-center py-1.5 rounded-lg bg-surface-container text-on-surface font-label-lg" readonly="" type="password" value="8"/>
+<input class="w-1/4 text-center py-1.5 rounded-lg bg-surface-container text-on-surface font-label-lg" readonly="" type="password" value="2"/>
+<input class="w-1/4 text-center py-1.5 rounded-lg bg-error-container/40 text-on-surface font-label-lg" placeholder="•" readonly="" type="password" value=""/>
+<input class="w-1/4 text-center py-1.5 rounded-lg bg-error-container/40 text-on-surface font-label-lg" placeholder="•" readonly="" type="password" value=""/>
+</div>
+<p class="font-body-sm text-xs text-error">4-digit PIN required (3 attempts remaining before security lock)</p>
+</div>
+</div>
+<div class="pt-space-sm">
+<button class="w-full py-2 rounded-full bg-surface-container text-tertiary font-label-md text-label-md cursor-not-allowed">
+              Complete Order Verification
+            </button>
+</div>
+</section>
+</div>
+<!-- ========================================== -->
+<!-- GROUP 5: PERMISSIONS, MODALS & TIMERS (Patterns 9, 10 & 11) -->
+<!-- ========================================== -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg" data-category="modals">
+<!-- Pattern 9: 403 No Permission / RBAC -->
+<section class="state-card-item bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-surface-container text-primary font-label-caps text-label-caps flex items-center justify-center">09</span>
+<span class="font-label-caps text-label-caps text-tertiary">Role Access Control</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-label-caps">HTTP 403</span>
+</div>
+<!-- Shield Padlock with Warm Glow -->
+<div class="relative w-16 h-16 rounded-2xl bg-surface-container-high flex items-center justify-center text-primary shadow-inner">
+<span class="material-symbols-outlined text-[34px]">shield_person</span>
+<span class="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-error text-on-error flex items-center justify-center text-[14px]">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">403 • Operational Access Restricted</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                Your current profile (<span class="font-bold text-on-surface">Role: Undergraduate Scholar</span>) does not have permission to access the Station 86 &amp; Kitchen KDS Configuration. This module requires Manager or Station Lead credentials.
+              </p>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl text-xs space-y-1">
+<div class="text-on-surface font-semibold">Authorized Roles:</div>
+<div class="text-on-surface-variant flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-caps">Station Chef</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-caps">Kitchen Lead</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-caps">Operations Admin</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md space-y-2">
+<button class="w-full py-2.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow hover:bg-primary transition-all">
+              Return to Canteen Portal
+            </button>
+<button class="w-full py-2 rounded-full text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-all">
+              Request Role Elevation from Dr. Aris Thorne
+            </button>
+</div>
+</section>
+<!-- Pattern 10: Cancellation Confirmation Modal Preview -->
+<section class="state-card-item bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-surface-container text-primary font-label-caps text-label-caps flex items-center justify-center">10</span>
+<span class="font-label-caps text-label-caps text-error">Destructive Modal Pattern</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-caps text-label-caps">Grace Window</span>
+</div>
+<!-- Dialog Preview Container -->
+<div class="p- space-md bg-surface-container-low rounded-2xl p-4 shadow-md space-y-3">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-error-container text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Cancel Order #C-032?</h4>
+</div>
+<span class="font-label-caps text-label-caps text-secondary bg-secondary-container px-2 py-0.5 rounded-full">1m Elapsed</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-xl space-y-1 text-xs">
+<div class="text-on-surface font-semibold">Active Order Summary:</div>
+<div class="text-on-surface-variant flex justify-between">
+<span>2x Crispy Chicken Brioche, 1x Truffle Fries</span>
+<span class="font-bold text-on-surface">$23.30</span>
+</div>
+<div class="text-tertiary pt-1">Placed 1 min ago (Pre-Prep Grace Window Active)</div>
+</div>
+<div class="p-2.5 rounded-xl bg-secondary-container/40 text-on-secondary-container flex items-center gap-2 text-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">payments</span>
+<span><strong>100% of $23.30</strong> will be immediately returned to your Campus SmartCard balance in &lt; 60 seconds.</span>
+</div>
+<div class="flex flex-col gap-2 pt-1">
+<button class="w-full py-2 rounded-full bg-error text-on-error font-label-md text-label-md hover:bg-error/90 transition-all shadow-sm">
+                Confirm Cancellation &amp; Refund
+              </button>
+<button class="w-full py-1.5 rounded-full text-on-surface font-label-md text-label-md hover:bg-surface-container transition-all">
+                Keep Order (Proceed)
+              </button>
+</div>
+</div>
+<div class="pt-3 text-xs text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">info</span>
+            Grace window closes once kitchen drops ingredients into fryer (approx 3m).
+          </div>
+</section>
+<!-- Pattern 11: Uncollected-Order Warning (Thermal Locker Expiration Notice) -->
+<section class="state-card-item bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-surface-container text-primary font-label-caps text-label-caps flex items-center justify-center">11</span>
+<span class="font-label-caps text-label-caps text-error">Food Safety Expiration</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error text-on-error font-label-caps text-label-caps animate-pulse">Urgent</span>
+</div>
+<!-- Countdown Timer Block -->
+<div class="p-3 bg-surface-container-high rounded-2xl flex items-center justify-between shadow-sm">
+<div>
+<span class="font-label-caps text-label-caps text-primary">Holding in Locker B-04</span>
+<div class="font-queue-token-lg text-queue-token-lg text-primary tracking-tight">04:18</div>
+</div>
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary shadow">
+<span class="material-symbols-outlined text-[28px] animate-spin">timer</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Thermal Locker Retrieval Window Expiring</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 leading-relaxed">
+                Your meal has been held at 65°C for 25 minutes. Pursuant to campus food safety protocols, uncollected meals after 30 minutes are routed to the Campus Zero-Waste Food Rescue pantry to prevent spoilage.
+              </p>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container text-xs text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">thermostat</span>
+              Locker Sensor: 65.4°C (Optimal holding temp maintained)
+            </div>
+</div>
+<div class="pt-space-md space-y-2">
+<button class="w-full py-2.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow hover:bg-primary transition-all flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">directions_walk</span>
+              I'm Arriving Now (+5m Extension Request)
+            </button>
+<button class="w-full py-2 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md hover:opacity-90 transition-all flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">lock_open</span>
+              Unlock Locker Remotely
+            </button>
+</div>
+</section>
+</div>
+<!-- ========================================== -->
+<!-- GROUP 6: TOAST NOTIFICATIONS & FEEDBACK (Pattern 12) -->
+<!-- ========================================== -->
+<section class="state-card-item flex flex-col gap-space-md" data-category="toasts">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-3">
+<span class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center font-label-caps text-label-caps text-primary">12</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Toast Notifications &amp; Transient Feedback Trays</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Elevated tactile notification cards with high contrast and explicit status signifiers.</p>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container font-label-caps text-label-caps text-on-surface-variant">Pattern #TOAST-SET</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Success Toast -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-lg flex flex-col justify-between gap-space-md relative overflow-hidden">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">check_circle</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface text-base">Order Placed Successfully</span>
+<span class="font-label-caps text-label-caps text-secondary bg-secondary-container px-2 py-0.5 rounded-full">Just Now</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Token <strong>#C-023</strong> dispatched to Hearth Station #2. Estimated pickup at <strong>12:45 PM</strong>.
+                </p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-xs text-on-surface-variant">
+<span class="flex items-center gap-1 font-label-md">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                Ticket in KDS queue
+              </span>
+<button class="font-label-md text-label-md text-primary hover:underline">Track Prep</button>
+</div>
+</div>
+<!-- Warning Toast -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-lg flex flex-col justify-between gap-space-md relative overflow-hidden">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">hourglass_top</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface text-base">Rush Delay Notification</span>
+<span class="font-label-caps text-label-caps text-primary bg-surface-container-high px-2 py-0.5 rounded-full">+4m Delay</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Hearth Line is running behind schedule due to high lunchtime ticket inflow.
+                </p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-xs text-on-surface-variant">
+<span class="flex items-center gap-1 font-label-md">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                Revised pickup: 12:49 PM
+              </span>
+<button class="font-label-md text-label-md text-primary hover:underline">Acknowledge</button>
+</div>
+</div>
+<!-- Error Toast -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-lg flex flex-col justify-between gap-space-md relative overflow-hidden">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-error-container flex items-center justify-center text-error shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">gpp_maybe</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface text-base">Door Sensor Alert</span>
+<span class="font-label-caps text-label-caps text-error bg-error-container px-2 py-0.5 rounded-full">Locker B-04</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Locker bay #B-04 did not latch securely. Please verify drawer closure or scan QR at help desk.
+                </p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-xs text-on-surface-variant">
+<span class="flex items-center gap-1 font-label-md text-error">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+                Hardware latch open
+              </span>
+<button class="font-label-md text-label-md text-primary hover:underline">Re-send Lock Signal</button>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- DESIGN SYSTEM SUMMARY / IMPLEMENTATION NOTES -->
+<!-- ========================================== -->
+<section class="bg-surface-container-low p-space-lg rounded-3xl flex flex-col md:flex-row items-center justify-between gap-space-lg">
+<div class="space-y-space-xs max-w-2xl">
+<div class="font-label-caps text-label-caps text-primary">ENGINEERING DIRECTIVE</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Production Implementation Checklist</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            All twelve exception states conform to Chez Gourmet WCAG 2.1 AAA color contrast standards, support optimistic mutation rollbacks, and emit telemetry events through the central dispatch monitoring hub.
+          </p>
+</div>
+<div class="flex flex-wrap items-center gap-3">
+<a class="px-5 py-2.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-all" href="#">
+            Download JSON Schema
+          </a>
+<a class="px-5 py-2.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shadow hover:bg-primary transition-all" href="#">
+            Deploy to KDS Fleet
+          </a>
+</div>
+</section>
+</div>
+</main>
+</div>
+<script>
+  function filterStateGroup(category, btn) {
+    // 1. Update button styling
+    const allButtons = document.querySelectorAll('.state-filter-btn');
+    allButtons.forEach(b => {
+      b.className = 'state-filter-btn px-4 py-2 rounded-full font-label-lg text-label-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all';
+    });
+    btn.className = 'state-filter-btn px-4 py-2 rounded-full font-label-lg text-label-lg bg-primary text-on-primary shadow-sm transition-all';
+
+    // 2. Filter sections
+    const cards = document.querySelectorAll('.state-card-item');
+    cards.forEach(card => {
+      const cardCategory = card.getAttribute('data-category');
+      if (category === 'all' || cardCategory === category) {
+        card.style.display = '';
+        card.classList.add('animate-fadeIn');
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+</script></main><footer class="w-full bg-surface-container-low text-on-surface-variant py-space-xl shadow-[0_-1px_12px_rgba(74,44,29,0.03)]"><div class="w-full px-margin flex flex-col md:flex-row items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md"><img alt="Artisanal food and botanical leaf logo for Chez Gourmet Smart Canteen. Elegant stylized fork/spoon and fresh green leaf motif, warm deep orange #F26B21 and natural forest green #3F6B3A on transparent background, minimalist vector style, sophisticated culinary brand mark. Design context: - Primary color: #f26b21 - Font: playfairDisplay - Mode: light - Roundness: rounded-md . The logo should be visually consistent with these brand tokens." class="h-6 w-auto object-contain opacity-80" src="https://lh3.googleusercontent.com/aida/AEtjO1Vo05zV1l30OuCCZOZbn3gCKuwvOGC4lSVWuMF41PLFVCvr_AZGw1VFEkUe_hZNYCwEMZkVjTJG25VgrvdmeGO8hsxL9Su69cgz3_qX6VTh746xH0MZXd12WBr-kjGZanPe9ze7jVgs7wO-dGIiDjXA2UvWaKcmhVnQ-uqewato6cDKLn1wLBTR6cxRulNdZdnZBWASGbcLuRyMw4jL-YShKFzL0X3Vp5pboz_4mw0lqLx4fC1umB0Zr5uh"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Chez Gourmet</span><span class="font-label-caps text-label-caps text-tertiary">Smart Culinary Canteen Management</span></div></div><div class="flex flex-wrap items-center justify-center gap-space-lg font-label-md text-label-md"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="menu" href="#">Artisanal Menu</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="live-operations" href="#">Countertop Kiosk Queue</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="documentation" href="#">Culinary Docs &amp; APIs</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="system-states-&amp;-error-handlers" href="#">Kitchen Status</a></div><div class="text-right"><span class="font-body-sm text-body-sm text-tertiary">© 2024 Chez Gourmet Systems. High-trust dining operations.</span></div></div></footer></body></html>

@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-container":"#f26b21","tertiary-fixed":"#e8e2d6","surface-container":"#ffeae1","on-tertiary-fixed-variant":"#49473e","primary-fixed-dim":"#ffb595","tertiary":"#615e55","secondary":"#3d6838","surface-container-low":"#fff1eb","on-surface":"#2e1508","on-secondary-fixed":"#002202","on-primary-fixed-variant":"#7c2e00","secondary-fixed-dim":"#a2d398","surface-bright":"#fff8f6","on-tertiary-fixed":"#1d1c14","on-secondary-container":"#426f3d","surface-container-lowest":"#ffffff","on-error":"#ffffff","on-background":"#2e1508","surface-dim":"#ffd0bb","outline-variant":"#e0c0b2","surface":"#fff8f6","surface-tint":"#a23f00","surface-variant":"#ffdbcb","surface-container-high":"#ffe2d6","inverse-primary":"#ffb595","secondary-container":"#bdf0b2","outline":"#8c7166","inverse-surface":"#47291a","error":"#ba1a1a","tertiary-container":"#98948a","on-primary-fixed":"#351000","on-tertiary":"#ffffff","on-primary-container":"#511c00","error-container":"#ffdad6","on-error-container":"#93000a","on-tertiary-container":"#2f2d25","inverse-on-surface":"#ffede6","surface-container-highest":"#ffdbcb","secondary-fixed":"#bdf0b2","on-primary":"#ffffff","tertiary-fixed-dim":"#cbc6bb","on-surface-variant":"#594238","primary-fixed":"#ffdbcd","primary":"#a23f00","on-secondary-fixed-variant":"#255022","on-secondary":"#ffffff","background":"#fff8f6"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{gutter:"1.5rem","space-sm":"0.5rem",margin:"2.5rem","space-xl":"2.25rem","margin-mobile":"1.25rem","space-xs":"0.25rem","space-lg":"1.5rem","gutter-mobile":"1rem","space-md":"1rem"},fontFamily:{"headline-lg":["Playfair Display"],"display-hero-mobile":["Playfair Display"],"body-sm":["DM Sans"],"display-hero":["Playfair Display"],"headline-sm":["Playfair Display"],"label-lg":["DM Sans"],"label-caps":["DM Sans"],"headline-md":["Playfair Display"],"body-lg":["DM Sans"],"label-md":["DM Sans"],"body-md":["DM Sans"],"queue-token-lg":["DM Sans"],"headline-lg-mobile":["Playfair Display"]},fontSize:{"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.01em",fontWeight:"600"}],"display-hero-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}],"display-hero":["48px",{lineHeight:"56px",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-sm":["20px",{lineHeight:"28px",fontWeight:"600"}],"label-lg":["14px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"600"}],"label-caps":["11px",{lineHeight:"14px",letterSpacing:"0.08em",fontWeight:"700"}],"headline-md":["24px",{lineHeight:"32px",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"28px",fontWeight:"400"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"body-md":["15px",{lineHeight:"22px",fontWeight:"400"}],"queue-token-lg":["44px",{lineHeight:"48px",letterSpacing:"0.02em",fontWeight:"700"}],"headline-lg-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.01em",fontWeight:"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(74,44,29,0.06)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="px-space-lg pt-space-lg pb-space-md flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><img alt="Artisanal food and botanical leaf logo for Chez Gourmet Smart Canteen. Elegant stylized fork/spoon and fresh green leaf motif, warm deep orange #F26B21 and natural forest green #3F6B3A on transparent background, minimalist vector style, sophisticated culinary brand mark. Design context: - Primary color: #f26b21 - Font: playfairDisplay - Mode: light - Roundness: rounded-md. The logo should be visually consistent with these brand tokens." class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vo05zV1l30OuCCZOZbn3gCKuwvOGC4lSVWuMF41PLFVCvr_AZGw1VFEkUe_hZNYCwEMZkVjTJG25VgrvdmeGO8hsxL9Su69cgz3_qX6VTh746xH0MZXd12WBr-kjGZanPe9ze7jVgs7wO-dGIiDjXA2UvWaKcmhVnQ-uqewato6cDKLn1wLBTR6cxRulNdZdnZBWASGbcLuRyMw4jL-YShKFzL0X3Vp5pboz_4mw0lqLx4fC1umB0Zr5uh"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Chez Gourmet</span></div><div class="flex items-center gap-space-xs text-on-surface-variant font-label-caps text-label-caps uppercase tracking-wider pl-space-xs"><span>Staff Ops Portal</span><span class="text-outline-variant">•</span><span>South Atrium</span></div></div><div class="px-space-md py-space-xs"><div class="h-px w-full bg-surface-container-low"></div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-sm" data-active-classes="bg-surface-container text-primary font-label-lg rounded-xl shadow-[0_2px_8px_rgba(74,44,29,0.04)]"><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="incoming-orders" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span>Incoming Orders</span></div><span class="px-space-sm py-0.5 bg-primary-container text-on-primary font-label-caps text-label-caps rounded-full shadow-sm">4 New</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="live-queue" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">soup_kitchen</span><span>Live Queue</span></div><span class="px-space-sm py-0.5 bg-secondary-container text-secondary font-label-caps text-label-caps rounded-full">12 In Prep</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="menu-availability" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span>Menu Availability</span></div><span class="px-space-sm py-0.5 bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps rounded-full">86 Stock</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="collection-desk" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">shelves</span><span>Collection Desk</span></div><span class="material-symbols-outlined text-outline-variant text-[16px]">chevron_right</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="report-problem" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">flag</span><span>Report Problem</span></div><span class="material-symbols-outlined text-outline-variant text-[16px]">chevron_right</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="activity-log" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">history</span><span>Activity Log</span></div><span class="material-symbols-outlined text-outline-variant text-[16px]">chevron_right</span></a></nav></div><div class="flex flex-col p-space-md gap-space-sm bg-surface-container-low/60"><div class="p-space-sm bg-surface-container-lowest rounded-xl shadow-[0_2px_6px_rgba(74,44,29,0.03)] flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Shift Telemetry</span><span class="inline-flex items-center gap-1 font-label-caps text-label-caps text-secondary font-bold"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>Online</span></div><div class="flex flex-col"><span class="font-label-lg text-label-lg text-on-surface">Chef Laurent</span><span class="font-body-sm text-body-sm text-on-surface-variant">Lead Hearth Cook • Line #2</span></div><div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-md text-label-md"><span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">mode_heat</span>Grill: 340°C</span><span class="text-secondary font-bold">Synced</span></div></div><button class="w-full flex items-center justify-center gap-space-xs py-space-sm px-space-md rounded-xl bg-error-container text-on-error-container hover:bg-error hover:text-on-error font-label-lg text-label-lg transition-colors shadow-sm" type="button"><span class="material-symbols-outlined text-[18px]">e911_emergency</span><span>Kitchen Intercom</span></button><div class="flex items-center justify-between px-space-xs pt-space-xs"><a class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant hover:text-error transition-colors" data-path="logout" href="#"><span class="material-symbols-outlined text-[16px]">logout</span><span>Log Out</span></a><span class="font-label-caps text-label-caps text-outline">v2.4.1</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(74,44,29,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant"><span class="hover:text-on-surface cursor-pointer">Staff Ops</span><span class="text-outline-variant">/</span><span class="hover:text-on-surface cursor-pointer">Hearth Station #2</span><span class="text-outline-variant">/</span><span class="text-on-surface font-bold">Incoming Ticket Queue</span></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 bg-secondary-fixed/50 text-secondary font-label-md text-label-md rounded-full"><span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span><span>Station Online (24ms)</span></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center gap-space-xs px-space-md py-1.5 bg-surface-container-lowest rounded-full shadow-[0_1px_4px_rgba(74,44,29,0.04)] text-on-surface"><span class="material-symbols-outlined text-[16px] text-secondary">schedule</span><span class="font-label-lg text-label-lg">1:14:28 PM</span><span class="text-outline-variant">•</span><span class="font-label-md text-label-md text-primary font-bold">Lunch Service Rush</span></div><button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors shadow-[0_1px_4px_rgba(74,44,29,0.04)] font-label-md text-label-md" type="button"><span class="material-symbols-outlined text-[18px] text-primary">notifications_active</span><span class="hidden sm:inline">Chimes On</span></button><button class="w-8 h-8 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center shadow-[0_1px_4px_rgba(74,44,29,0.04)]" type="button"><span class="material-symbols-outlined text-[18px]">refresh</span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden md:flex flex-col text-left"><span class="font-label-lg text-label-lg text-on-surface leading-tight">Chef Laurent M.</span><span class="font-label-caps text-label-caps text-on-surface-variant leading-tight">Head Station Lead</span></div><button class="w-6 h-6 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">arrow_drop_down</span></button></div></div></header><main class="w-full pt-16 bg-background min-h-screen px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Toast Floating Notification System (Live Feedback Mock) -->
+<div class="mb-space-lg w-full flex items-center justify-between gap-space-md p-space-md bg-surface-container-lowest rounded-xl shadow-lg border-l-4 border-primary">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[22px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface">Item hidden from new diner orders</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Kitchen Auto-Gate Active</span>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-fixed text-secondary font-label-caps text-label-caps">12ms Sync</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+<strong class="font-semibold text-on-surface">Artisanal Crispy Chicken Brioche</strong> reached 0 portions. Instantly de-listed across mobile kiosks, web order carts, and digital boards.
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="px-space-md py-1.5 rounded-full bg-surface-container text-primary hover:bg-primary hover:text-on-primary font-label-md text-label-md transition-all shadow-sm" type="button">
+        Undo 86 Action
+      </button>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container-low text-on-surface-variant flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Header Section with Editorial Flair & Action Triggers -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md pb-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs font-label-caps text-label-caps text-primary tracking-widest uppercase">
+<span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+<span>Kitchen Display &amp; Service Desk Operations</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+        Menu Availability &amp; Stock Controls <span class="font-normal italic text-tertiary">(86 Board)</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+        Real-time kitchen line portion depletion, automated kiosk item gating, and manual station 86ing for the lunch service rush.
+      </p>
+</div>
+<!-- Quick Emergency Controls -->
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-full bg-surface-container-lowest text-secondary font-label-lg text-label-lg shadow-sm hover:bg-surface-container transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+<span>Restock from Central Prep</span>
+<span class="ml-1 px-1.5 py-0.5 rounded-full bg-secondary-fixed text-secondary font-label-caps text-label-caps font-bold">+28</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-full bg-error text-on-error font-label-lg text-label-lg shadow-sm hover:opacity-90 active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">block</span>
+<span>Emergency 86 Station</span>
+</button>
+</div>
+</div>
+<!-- KPI Metric Overview Row -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-xl">
+<!-- Card 1: Active Menu Items -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Active Offerings</span>
+<span class="w-8 h-8 rounded-full bg-secondary-fixed/50 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">restaurant_menu</span>
+</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface">24</span>
+<span class="font-label-lg text-label-lg text-secondary font-semibold">Online &amp; Orderable</span>
+</div>
+<div class="pt-space-xs flex items-center justify-between font-label-md text-label-md text-on-surface-variant">
+<span>Across 4 Stations</span>
+<span class="text-secondary font-medium">89% Line Fill</span>
+</div>
+</div>
+<!-- Card 2: Low Stock Alert -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-wider font-bold">Critical Threshold (&lt;5)</span>
+<span class="w-8 h-8 rounded-full bg-surface-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-primary">3</span>
+<span class="font-label-lg text-label-lg text-primary font-semibold">Items Critical</span>
+</div>
+<div class="pt-space-xs flex items-center justify-between font-label-md text-label-md text-on-surface-variant">
+<span>Auto-cutoff armed</span>
+<span class="text-primary font-medium">Paced Allocation</span>
+</div>
+</div>
+<!-- Card 3: 86'd / Sold Out -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-error tracking-wider font-bold">86'd / Sold Out</span>
+<span class="w-8 h-8 rounded-full bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">do_not_disturb_on</span>
+</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-error">3</span>
+<span class="font-label-lg text-label-lg text-on-surface-variant font-semibold">Gated Globally</span>
+</div>
+<div class="pt-space-xs flex items-center justify-between font-label-md text-label-md text-on-surface-variant">
+<span>Hidden from Kiosks</span>
+<span class="text-error font-medium">1 Auto-triggered</span>
+</div>
+</div>
+<!-- Card 4: Commissary Restock ETA -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Central Delivery ETA</span>
+<span class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface">14</span>
+<span class="font-headline-sm text-headline-sm text-tertiary">mins</span>
+</div>
+<div class="pt-space-xs flex items-center justify-between font-label-md text-label-md text-on-surface-variant">
+<span>Commissary Van #2</span>
+<span class="text-secondary font-bold">En Route (1.4 km)</span>
+</div>
+</div>
+</div>
+<!-- Search & Filter Control Bar -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md p-space-md bg-surface-container-lowest rounded-xl shadow-sm mb-space-lg">
+<!-- Search Input -->
+<div class="relative flex-1 max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline-variant text-[20px]">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low rounded-full font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container transition-colors" placeholder="Search menu items, ingredients, station..." type="text"/>
+</div>
+<!-- Station & Status Pills -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase mr-2 tracking-wider">Station:</span>
+<button class="px-space-md py-1.5 rounded-full bg-on-surface text-surface font-label-md text-label-md" type="button">All Stations (24)</button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" type="button">Hearth Grill #1 &amp; #2 (8)</button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" type="button">Botanical Salad Lab (6)</button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" type="button">Bakery Hearth (5)</button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" type="button">Juicery &amp; Brew (5)</button>
+</div>
+<!-- Filter Separator -->
+<div class="hidden xl:block h-6 w-px bg-surface-container"></div>
+<!-- Quick Status Toggles -->
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-1.5 px-space-sm py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Low Stock Only (3)</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-sm py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container text-error font-label-md text-label-md transition-colors" type="button">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span>86'd Items (3)</span>
+</button>
+</div>
+</div>
+<!-- SECTION 1: Hearth & Flame Grill Line -->
+<div class="flex flex-col gap-space-sm mb-space-xl">
+<div class="flex items-center justify-between px-space-xs pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Hearth &amp; Flame Grill Line</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-label-caps">Station Lead: Chef Laurent • Fire Temp 340°C</span>
+</div>
+<button class="font-label-md text-label-md text-primary hover:underline flex items-center gap-1" type="button">
+<span>Station 86 Override</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<!-- Inventory Table Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="grid grid-cols-12 gap-space-md px-space-md py-3 bg-surface-container-low/70 font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">
+<div class="col-span-5 flex items-center gap-space-xs">Dish &amp; Station Profile</div>
+<div class="col-span-3 flex items-center justify-center">Inventory &amp; Depletion Rate</div>
+<div class="col-span-2 text-center">App Availability</div>
+<div class="col-span-2 text-right">Quick Station Actions</div>
+</div>
+<div class="flex flex-col divide-y-0">
+<!-- Item 1: Crispy Chicken Brioche (86'd / Sold Out State Highlighted) -->
+<div class="grid grid-cols-12 gap-space-md px-space-md py-space-md items-center bg-surface-container-low/30 hover:bg-surface-container-low/50 transition-colors">
+<div class="col-span-5 flex items-center gap-space-md min-w-0">
+<div class="relative w-20 h-16 rounded-xl overflow-hidden shrink-0 shadow-sm bg-surface-container">
+<img class="w-full h-full object-cover grayscale opacity-75" data-alt="Artisanal golden crispy buttermilk fried chicken burger with melted farmhouse cheddar cheese, fresh homemade herb tartar sauce, pickles, on toasted brioche bun, presented on rustic dark ceramic plate in cozy restaurant setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHQT2_b-TJ-An01782ZIuUp9Z5-PIcV2OJUNY_7o1Ye1HI-iIjDL6cgd2TL3BYIzfKYnoieZo3oVSzmnkxkcfU-KNmGWg2Teuur86KasCIFai90aJe41nnQrhKRcXxhKIJYUWu-ntnEvy6X0R-aBTDeKpPKPqT3_oQf7VdAa1RIWG8zAj1TIppJ62f82YGKmfQiJNgoM1ervxCUW46S7Gt-66N8xgZp3sDvBd5Zm9b3AqqxWQ6GvYfjQ"/>
+<div class="absolute inset-0 bg-inverse-surface/40 flex items-center justify-center">
+<span class="px-1.5 py-0.5 bg-error text-on-error font-label-caps text-[9px] rounded uppercase font-bold tracking-wider">86'D</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h3 class="font-label-lg text-label-lg text-on-surface line-through truncate">Artisanal Crispy Chicken Brioche</h3>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-caps text-label-caps font-bold">Auto-Sold Out</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">House pickle relish, dill emulsion, brioche bun</span>
+<div class="flex items-center gap-space-xs text-outline font-label-md text-label-md mt-0.5">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span>
+<span>Hearth Line #2</span>
+<span>•</span>
+<span class="text-error font-semibold">Zero Stock Gated at 1:12 PM</span>
+</div>
+</div>
+</div>
+<!-- Stock Level & Stepper: 0 remaining -->
+<div class="col-span-3 flex flex-col items-center justify-center gap-1.5">
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-full">
+<button class="w-6 h-6 rounded-full bg-surface-container-lowest text-outline-variant flex items-center justify-center shadow-sm cursor-not-allowed" disabled="" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="font-label-lg text-label-lg text-error font-bold w-12 text-center">0 / 45</span>
+<button class="w-6 h-6 rounded-full bg-surface-container-lowest text-primary hover:bg-primary hover:text-on-primary flex items-center justify-center shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+<!-- Progress Depletion Bar (Empty) -->
+<div class="w-36 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-error rounded-full w-0"></div>
+</div>
+<span class="font-label-caps text-label-caps text-error font-bold uppercase tracking-wider">Depleted • 0% Capacity</span>
+</div>
+<!-- Availability Toggle -->
+<div class="col-span-2 flex flex-col items-center justify-center gap-1">
+<div class="relative inline-flex items-center cursor-pointer">
+<!-- Switch Track (Off State) -->
+<div class="w-12 h-6 bg-surface-container-high rounded-full p-1 transition-colors duration-200 ease-in-out">
+<!-- Knob -->
+<div class="w-4 h-4 rounded-full bg-outline-variant transition-transform duration-200 ease-in-out"></div>
+</div>
+</div>
+<span class="font-label-caps text-label-caps text-error uppercase font-bold">Unavailable</span>
+</div>
+<!-- Quick Action Buttons -->
+<div class="col-span-2 flex items-center justify-end gap-space-xs">
+<button class="px-space-sm py-1.5 rounded-full bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md transition-colors shadow-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+<span>+10 Prep</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Item 2: Hearth Roasted Squash Bowl (Low Stock Alert) -->
+<div class="grid grid-cols-12 gap-space-md px-space-md py-space-md items-center bg-surface-container-lowest hover:bg-surface-container-low/40 transition-colors">
+<div class="col-span-5 flex items-center gap-space-md min-w-0">
+<div class="relative w-20 h-16 rounded-xl overflow-hidden shrink-0 shadow-sm bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Hearth roasted seasonal butternut squash bowl with toasted pepitas, crumbled goat cheese, pomegranate seeds, and tender wild greens on a warm rustic earthenware bowl." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwrUFkZ26-gebJ-0GAhxGC6ydLelvmjOaHAbDJkI7s8kYTi3LlBRikRMSwS7Lwt3smUEJ7VxfRsLijsGVnNIKb9fuTKFNfTkU1tG8jbagIc5qP3oGO0MGPldRBmyEA_hu2Y6Im0Td-jpUgxs7NGP0NFammqjKiBXvwb_I6uVH0R4JIxB7wocNqC__mPRnabmRlCYdUEsnL4e6LlYjRMnRFi6pYQw5B5IYbpBrtjUAOI8GqP1RXY6Sh6g"/>
+<div class="absolute top-1 left-1 px-1.5 py-0.5 bg-primary text-on-primary font-label-caps text-[9px] rounded-full uppercase font-bold tracking-wider">LOW</div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h3 class="font-label-lg text-label-lg text-on-surface truncate">Hearth Roasted Squash &amp; Pepita Plate</h3>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-caps text-label-caps font-bold">3 Left</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Crumbled chèvre, organic cider glaze, micro-chives</span>
+<div class="flex items-center gap-space-xs text-outline font-label-md text-label-md mt-0.5">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span>
+<span>Hearth Line #1</span>
+<span>•</span>
+<span class="text-primary font-semibold">Depleting rapidly (4 sold / 10m)</span>
+</div>
+</div>
+</div>
+<!-- Stock Level & Stepper: 3 remaining -->
+<div class="col-span-3 flex flex-col items-center justify-center gap-1.5">
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-full">
+<button class="w-6 h-6 rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container flex items-center justify-center shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="font-label-lg text-label-lg text-primary font-bold w-12 text-center">3 / 25</span>
+<button class="w-6 h-6 rounded-full bg-surface-container-lowest text-primary hover:bg-primary hover:text-on-primary flex items-center justify-center shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+<!-- Progress Depletion Bar (12%) -->
+<div class="w-36 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 12%;"></div>
+</div>
+<span class="font-label-caps text-label-caps text-primary font-bold uppercase tracking-wider">12% Stock • Gating Soon</span>
+</div>
+<!-- Availability Toggle (Active) -->
+<div class="col-span-2 flex flex-col items-center justify-center gap-1">
+<div class="relative inline-flex items-center cursor-pointer">
+<!-- Switch Track (On State) -->
+<div class="w-12 h-6 bg-secondary rounded-full p-1 transition-colors duration-200 ease-in-out flex justify-end">
+<!-- Knob -->
+<div class="w-4 h-4 rounded-full bg-surface-container-lowest shadow-sm"></div>
+</div>
+</div>
+<span class="font-label-caps text-label-caps text-secondary uppercase font-bold">Limited</span>
+</div>
+<!-- Quick Action Buttons -->
+<div class="col-span-2 flex items-center justify-end gap-space-xs">
+<button class="px-space-sm py-1.5 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">block</span>
+<span>86 Now</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Item 3: Truffle Herb Sea Salt Fries (Healthy Stock) -->
+<div class="grid grid-cols-12 gap-space-md px-space-md py-space-md items-center bg-surface-container-lowest hover:bg-surface-container-low/40 transition-colors">
+<div class="col-span-5 flex items-center gap-space-md min-w-0">
+<div class="relative w-20 h-16 rounded-xl overflow-hidden shrink-0 shadow-sm bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Golden crisp hand-cut French fries tossed with freshly chopped rosemary, sea salt crystals, and shaved black truffle served in copper wire basket alongside aioli dipping bowl." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhpOHBhP23eYceVBtg_Vc7olV8vlq0oCTDvoS7pYwnw2y8rWYEjDLF49cy1sNiY1a76uLiUpfIEFzatWRK1GaT0psUMNvxHBPHMbqvPfSuRi22XfUezCz5Ismjj_TUwSQQEmAq1M0K3UcX78wnfpMZ0ZLhdo8byMtsmVw3KbHCkpX5fnBLCsTKtUBFzIjX8aYnS4s6P6NXv_gZp0lzurPddqFBDEOmrfTxlIvt9VbHS9mzH0_C11NzcQ"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h3 class="font-label-lg text-label-lg text-on-surface truncate">Truffle Herb Sea Salt Fries</h3>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-secondary font-label-caps text-label-caps font-bold">High Stock</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Hand-cut Russets, roasted garlic aioli, rosemary dust</span>
+<div class="flex items-center gap-space-xs text-outline font-label-md text-label-md mt-0.5">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span>
+<span>Hearth Fryer #2</span>
+<span>•</span>
+<span class="text-secondary font-semibold">Continuous fryer batch active</span>
+</div>
+</div>
+</div>
+<!-- Stock Level & Stepper: 34 remaining -->
+<div class="col-span-3 flex flex-col items-center justify-center gap-1.5">
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-full">
+<button class="w-6 h-6 rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container flex items-center justify-center shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="font-label-lg text-label-lg text-on-surface font-bold w-12 text-center">34 / 50</span>
+<button class="w-6 h-6 rounded-full bg-surface-container-lowest text-primary hover:bg-primary hover:text-on-primary flex items-center justify-center shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+<!-- Progress Depletion Bar (68%) -->
+<div class="w-36 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 68%;"></div>
+</div>
+<span class="font-label-caps text-label-caps text-secondary font-bold uppercase tracking-wider">68% Capacity • Stable</span>
+</div>
+<!-- Availability Toggle (Active) -->
+<div class="col-span-2 flex flex-col items-center justify-center gap-1">
+<div class="relative inline-flex items-center cursor-pointer">
+<div class="w-12 h-6 bg-secondary rounded-full p-1 transition-colors duration-200 ease-in-out flex justify-end">
+<div class="w-4 h-4 rounded-full bg-surface-container-lowest shadow-sm"></div>
+</div>
+</div>
+<span class="font-label-caps text-label-caps text-secondary uppercase font-bold">Available</span>
+</div>
+<!-- Quick Action Buttons -->
+<div class="col-span-2 flex items-center justify-end gap-space-xs">
+<button class="px-space-sm py-1.5 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Allergens</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 2: Botanical Salad Lab & Nourish Bowls -->
+<div class="flex flex-col gap-space-sm mb-space-xl">
+<div class="flex items-center justify-between px-space-xs pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-3 h-3 rounded-full bg-secondary"></div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Botanical Salad Lab &amp; Cold Plates</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-label-caps">Station Lead: Chef Yoko • Chiller Temp 3.2°C</span>
+</div>
+<button class="font-label-md text-label-md text-secondary hover:underline flex items-center gap-1" type="button">
+<span>Restock Central Prep</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<!-- Inventory Table Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="grid grid-cols-12 gap-space-md px-space-md py-3 bg-surface-container-low/70 font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">
+<div class="col-span-5 flex items-center gap-space-xs">Dish &amp; Station Profile</div>
+<div class="col-span-3 flex items-center justify-center">Inventory &amp; Depletion Rate</div>
+<div class="col-span-2 text-center">App Availability</div>
+<div class="col-span-2 text-right">Quick Station Actions</div>
+</div>
+<div class="flex flex-col divide-y-0">
+<!-- Item 4: Wild Grain Rice & Lemon Hen Bowl -->
+<div class="grid grid-cols-12 gap-space-md px-space-md py-space-md items-center bg-surface-container-lowest hover:bg-surface-container-low/40 transition-colors">
+<div class="col-span-5 flex items-center gap-space-md min-w-0">
+<div class="relative w-20 h-16 rounded-xl overflow-hidden shrink-0 shadow-sm bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Wholesome Mediterranean chicken skewer bowl filled with nutty wild grain rice, flame roasted yellow peppers, sliced creamy avocado, crisp baby arugula and tahini drizzle in ceramic bowl on a sunny dining table." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX0fpMq5yhrYjQ6d-SWljAOb1XqtK3mCzsaC2j-5-k-kgBiDIH9KQCsMzMTYvEZ6Hbh91C9w3Ud3D9Ob1ZuovhIHIZMJSFnEMv_IQxDPl6XjXMesreI44--vmfcTZDurWRTNs4FZZRDqQxMt1dxXnS05TBrfiKLyhrbrwtZnyTYyO8T8WBEbWQTRzYNVBuoZTUX-l5OPBso2wgPlhU-Lz1AoAJ6B6nfyrZvPFQ396bYZgw26sqR-gwAA"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h3 class="font-label-lg text-label-lg text-on-surface truncate">Wild Grain Rice &amp; Lemon Hen Bowl</h3>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-secondary font-label-caps text-label-caps font-bold">Paced</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Charred peppers, Hass avocado, lemon tahini dressing</span>
+<div class="flex items-center gap-space-xs text-outline font-label-md text-label-md mt-0.5">
+<span class="material-symbols-outlined text-[14px]">eco</span>
+<span>Cold Salad Lab</span>
+<span>•</span>
+<span class="text-secondary font-semibold">18 units allocated for lunch rush</span>
+</div>
+</div>
+</div>
+<!-- Stock Level & Stepper: 18 remaining -->
+<div class="col-span-3 flex flex-col items-center justify-center gap-1.5">
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-full">
+<button class="w-6 h-6 rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container flex items-center justify-center shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="font-label-lg text-label-lg text-on-surface font-bold w-12 text-center">18 / 30</span>
+<button class="w-6 h-6 rounded-full bg-surface-container-lowest text-primary hover:bg-primary hover:text-on-primary flex items-center justify-center shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+<!-- Progress Depletion Bar (60%) -->
+<div class="w-36 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 60%;"></div>
+</div>
+<span class="font-label-caps text-label-caps text-secondary font-bold uppercase tracking-wider">60% Available • High Flow</span>
+</div>
+<!-- Availability Toggle -->
+<div class="col-span-2 flex flex-col items-center justify-center gap-1">
+<div class="relative inline-flex items-center cursor-pointer">
+<div class="w-12 h-6 bg-secondary rounded-full p-1 transition-colors duration-200 ease-in-out flex justify-end">
+<div class="w-4 h-4 rounded-full bg-surface-container-lowest shadow-sm"></div>
+</div>
+</div>
+<span class="font-label-caps text-label-caps text-secondary uppercase font-bold">Available</span>
+</div>
+<!-- Quick Action Buttons -->
+<div class="col-span-2 flex items-center justify-end gap-space-xs">
+<button class="px-space-sm py-1.5 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">block</span>
+<span>86 Item</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Item 5: Loch Duart Salmon & Poached Hen Egg (Temporarily Paused / Prepping Batch) -->
+<div class="grid grid-cols-12 gap-space-md px-space-md py-space-md items-center bg-surface-container-low/20 hover:bg-surface-container-low/40 transition-colors">
+<div class="col-span-5 flex items-center gap-space-md min-w-0">
+<div class="relative w-20 h-16 rounded-xl overflow-hidden shrink-0 shadow-sm bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Seared Scottish salmon fillet served over wholesome grains with a perfectly poached golden runny hen egg, sliced avocado, pea shoots, and roasted pumpkin seeds in an artisan textured ceramic bowl." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvEnhjz0hXxKRXHLUJaOpcSsXby6xFf2Op94eX_iTb37kRDP_a-Hou6b9QeR_lJXNvk3IrwIIQCnuMKo8twx9IeomHSfcZzHmVQyX4uKtzwkVCwipE_uFxEhAHl6Gmq6xCCrI6bjlqgA--HN2l7Qk8i_pm7wxOFp-kDGxO7MIkzh3Xw5vhB8dCReweQ5nUiHdmwOZ8jssa2tHKnORulr6_47ls5h2o8OiXA0S9A6LZ1x285RHmVAFoLg"/>
+<div class="absolute inset-0 bg-tertiary/40 flex items-center justify-center">
+<span class="material-symbols-outlined text-surface-container-lowest text-[22px]">hourglass_top</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h3 class="font-label-lg text-label-lg text-on-surface truncate">Loch Duart Salmon &amp; Poached Egg</h3>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-caps text-label-caps font-bold">Batch Prepping</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Organic pea greens, toasted pepitas, six-minute egg</span>
+<div class="flex items-center gap-space-xs text-outline font-label-md text-label-md mt-0.5">
+<span class="material-symbols-outlined text-[14px]">pause_circle</span>
+<span>Cold Salad Lab</span>
+<span>•</span>
+<span class="text-tertiary font-semibold">Paused until 1:30 PM (Poaching 15 eggs)</span>
+</div>
+</div>
+</div>
+<!-- Stock Level & Stepper: 0 active (prepping batch) -->
+<div class="col-span-3 flex flex-col items-center justify-center gap-1.5">
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-full">
+<button class="w-6 h-6 rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container flex items-center justify-center shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="font-label-lg text-label-lg text-tertiary font-bold w-12 text-center">0 / 20</span>
+<button class="w-6 h-6 rounded-full bg-surface-container-lowest text-primary hover:bg-primary hover:text-on-primary flex items-center justify-center shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+<!-- Progress Depletion Bar (Paused state) -->
+<div class="w-36 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-tertiary rounded-full w-0"></div>
+</div>
+<span class="font-label-caps text-label-caps text-tertiary font-bold uppercase tracking-wider">Paused for Prep • Ready in 12m</span>
+</div>
+<!-- Availability Toggle (Temporary Off) -->
+<div class="col-span-2 flex flex-col items-center justify-center gap-1">
+<div class="relative inline-flex items-center cursor-pointer">
+<div class="w-12 h-6 bg-surface-container-high rounded-full p-1 transition-colors duration-200 ease-in-out">
+<div class="w-4 h-4 rounded-full bg-outline-variant"></div>
+</div>
+</div>
+<span class="font-label-caps text-label-caps text-tertiary uppercase font-bold">Temporarily Paused</span>
+</div>
+<!-- Quick Action Buttons -->
+<div class="col-span-2 flex items-center justify-end gap-space-xs">
+<button class="px-space-sm py-1.5 rounded-full bg-secondary text-on-secondary hover:bg-secondary/90 font-label-md text-label-md transition-colors shadow-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+<span>Release +15</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 3: Bakery & Artisanal Morning Hearth -->
+<div class="flex flex-col gap-space-sm mb-space-xl">
+<div class="flex items-center justify-between px-space-xs pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-3 h-3 rounded-full bg-primary-container"></div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Bakery &amp; Hearth Morning Goods</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-label-caps">Station Lead: Baker Marie • Oven #4</span>
+</div>
+<button class="font-label-md text-label-md text-primary hover:underline flex items-center gap-1" type="button">
+<span>Afternoon Bake Schedule</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<!-- Inventory Table Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="grid grid-cols-12 gap-space-md px-space-md py-3 bg-surface-container-low/70 font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">
+<div class="col-span-5 flex items-center gap-space-xs">Dish &amp; Station Profile</div>
+<div class="col-span-3 flex items-center justify-center">Inventory &amp; Depletion Rate</div>
+<div class="col-span-2 text-center">App Availability</div>
+<div class="col-span-2 text-right">Quick Station Actions</div>
+</div>
+<div class="flex flex-col divide-y-0">
+<!-- Item 6: Warm Organic Cardamom Morning Buns (Low Stock) -->
+<div class="grid grid-cols-12 gap-space-md px-space-md py-space-md items-center bg-surface-container-lowest hover:bg-surface-container-low/40 transition-colors">
+<div class="col-span-5 flex items-center gap-space-md min-w-0">
+<div class="relative w-20 h-16 rounded-xl overflow-hidden shrink-0 shadow-sm bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Warm flaky cardamom morning buns dusted with Swedish pearl sugar and crushed cardamom seeds freshly baked on bakery parchment with rustic wood table background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAmQ4OySvm5nvzJ91ewU6cV5HvNpfi4gCf2hXFmWeK_MKn7__k7Xk32LimD2mLy9ZkIhD_sXwcoMNdY43M2Oo4uKz0KKSBFxnMOO2p4OSzd4KJKXPK-FWX6amWw-Ymqyv1sftUTy65idQOKxHxgYd0DhOTxuTdcHTd9_g08D1WEfz4HJuVsu2EK83UOicgEEdsJSlrG2SHx3W4DLpNLp_CqYGZ9hvbDo5jT9dlbFig3is0evZvbfOCSw"/>
+<div class="absolute top-1 left-1 px-1.5 py-0.5 bg-primary text-on-primary font-label-caps text-[9px] rounded-full uppercase font-bold tracking-wider">LOW</div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h3 class="font-label-lg text-label-lg text-on-surface truncate">Warm Organic Cardamom Morning Bun</h3>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-caps text-label-caps font-bold">2 Left</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Sourdough laminated pastry, crushed green cardamom</span>
+<div class="flex items-center gap-space-xs text-outline font-label-md text-label-md mt-0.5">
+<span class="material-symbols-outlined text-[14px]">bakery_dining</span>
+<span>Pastry Case Display</span>
+<span>•</span>
+<span class="text-primary font-semibold">Final morning batch (No 2PM bake)</span>
+</div>
+</div>
+</div>
+<!-- Stock Level & Stepper: 2 remaining -->
+<div class="col-span-3 flex flex-col items-center justify-center gap-1.5">
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-full">
+<button class="w-6 h-6 rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container flex items-center justify-center shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="font-label-lg text-label-lg text-primary font-bold w-12 text-center">2 / 40</span>
+<button class="w-6 h-6 rounded-full bg-surface-container-lowest text-primary hover:bg-primary hover:text-on-primary flex items-center justify-center shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+<!-- Progress Depletion Bar (5%) -->
+<div class="w-36 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 5%;"></div>
+</div>
+<span class="font-label-caps text-label-caps text-primary font-bold uppercase tracking-wider">5% Capacity • Critical</span>
+</div>
+<!-- Availability Toggle -->
+<div class="col-span-2 flex flex-col items-center justify-center gap-1">
+<div class="relative inline-flex items-center cursor-pointer">
+<div class="w-12 h-6 bg-secondary rounded-full p-1 transition-colors duration-200 ease-in-out flex justify-end">
+<div class="w-4 h-4 rounded-full bg-surface-container-lowest shadow-sm"></div>
+</div>
+</div>
+<span class="font-label-caps text-label-caps text-secondary uppercase font-bold">Limited</span>
+</div>
+<!-- Quick Action Buttons -->
+<div class="col-span-2 flex items-center justify-end gap-space-xs">
+<button class="px-space-sm py-1.5 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">block</span>
+<span>86 Now</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Drawer / Kitchen Station Telemetry Banner -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col lg:flex-row items-center justify-between gap-space-md mb-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[28px]">sync_saved_locally</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface">Auto-Sync Protocol to South Atrium Diners</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-secondary font-label-caps text-label-caps font-bold">Active &amp; Live</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+          Changes on this 86 Board propagate instantly to mobile web apps, self-order kiosks, and pickup shelf monitors across the campus.
+        </span>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0 w-full lg:w-auto justify-end">
+<div class="text-right hidden sm:block">
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase">Last Commissary Sync</div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">1:14:10 PM (18s ago)</div>
+</div>
+<button class="px-space-lg py-2.5 rounded-full bg-primary text-on-primary hover:bg-on-primary-container font-label-lg text-label-lg shadow-sm transition-all flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">cloud_sync</span>
+<span>Force Kiosk Refresh</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interactions for kitchen staff adjustments
+  document.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      // Avoid redirect or unintended shell behaviors
+      if (this.textContent.includes('Prep') || this.textContent.includes('+10')) {
+        const row = this.closest('.grid');
+        if (row) {
+          const countSpan = row.querySelector('.font-bold.w-12');
+          if (countSpan) {
+            countSpan.textContent = '10 / 45';
+            countSpan.className = countSpan.className.replace('text-error', 'text-secondary');
+          }
+        }
+      }
+    });
+  });
+</script></main></div></body></html>

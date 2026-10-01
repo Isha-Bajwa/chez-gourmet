@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"outline":"#8c7166","inverse-primary":"#ffb595","on-secondary-fixed":"#002202","tertiary-fixed-dim":"#cbc6bb","surface-container-low":"#fff1eb","on-secondary":"#ffffff","primary-fixed":"#ffdbcd","secondary-container":"#bdf0b2","on-error":"#ffffff","surface-container-lowest":"#ffffff","surface-tint":"#a23f00","on-primary":"#ffffff","outline-variant":"#e0c0b2","surface-container":"#ffeae1","secondary":"#3d6838","surface-container-highest":"#ffdbcb","inverse-surface":"#47291a","on-surface-variant":"#594238","secondary-fixed":"#bdf0b2","tertiary":"#615e55","surface-variant":"#ffdbcb","tertiary-fixed":"#e8e2d6","on-background":"#2e1508","error":"#ba1a1a","on-primary-fixed":"#351000","on-primary-fixed-variant":"#7c2e00","primary-fixed-dim":"#ffb595","on-surface":"#2e1508","secondary-fixed-dim":"#a2d398","on-secondary-container":"#426f3d","on-tertiary-container":"#2f2d25","tertiary-container":"#98948a","surface-container-high":"#ffe2d6","on-tertiary-fixed":"#1d1c14","on-error-container":"#93000a","primary-container":"#f26b21","on-tertiary-fixed-variant":"#49473e","surface-bright":"#fff8f6","on-primary-container":"#511c00","surface":"#fff8f6","background":"#fff8f6","surface-dim":"#ffd0bb","on-secondary-fixed-variant":"#255022","on-tertiary":"#ffffff","error-container":"#ffdad6","primary":"#a23f00","inverse-on-surface":"#ffede6"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1.5rem","space-xl":"2.25rem","margin":"2.5rem","space-sm":"0.5rem","gutter":"1.5rem","space-xs":"0.25rem","margin-mobile":"1.25rem","gutter-mobile":"1rem","space-md":"1rem"},fontFamily:{"display-hero-mobile":["Playfair Display"],"headline-md":["Playfair Display"],"body-md":["DM Sans"],"queue-token-lg":["DM Sans"],"headline-lg-mobile":["Playfair Display"],"headline-sm":["Playfair Display"],"display-hero":["Playfair Display"],"body-sm":["DM Sans"],"body-lg":["DM Sans"],"label-caps":["DM Sans"],"label-md":["DM Sans"],"label-lg":["DM Sans"],"headline-lg":["Playfair Display"]},fontSize:{"display-hero-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"body-md":["15px",{"lineHeight":"22px","fontWeight":"400"}],"queue-token-lg":["44px",{"lineHeight":"48px","letterSpacing":"0.02em","fontWeight":"700"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"display-hero":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"label-caps":["11px",{"lineHeight":"14px","letterSpacing":"0.08em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(74,44,29,0.06)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="px-space-lg pt-space-lg pb-space-md flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><img alt="Artisanal food and botanical leaf logo for Chez Gourmet Smart Canteen. Elegant stylized fork/spoon and fresh green leaf motif, warm deep orange #F26B21 and natural forest green #3F6B3A on transparent background, minimalist vector style, sophisticated culinary brand mark. Design context: - Primary color: #f26b21 - Font: playfairDisplay - Mode: light - Roundness: rounded-md. The logo should be visually consistent with these brand tokens." class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vo05zV1l30OuCCZOZbn3gCKuwvOGC4lSVWuMF41PLFVCvr_AZGw1VFEkUe_hZNYCwEMZkVjTJG25VgrvdmeGO8hsxL9Su69cgz3_qX6VTh746xH0MZXd12WBr-kjGZanPe9ze7jVgs7wO-dGIiDjXA2UvWaKcmhVnQ-uqewato6cDKLn1wLBTR6cxRulNdZdnZBWASGbcLuRyMw4jL-YShKFzL0X3Vp5pboz_4mw0lqLx4fC1umB0Zr5uh"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Chez Gourmet</span></div><div class="flex items-center gap-space-xs text-on-surface-variant font-label-caps text-label-caps uppercase tracking-wider pl-space-xs"><span>Staff &amp; Executive Ops</span><span class="text-outline-variant">•</span><span>South Atrium</span></div></div><div class="px-space-md py-space-xs"><div class="h-px w-full bg-surface-container-low"></div></div><nav class="flex flex-col gap-space-xs px-space-md py-space-sm" data-active-classes="bg-surface-container text-primary font-label-lg rounded-xl shadow-[0_2px_8px_rgba(74,44,29,0.04)]"><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="incoming-orders" href="#">Incoming Orders</a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="live-queue" href="#">Live Queue</a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="menu-availability" href="#">Menu Availability</a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="collection-desk" href="#">Collection Desk</a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="manager-dashboard" href="#">Manager Dashboard</a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="executive-analytics" href="#">Executive Analytics</a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="report-problem" href="#">Report Problem</a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all group font-label-lg text-label-lg" data-path="activity-log" href="#">Activity Log</a></nav></div><div class="flex flex-col p-space-md gap-space-sm bg-surface-container-low/60"><div class="p-space-sm bg-surface-container-lowest rounded-xl shadow-[0_2px_6px_rgba(74,44,29,0.03)] flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Shift Telemetry</span><span class="inline-flex items-center gap-1 font-label-caps text-label-caps text-secondary font-bold"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>Online</span></div><div class="flex flex-col"><span class="font-label-lg text-label-lg text-on-surface">Chef Laurent</span><span class="font-body-sm text-body-sm text-on-surface-variant">Lead Hearth Cook • Line #2</span></div><div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-md text-label-md"><span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">mode_heat</span>Grill: 340°C</span><span class="text-secondary font-bold">Synced</span></div></div><button class="w-full flex items-center justify-center gap-space-xs py-space-sm px-space-md rounded-xl bg-error-container text-on-error-container hover:bg-error hover:text-on-error font-label-lg text-label-lg transition-colors shadow-sm" type="button"><span class="material-symbols-outlined text-[18px]">e911_emergency</span><span>Kitchen Intercom</span></button><div class="flex items-center justify-between px-space-xs pt-space-xs"><a class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant hover:text-error transition-colors" data-path="logout" href="#"><span class="material-symbols-outlined text-[16px]">logout</span><span>Log Out</span></a><span class="font-label-caps text-label-caps text-outline">v2.4.1</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(74,44,29,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant"><span class="hover:text-on-surface cursor-pointer">Staff Ops</span><span class="text-outline-variant">/</span><span class="hover:text-on-surface cursor-pointer">Hearth Station #2</span><span class="text-outline-variant">/</span><span class="text-on-surface font-bold">Canteen Operations</span></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 bg-secondary-fixed/50 text-secondary font-label-md text-label-md rounded-full"><span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span><span>Station Online (24ms)</span></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center gap-space-xs px-space-md py-1.5 bg-surface-container-lowest rounded-full shadow-[0_1px_4px_rgba(74,44,29,0.04)] text-on-surface"><span class="material-symbols-outlined text-[16px] text-secondary">schedule</span><span class="font-label-lg text-label-lg">1:14:28 PM</span><span class="text-outline-variant">•</span><span class="font-label-md text-label-md text-primary font-bold">Lunch Service Rush</span></div><button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors shadow-[0_1px_4px_rgba(74,44,29,0.04)] font-label-md text-label-md" type="button"><span class="material-symbols-outlined text-[18px] text-primary">notifications_active</span><span class="hidden sm:inline">Chimes On</span></button><button class="w-8 h-8 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center shadow-[0_1px_4px_rgba(74,44,29,0.04)]" type="button"><span class="material-symbols-outlined text-[18px]">refresh</span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden md:flex flex-col text-left"><span class="font-label-lg text-label-lg text-on-surface leading-tight">Chef Laurent M.</span><span class="font-label-caps text-label-caps text-on-surface-variant leading-tight">Head Station Lead</span></div><button class="w-6 h-6 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">arrow_drop_down</span></button></div></div></header><main class="w-full pt-16 bg-background min-h-screen px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Top Command & Telemetry Breadcrumb -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-lg">
+<div>
+<div class="flex items-center gap-space-xs font-label-caps text-label-caps text-primary uppercase tracking-widest mb-1">
+<span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>Operational Command • South Atrium Hub</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+        Menu Catalog &amp; Station Capacity Management
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl mt-1">
+        Configure culinary offerings, live inventory quotas, prep latency benchmarks, and dynamic 15-minute pickup slot throttling across campus lines.
+      </p>
+</div>
+<!-- Quick Global Actions -->
+<div class="flex items-center gap-space-sm self-start md:self-auto shrink-0">
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-all shadow-sm" onclick="toggleModal('modal-drawer')">
+<span class="material-symbols-outlined text-[18px] text-tertiary">tune</span>
+<span>Batch Bulk Update</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-full bg-secondary-fixed/70 text-secondary hover:bg-secondary-fixed font-label-lg text-label-lg transition-all shadow-sm" id="sync-btn" onclick="syncKiosks()">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span id="sync-text">Sync to Kiosks &amp; Mobile</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-lg py-2.5 rounded-full bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg transition-all shadow-md hover:shadow-lg active:scale-95" onclick="openDrawer('new-dish')">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span>Add Menu Item</span>
+</button>
+</div>
+</div>
+<!-- Operational Tab Switcher Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pb-space-md border-b-0 mb-space-lg">
+<div class="flex items-center gap-2 p-1.5 bg-surface-container-low rounded-2xl">
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-xl bg-surface-container-lowest text-primary font-label-lg text-label-lg shadow-sm transition-all" id="tab-btn-catalog" onclick="switchTab('catalog')">
+<span class="material-symbols-outlined text-[18px]">restaurant_menu</span>
+<span>Menu Catalog &amp; Inventory</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-caps text-label-caps ml-1">28 Active</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-xl text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-all" id="tab-btn-capacity" onclick="switchTab('capacity')">
+<span class="material-symbols-outlined text-[18px]">speed</span>
+<span>Order Limits &amp; Pickup Slots</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-caps text-label-caps ml-1">Rush Throttled</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-xl text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-all" id="tab-btn-matrix" onclick="switchTab('matrix')">
+<span class="material-symbols-outlined text-[18px]">view_timeline</span>
+<span>Bulk Allergen &amp; Price Matrix</span>
+</button>
+</div>
+<!-- Quick Status Strip -->
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-md text-label-md">
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span>Hearth Station #2: <strong>86.4% Efficiency</strong></span>
+</div>
+<div class="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-[16px]">schedule</span>
+<span>Avg. Cooking SLA: <strong>7.2 min</strong></span>
+</div>
+</div>
+</div>
+<!-- VIEW 1: MENU CATALOG & INVENTORY (DEFAULT ACTIVE) -->
+<div class="flex flex-col gap-space-lg" id="view-catalog">
+<!-- Filter, Search & View Controls -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+<div class="flex flex-1 flex-wrap items-center gap-space-sm">
+<!-- Search bar -->
+<div class="relative flex-1 min-w-[240px]">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-tertiary text-[18px]">search</span>
+<input class="w-full pl-9 pr-4 py-2 bg-surface-container-low rounded-xl font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Search dish name, SKU, or allergen..." type="text"/>
+</div>
+<!-- Category Dropdown Filter -->
+<div class="relative">
+<select class="appearance-none pl-3 pr-8 py-2 bg-surface-container-low rounded-xl font-label-md text-label-md text-on-surface focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer">
+<option>All Culinary Lines (5)</option>
+<option>Woodfire Hearth Line</option>
+<option>Botanical Salad Lab</option>
+<option>Rotisserie &amp; Grill</option>
+<option>Artisanal Bakery</option>
+<option>Cold-Pressed Juicery</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[16px]">expand_more</span>
+</div>
+<!-- Stock Status Filter -->
+<div class="relative">
+<select class="appearance-none pl-3 pr-8 py-2 bg-surface-container-low rounded-xl font-label-md text-label-md text-on-surface focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer">
+<option>Stock Status: All</option>
+<option>Available Only</option>
+<option>Low Stock (&lt; 5)</option>
+<option>86'd / Sold Out</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[16px]">expand_more</span>
+</div>
+</div>
+<!-- View Switcher & Counter -->
+<div class="flex items-center gap-space-sm justify-between lg:justify-end">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Showing <strong>5</strong> of 28 dishes</span>
+<div class="flex items-center bg-surface-container-low rounded-xl p-1">
+<button class="p-1.5 rounded-lg bg-surface-container-lowest text-primary shadow-xs" id="btn-toggle-table" onclick="setViewMode('table')">
+<span class="material-symbols-outlined text-[18px]">table_rows</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface transition-colors" id="btn-toggle-grid" onclick="setViewMode('grid')">
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+</button>
+</div>
+</div>
+</div>
+<!-- TABLE VIEW -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden flex flex-col" id="catalog-table-view">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/70 font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">
+<th class="py-3 px-space-md">Dish / SKU / Station</th>
+<th class="py-3 px-space-md">Category</th>
+<th class="py-3 px-space-md">Pricing</th>
+<th class="py-3 px-space-md w-56">Portion Inventory</th>
+<th class="py-3 px-space-md">Latency</th>
+<th class="py-3 px-space-md">Live Status</th>
+<th class="py-3 px-space-md text-right">Station Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 font-body-sm text-body-sm">
+<!-- ROW 1: Artisanal Crispy Chicken Brioche Burger (Sold Out) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative w-16 h-16 rounded-xl overflow-hidden shrink-0 shadow-sm">
+<img alt="Artisanal Crispy Chicken Brioche" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida/AEtjO1VFIwwWy7ipHOgJ1D6H2mZjCWB84GmCXM8QYzhpQNxGB5kFcGizcm_QEsyV1RX0QjY-3u8B_OtoSSVRVkEG1jIn3zqVt3pO_Xu0zARF0G70GAs7fAlqgXXjD4QbC9w8lc7mw8Eb8AnWiCxQL-8pXUIdQkVuBzK9XsEoPj2jxxyDpTGPHv-ScRoYvPizILoSP4pDX0Jl1vB4xa_L3AalmiJXu0-TiZ7KmxHxL0uUa5NltaM-35_yCRRieI8"/>
+<span class="absolute top-1 left-1 px-1.5 py-0.5 rounded-full bg-error text-on-error font-label-caps text-[9px] leading-tight">86'D</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-[16px] text-on-surface font-semibold group-hover:text-primary transition-colors">
+                      Artisanal Crispy Chicken Brioche Burger
+                    </span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-caps text-label-caps text-outline">#CG-HRTH-01</span>
+<span class="text-outline-variant">•</span>
+<span class="text-on-surface-variant font-label-md text-label-md">Hearth Line #2</span>
+<span class="text-outline-variant">•</span>
+<span class="text-tertiary">680 kcal</span>
+</div>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-caps text-[10px]">Gluten</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-caps text-[10px]">Dairy</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-primary text-[14px]">local_fire_department</span>
+                  Woodfire Hearth
+                </span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">$11.50</span>
+<span class="font-label-caps text-[11px] text-secondary font-medium tracking-normal">$10.35 SmartCard</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col gap-1 w-full max-w-[180px]">
+<div class="flex justify-between items-center font-label-caps text-label-caps">
+<span class="text-error font-bold">0 / 45 portions</span>
+<span class="text-outline">0% left</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-error w-0"></div>
+</div>
+<span class="text-[11px] text-error font-body-sm leading-tight">Sold Out at 1:12 PM</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-tertiary">timer</span>
+<span>10 mins</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-caps text-label-caps">Sold Out</span>
+<!-- Quick Toggle Off -->
+<button class="w-9 h-5 rounded-full bg-surface-container-high p-0.5 transition-colors relative cursor-pointer" onclick="toggleDishStatus(this)" title="Toggle On-line availability">
+<div class="w-4 h-4 rounded-full bg-surface-container-lowest shadow-xs transform translate-x-0 transition-transform"></div>
+</button>
+</div>
+</td>
+<td class="py-4 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-secondary hover:bg-secondary-fixed/40 transition-colors" onclick="restockDish('CG-HRTH-01', 10)" title="Quick Restock +10">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" onclick="editDish('Artisanal Crispy Chicken Brioche Burger')" title="Edit Recipe &amp; Config">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:bg-surface-container hover:text-on-surface transition-colors" title="Duplicate SKU">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-1.5 rounded-lg text-error hover:bg-error-container transition-colors" title="Archive Dish">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 2: Wild Grain Rice & Lemon Hen Bowl (Available) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative w-16 h-16 rounded-xl overflow-hidden shrink-0 shadow-sm">
+<img alt="Wild Grain Rice and Lemon Hen Bowl" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida/AEtjO1XR63-u2ya6vYwqANHt0HwY29cakFT6CnmXeQljEpFU2zGV0oLOcV-RZEyAwrrFPNSl3J8XMq80jVBUakh0EwqvG03GUE4DMnZ0up3GOnQGEmlcIQM44bkITWQtEIVFksfdIZ3aTV_Tvhd_QacBr-PuQooSjXPvcEBLz0PQbgIArEXQHzWdh-Hc0ZtngOIPvc6S3-QA1r-ZP26pXA8ahzz79RdZeEF7yXFR742DKd9vvxxm52kPedP7SZCo"/>
+<span class="absolute top-1 left-1 px-1.5 py-0.5 rounded-full bg-secondary text-on-secondary font-label-caps text-[9px] leading-tight">CHEF PICK</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-[16px] text-on-surface font-semibold group-hover:text-primary transition-colors">
+                      Wild Grain Rice &amp; Lemon Hen Bowl
+                    </span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-caps text-label-caps text-outline">#CG-SLD-04</span>
+<span class="text-outline-variant">•</span>
+<span class="text-on-surface-variant font-label-md text-label-md">Salad Lab Station</span>
+<span class="text-outline-variant">•</span>
+<span class="text-tertiary">520 kcal</span>
+</div>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed/50 text-secondary font-label-caps text-[10px]">Nut-Free</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed/50 text-secondary font-label-caps text-[10px]">Halal</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed/40 font-label-md text-label-md text-secondary">
+<span class="material-symbols-outlined text-[14px]">eco</span>
+                  Botanical Salad Lab
+                </span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">$13.50</span>
+<span class="font-label-caps text-[11px] text-secondary font-medium tracking-normal">$12.15 SmartCard</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col gap-1 w-full max-w-[180px]">
+<div class="flex justify-between items-center font-label-caps text-label-caps">
+<span class="text-on-surface font-bold">18 / 30 portions</span>
+<span class="text-secondary font-bold">60%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 60%;"></div>
+</div>
+<span class="text-[11px] text-on-surface-variant font-body-sm leading-tight">Stable supply (approx 45m left)</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-tertiary">timer</span>
+<span>6 mins</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-caps text-label-caps">Available</span>
+<!-- Quick Toggle ON -->
+<button class="w-9 h-5 rounded-full bg-secondary p-0.5 transition-colors relative cursor-pointer" onclick="toggleDishStatus(this)" title="Toggle On-line availability">
+<div class="w-4 h-4 rounded-full bg-surface-container-lowest shadow-xs transform translate-x-4 transition-transform"></div>
+</button>
+</div>
+</td>
+<td class="py-4 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-secondary hover:bg-secondary-fixed/40 transition-colors" onclick="restockDish('CG-SLD-04', 5)" title="Quick Restock +5">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" onclick="editDish('Wild Grain Rice &amp; Lemon Hen Bowl')" title="Edit Recipe &amp; Config">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:bg-surface-container hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-1.5 rounded-lg text-error hover:bg-error-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 3: Loch Duart Salmon & Poached Egg Bowl (Limited Stock) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative w-16 h-16 rounded-xl overflow-hidden shrink-0 shadow-sm">
+<img alt="Loch Duart Salmon &amp; Poached Egg Bowl" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida/AEtjO1X9POpR3agTsw5vy58I_alkoqABKMcfQ1Ei-05v2cqScb8uE4MFPG7Ro2nvdCr3_3iqZimnuGpQHsOmFXhA5wbWJ50JXTgwxivzC1vZMMjSF0hLmojrQ5wZSpKLJoS1xNCIE_6_vhhLZjaKOu0ipi9pzwlg6dtrDNBn4QqBeiUHU1MRRlfIAhDJ-ZKXceJRC6_QH_4gOhA_5M1Cn0I-WUOfjBsAXbrOTJaOATf-q9MJOxxiRDMy2BpItaHi"/>
+<span class="absolute top-1 left-1 px-1.5 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-caps text-[9px] leading-tight">LOW QTY</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-[16px] text-on-surface font-semibold group-hover:text-primary transition-colors">
+                      Loch Duart Salmon &amp; Poached Egg Bowl
+                    </span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-caps text-label-caps text-outline">#CG-SLD-08</span>
+<span class="text-outline-variant">•</span>
+<span class="text-on-surface-variant font-label-md text-label-md">Salad Lab Station</span>
+<span class="text-outline-variant">•</span>
+<span class="text-tertiary">590 kcal</span>
+</div>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-caps text-[10px]">Omega-3</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-caps text-[10px]">Egg</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed/40 font-label-md text-label-md text-secondary">
+<span class="material-symbols-outlined text-[14px]">eco</span>
+                  Botanical Salad Lab
+                </span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">$15.50</span>
+<span class="font-label-caps text-[11px] text-secondary font-medium tracking-normal">$13.95 SmartCard</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col gap-1 w-full max-w-[180px]">
+<div class="flex justify-between items-center font-label-caps text-label-caps">
+<span class="text-primary font-bold">3 / 25 portions</span>
+<span class="text-primary font-bold">12%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 12%;"></div>
+</div>
+<span class="text-[11px] text-primary font-body-sm leading-tight flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">warning</span> Low Stock Alert
+                  </span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-tertiary">timer</span>
+<span>8 mins</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-caps text-label-caps">Limited</span>
+<!-- Quick Toggle ON -->
+<button class="w-9 h-5 rounded-full bg-secondary p-0.5 transition-colors relative cursor-pointer" onclick="toggleDishStatus(this)" title="Toggle On-line availability">
+<div class="w-4 h-4 rounded-full bg-surface-container-lowest shadow-xs transform translate-x-4 transition-transform"></div>
+</button>
+</div>
+</td>
+<td class="py-4 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-primary hover:bg-primary-fixed/40 transition-colors" onclick="emergency86('CG-SLD-08')" title="Emergency 86 (Sold Out Now)">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" onclick="editDish('Loch Duart Salmon &amp; Poached Egg Bowl')">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:bg-surface-container hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-1.5 rounded-lg text-error hover:bg-error-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 4: Warm Organic Cardamom Morning Bun -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative w-16 h-16 rounded-xl bg-surface-container flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[28px] text-tertiary">bakery_dining</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-[16px] text-on-surface font-semibold group-hover:text-primary transition-colors">
+                      Warm Organic Cardamom Morning Bun
+                    </span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-caps text-label-caps text-outline">#CG-BKR-02</span>
+<span class="text-outline-variant">•</span>
+<span class="text-on-surface-variant font-label-md text-label-md">Hearth Bakery</span>
+<span class="text-outline-variant">•</span>
+<span class="text-tertiary">380 kcal</span>
+</div>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-caps text-[10px]">Sourdough Laminate</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-outline">cookie</span>
+                  Artisanal Bakery
+                </span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">$4.50</span>
+<span class="font-label-caps text-[11px] text-secondary font-medium tracking-normal">$4.05 SmartCard</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col gap-1 w-full max-w-[180px]">
+<div class="flex justify-between items-center font-label-caps text-label-caps">
+<span class="text-primary font-bold">2 / 40 portions</span>
+<span class="text-primary font-bold">5%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 5%;"></div>
+</div>
+<span class="text-[11px] text-error font-body-sm leading-tight">Critical Low</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">flash_on</span>
+<span>2 mins</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-caps text-label-caps">Limited</span>
+<button class="w-9 h-5 rounded-full bg-secondary p-0.5 transition-colors relative cursor-pointer" onclick="toggleDishStatus(this)" title="Toggle On-line availability">
+<div class="w-4 h-4 rounded-full bg-surface-container-lowest shadow-xs transform translate-x-4 transition-transform"></div>
+</button>
+</div>
+</td>
+<td class="py-4 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-secondary hover:bg-secondary-fixed/40 transition-colors" onclick="restockDish('CG-BKR-02', 15)" title="Quick Restock +15">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" onclick="editDish('Warm Organic Cardamom Morning Bun')">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:bg-surface-container hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-1.5 rounded-lg text-error hover:bg-error-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 5: Truffle Herb Sea Salt Hand-Cut Fries -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative w-16 h-16 rounded-xl bg-surface-container flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[28px] text-tertiary">lunch_dining</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-[16px] text-on-surface font-semibold group-hover:text-primary transition-colors">
+                      Truffle Herb Sea Salt Hand-Cut Fries
+                    </span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-caps text-label-caps text-outline">#CG-FRY-01</span>
+<span class="text-outline-variant">•</span>
+<span class="text-on-surface-variant font-label-md text-label-md">Fryer Line Hub</span>
+<span class="text-outline-variant">•</span>
+<span class="text-tertiary">410 kcal</span>
+</div>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed/50 text-secondary font-label-caps text-[10px]">Vegan</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-caps text-[10px]">Black Truffle</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-primary text-[14px]">local_fire_department</span>
+                  Woodfire Hearth
+                </span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">$5.50</span>
+<span class="font-label-caps text-[11px] text-secondary font-medium tracking-normal">$4.95 SmartCard</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col gap-1 w-full max-w-[180px]">
+<div class="flex justify-between items-center font-label-caps text-label-caps">
+<span class="text-on-surface font-bold">34 / 50 portions</span>
+<span class="text-secondary font-bold">68%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 68%;"></div>
+</div>
+<span class="text-[11px] text-secondary font-body-sm leading-tight">Stable capacity</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-tertiary">timer</span>
+<span>5 mins</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-caps text-label-caps">Available</span>
+<button class="w-9 h-5 rounded-full bg-secondary p-0.5 transition-colors relative cursor-pointer" onclick="toggleDishStatus(this)" title="Toggle On-line availability">
+<div class="w-4 h-4 rounded-full bg-surface-container-lowest shadow-xs transform translate-x-4 transition-transform"></div>
+</button>
+</div>
+</td>
+<td class="py-4 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-secondary hover:bg-secondary-fixed/40 transition-colors" onclick="restockDish('CG-FRY-01', 20)" title="Quick Restock +20">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" onclick="editDish('Truffle Herb Sea Salt Hand-Cut Fries')">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:bg-surface-container hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-1.5 rounded-lg text-error hover:bg-error-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Pagination & Batch Bar -->
+<div class="flex flex-col sm:flex-row items-center justify-between p-space-md bg-surface-container-low/50 gap-space-sm">
+<div class="flex items-center gap-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<span>Selected <strong>0</strong> dishes</span>
+<span class="text-outline-variant">•</span>
+<button class="text-primary hover:underline font-label-md text-label-md" onclick="alert('All 28 items selected')">Select all 28</button>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded-xl bg-surface-container-lowest hover:bg-surface-container font-label-md text-label-md text-on-surface transition-colors">Previous</button>
+<span class="px-3 py-1.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md">1</span>
+<button class="px-3 py-1.5 rounded-xl bg-surface-container-lowest hover:bg-surface-container font-label-md text-label-md text-on-surface transition-colors">2</button>
+<button class="px-3 py-1.5 rounded-xl bg-surface-container-lowest hover:bg-surface-container font-label-md text-label-md text-on-surface transition-colors">3</button>
+<button class="px-3 py-1.5 rounded-xl bg-surface-container-lowest hover:bg-surface-container font-label-md text-label-md text-on-surface transition-colors">Next</button>
+</div>
+</div>
+</div>
+<!-- GRID VIEW (HIDDEN INITIALLY, TOGGLED VIA JS) -->
+<div class="hidden grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-space-lg" id="catalog-grid-view">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="relative w-full h-48 rounded-xl overflow-hidden mb-space-md">
+<img alt="Brioche Burger" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VFIwwWy7ipHOgJ1D6H2mZjCWB84GmCXM8QYzhpQNxGB5kFcGizcm_QEsyV1RX0QjY-3u8B_OtoSSVRVkEG1jIn3zqVt3pO_Xu0zARF0G70GAs7fAlqgXXjD4QbC9w8lc7mw8Eb8AnWiCxQL-8pXUIdQkVuBzK9XsEoPj2jxxyDpTGPHv-ScRoYvPizILoSP4pDX0Jl1vB4xa_L3AalmiJXu0-TiZ7KmxHxL0uUa5NltaM-35_yCRRieI8"/>
+<span class="absolute top-2 left-2 px-2.5 py-1 rounded-full bg-error text-on-error font-label-caps text-label-caps">86'd Sold Out</span>
+</div>
+<div class="flex items-start justify-between gap-2">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Artisanal Crispy Chicken Brioche Burger</h3>
+<p class="font-label-caps text-label-caps text-outline mt-1">#CG-HRTH-01 • Hearth Line #2</p>
+</div>
+<div class="text-right shrink-0">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">$11.50</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low rounded-xl p-3 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-error font-medium">0 / 45 portions remaining</span>
+<button class="px-3 py-1 rounded-full bg-secondary text-on-secondary font-label-md text-label-md hover:bg-secondary/90 transition-colors" onclick="restockDish('CG-HRTH-01', 10)">
+            +10 Restock
+          </button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="relative w-full h-48 rounded-xl overflow-hidden mb-space-md">
+<img alt="Grain Hen Bowl" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XR63-u2ya6vYwqANHt0HwY29cakFT6CnmXeQljEpFU2zGV0oLOcV-RZEyAwrrFPNSl3J8XMq80jVBUakh0EwqvG03GUE4DMnZ0up3GOnQGEmlcIQM44bkITWQtEIVFksfdIZ3aTV_Tvhd_QacBr-PuQooSjXPvcEBLz0PQbgIArEXQHzWdh-Hc0ZtngOIPvc6S3-QA1r-ZP26pXA8ahzz79RdZeEF7yXFR742DKd9vvxxm52kPedP7SZCo"/>
+<span class="absolute top-2 left-2 px-2.5 py-1 rounded-full bg-secondary text-on-secondary font-label-caps text-label-caps">Available</span>
+</div>
+<div class="flex items-start justify-between gap-2">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Wild Grain Rice &amp; Lemon Hen Bowl</h3>
+<p class="font-label-caps text-label-caps text-outline mt-1">#CG-SLD-04 • Botanical Salad Lab</p>
+</div>
+<div class="text-right shrink-0">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">$13.50</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low rounded-xl p-3 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-secondary font-medium">18 / 30 portions (60%)</span>
+<button class="px-3 py-1 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" onclick="editDish('Wild Grain Rice &amp; Lemon Hen Bowl')">
+            Configure
+          </button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="relative w-full h-48 rounded-xl overflow-hidden mb-space-md">
+<img alt="Salmon bowl" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1X9POpR3agTsw5vy58I_alkoqABKMcfQ1Ei-05v2cqScb8uE4MFPG7Ro2nvdCr3_3iqZimnuGpQHsOmFXhA5wbWJ50JXTgwxivzC1vZMMjSF0hLmojrQ5wZSpKLJoS1xNCIE_6_vhhLZjaKOu0ipi9pzwlg6dtrDNBn4QqBeiUHU1MRRlfIAhDJ-ZKXceJRC6_QH_4gOhA_5M1Cn0I-WUOfjBsAXbrOTJaOATf-q9MJOxxiRDMy2BpItaHi"/>
+<span class="absolute top-2 left-2 px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-caps text-label-caps">Low Qty (3 left)</span>
+</div>
+<div class="flex items-start justify-between gap-2">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Loch Duart Salmon &amp; Poached Egg Bowl</h3>
+<p class="font-label-caps text-label-caps text-outline mt-1">#CG-SLD-08 • Salad Lab Station</p>
+</div>
+<div class="text-right shrink-0">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">$15.50</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low rounded-xl p-3 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-primary font-medium">3 / 25 portions (12%)</span>
+<button class="px-3 py-1 rounded-full bg-error-container text-on-error-container font-label-md text-label-md hover:bg-error hover:text-on-error transition-colors" onclick="emergency86('CG-SLD-08')">
+            86 Item Now
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- VIEW 2: ORDER LIMITS & PICKUP SLOTS (CAPACITY MANAGEMENT) -->
+<div class="hidden flex flex-col gap-space-lg" id="view-capacity">
+<!-- Capacity Hero KPIs Bento -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Per-Slot Inflow Limit</span>
+<button class="p-1 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-low">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+<div class="my-space-sm">
+<div class="flex items-baseline gap-2">
+<span class="font-display-hero text-[38px] leading-tight text-on-surface font-semibold">35</span>
+<span class="font-body-sm text-body-sm text-outline">orders / 15m</span>
+</div>
+<div class="flex items-center gap-1.5 mt-2 text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span>Peak slot at 94% saturation</span>
+</div>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 94%;"></div>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Diner Transaction Cap</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">badge</span>
+</div>
+<div class="my-space-sm">
+<div class="flex items-baseline gap-2">
+<span class="font-display-hero text-[38px] leading-tight text-on-surface font-semibold">4</span>
+<span class="font-body-sm text-body-sm text-outline">items max</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+            Applies to South Atrium student &amp; faculty credentials to eliminate hoarding bottlenecks.
+          </p>
+</div>
+<div class="flex items-center gap-1 text-secondary font-label-caps text-label-caps font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          POLICY ENFORCED
+        </div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Thermal Locker Quota</span>
+<span class="material-symbols-outlined text-primary text-[20px]">inventory_2</span>
+</div>
+<div class="my-space-sm">
+<div class="flex items-baseline gap-2">
+<span class="font-display-hero text-[38px] leading-tight text-on-surface font-semibold">24</span>
+<span class="font-body-sm text-body-sm text-outline">lockers / slot</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+            Physical limits across Hub A (12 lockers) and Hub B (12 lockers).
+          </p>
+</div>
+<div class="flex items-center justify-between font-label-caps text-[10px] text-outline">
+<span>Hub A: 12/12</span>
+<span>Hub B: 9/12</span>
+</div>
+</div>
+<!-- KPI 4: Emergency Kiosk Throttling -->
+<div class="bg-surface-container p-space-md rounded-2xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-wider font-bold">Kiosk Throttle Guard</span>
+<span class="material-symbols-outlined text-primary text-[20px]">crisis_alert</span>
+</div>
+<div class="my-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">+4m Pacing</span>
+<button class="w-11 h-6 rounded-full bg-primary p-0.5 transition-colors relative cursor-pointer" onclick="toggleThrottle(this)">
+<div class="w-5 h-5 rounded-full bg-surface-container-lowest shadow-sm transform translate-x-5 transition-transform"></div>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-snug">
+            Delays self-service ordering countdowns to protect prep lines during active rushes.
+          </p>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-primary font-label-caps text-label-caps w-fit">
+          Broadcasting to 8 Kiosks
+        </span>
+</div>
+</div>
+<!-- Intra-day 15-Minute Dynamic Pickup Slot Schedule -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-sm border-b-0">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md text-on-surface">15-Minute Dynamic Pickup Slot Management</h2>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-label-caps text-label-caps">Today: 11:30 AM – 2:30 PM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Control order throttling limits per time bracket to smooth kitchen prep pressure and counter pickup crowding.
+          </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="px-space-md py-2 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-all flex items-center gap-1.5 shadow-xs" onclick="autoBalanceSlots()">
+<span class="material-symbols-outlined text-[16px] text-secondary">auto_fix_high</span>
+<span>Auto-Balance Lunch Rush</span>
+</button>
+<button class="px-space-md py-2 rounded-xl bg-primary text-on-primary hover:bg-primary/90 font-label-md text-label-md transition-all flex items-center gap-1.5 shadow-sm" onclick="openSlotModal()">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+<span>Create Pickup Window</span>
+</button>
+</div>
+</div>
+<!-- Schedule Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/70 font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">
+<th class="py-3 px-space-md">Pickup Time Bracket</th>
+<th class="py-3 px-space-md">Current Booked</th>
+<th class="py-3 px-space-md w-60">Utilization Saturation</th>
+<th class="py-3 px-space-md">Locker Allocation</th>
+<th class="py-3 px-space-md">Status Flag</th>
+<th class="py-3 px-space-md text-right">Capacity Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 font-body-sm text-body-sm">
+<!-- Slot 1: 12:45 PM - 1:00 PM (FULL) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-xl bg-error-container text-on-error-container flex items-center justify-center font-label-caps text-label-caps font-bold">
+                    PAST
+                  </div>
+<div>
+<span class="font-headline-sm text-[16px] text-on-surface font-bold">12:45 PM – 1:00 PM</span>
+<span class="block font-label-caps text-label-caps text-outline">Target Slot Concluded</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="font-headline-sm text-[18px] text-on-surface font-bold">25</span>
+<span class="text-on-surface-variant font-body-sm">/ 25 max</span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-caps text-label-caps">
+<span class="text-error font-bold">100% Saturated</span>
+<span class="text-outline">0 slots left</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="font-label-md text-label-md text-on-surface">18 Lockers • 7 Counter</span>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[14px]">lock</span> FULL (CLOSED)
+                </span>
+</td>
+<td class="py-4 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2.5 py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors">
+                    Re-open (+5)
+                  </button>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Slot 2: 1:00 PM - 1:15 PM (CURRENT ACTIVE RUSH - USER EXPLICIT PROMPT FOCUS) -->
+<tr class="bg-primary/5 hover:bg-primary/10 transition-colors">
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-xl bg-primary text-on-primary flex items-center justify-center font-label-caps text-label-caps font-bold animate-pulse">
+                    LIVE
+                  </div>
+<div>
+<span class="font-headline-sm text-[16px] text-primary font-bold">1:00 PM – 1:15 PM</span>
+<span class="block font-label-caps text-label-caps text-primary font-semibold">Active Window Right Now</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="font-headline-sm text-[18px] text-error font-bold">20</span>
+<span class="text-on-surface-variant font-body-sm">/ 20 max</span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-caps text-label-caps">
+<span class="text-error font-bold">100% CAPACITY REACHED</span>
+<span class="text-error font-bold">LOCKED</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="font-label-md text-label-md text-on-surface">14 Lockers • 6 Counter</span>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-error text-on-error font-label-caps text-label-caps shadow-xs">
+<span class="material-symbols-outlined text-[14px]">lock</span> FULL (THROTTLED)
+                </span>
+</td>
+<td class="py-4 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-3 py-1 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md transition-all shadow-xs" onclick="increaseSlotCapacity('1:00 PM', 5)">
+                    +5 Emergency Cap
+                  </button>
+<button class="p-1.5 rounded-lg text-primary hover:bg-primary-fixed transition-colors" onclick="viewSlotOrders('1:00 PM – 1:15 PM')" title="View 20 Pending Orders">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Slot 3: 1:15 PM - 1:30 PM (FILLING FAST) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-xl bg-surface-container text-on-surface flex items-center justify-center font-label-caps text-label-caps font-bold">
+                    NEXT
+                  </div>
+<div>
+<span class="font-headline-sm text-[16px] text-on-surface font-bold">1:15 PM – 1:30 PM</span>
+<span class="block font-label-caps text-label-caps text-outline">Starting in 1 min</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="font-headline-sm text-[18px] text-on-surface font-bold">21</span>
+<span class="text-on-surface-variant font-body-sm">/ 25 max</span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-caps text-label-caps">
+<span class="text-primary font-bold">84% Saturated</span>
+<span class="text-primary font-bold">4 slots remain</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 84%;"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="font-label-md text-label-md text-on-surface">16 Lockers • 5 Counter</span>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span> FILLING FAST
+                </span>
+</td>
+<td class="py-4 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2.5 py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors">
+                    Reserve 4 Walk-in
+                  </button>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Slot 4: 1:30 PM - 1:45 PM (OPEN) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-xl bg-surface-container-low text-on-surface-variant flex items-center justify-center font-label-caps text-label-caps font-bold">
+                    OPEN
+                  </div>
+<div>
+<span class="font-headline-sm text-[16px] text-on-surface font-bold">1:30 PM – 1:45 PM</span>
+<span class="block font-label-caps text-label-caps text-outline">Post-Peak Window</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="font-headline-sm text-[18px] text-on-surface font-bold">11</span>
+<span class="text-on-surface-variant font-body-sm">/ 20 max</span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-caps text-label-caps">
+<span class="text-secondary font-bold">55% Moderate</span>
+<span class="text-outline">9 slots remain</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 55%;"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="font-label-md text-label-md text-on-surface">8 Lockers • 3 Counter</span>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> OPEN
+                </span>
+</td>
+<td class="py-4 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2.5 py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors">
+                    Adjust Cap
+                  </button>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Slot 5: 1:45 PM - 2:00 PM (OPEN) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-xl bg-surface-container-low text-on-surface-variant flex items-center justify-center font-label-caps text-label-caps font-bold">
+                    OPEN
+                  </div>
+<div>
+<span class="font-headline-sm text-[16px] text-on-surface font-bold">1:45 PM – 2:00 PM</span>
+<span class="block font-label-caps text-label-caps text-outline">Afternoon Taper</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="font-headline-sm text-[18px] text-on-surface font-bold">4</span>
+<span class="text-on-surface-variant font-body-sm">/ 20 max</span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-caps text-label-caps">
+<span class="text-secondary font-bold">20% Low Inflow</span>
+<span class="text-outline">16 slots remain</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 20%;"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="font-label-md text-label-md text-on-surface">4 Lockers • 0 Counter</span>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> OPEN
+                </span>
+</td>
+<td class="py-4 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2.5 py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors">
+                    Adjust Cap
+                  </button>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- VIEW 3: BULK PRICE & ALLERGEN MATRIX -->
+<div class="hidden flex flex-col gap-space-lg" id="view-matrix">
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Campus Allergen &amp; Dietary Subsidy Matrix</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Audit dietary cross-contact tags, institutional subsidized rates (10%), and station cook tags in bulk.</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors">
+            Export Regulatory CSV
+          </button>
+<button class="px-space-md py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md hover:bg-primary/90 transition-colors">
+            Save All Matrix Edits
+          </button>
+</div>
+</div>
+<!-- Quick Matrix Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mt-2">
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold">Halal &amp; Kosher Certification</span>
+<span class="font-display-hero text-[32px] text-on-surface">14 Items</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Prepared in isolated South Atrium Halal-certified pantry #3.</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-secondary uppercase font-bold">100% Plant-Based &amp; Vegan</span>
+<span class="font-display-hero text-[32px] text-on-surface">9 Items</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dedicated cold-press salad station with independent wash lines.</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-outline uppercase font-bold">Subsidized Student Pricing</span>
+<span class="font-display-hero text-[32px] text-on-surface">100% Active</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">10% automatic campus bursar deduction applied at NFC pickup.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- SLIDE-OVER DRAWER: ADD / EDIT MENU ITEM -->
+<div class="fixed inset-0 z-50 pointer-events-none transition-all duration-300" id="drawer-container">
+<!-- Backdrop Scrim -->
+<div class="absolute inset-0 bg-inverse-surface/40 backdrop-blur-xs opacity-0 transition-opacity duration-300 pointer-events-none" id="drawer-backdrop" onclick="closeDrawer()"></div>
+<!-- Right Drawer Panel -->
+<div class="absolute top-0 right-0 h-full w-full max-w-xl bg-surface-container-lowest shadow-2xl flex flex-col justify-between transform translate-x-full transition-transform duration-300 pointer-events-auto overflow-hidden" id="drawer-panel">
+<!-- Drawer Header -->
+<div class="p-space-lg bg-surface-container-low flex items-center justify-between border-b-0">
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest font-bold">Culinary Station Registry</span>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-0.5" id="drawer-title">+ Add New Menu Item</h2>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface flex items-center justify-center transition-colors" onclick="closeDrawer()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Drawer Body (Scrollable Form) -->
+<div class="flex-1 overflow-y-auto p-space-lg flex flex-col gap-space-md">
+<!-- Field 1: Name -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface">Dish / Item Name <span class="text-error">*</span></label>
+<input class="w-full px-4 py-2.5 bg-surface-container-low rounded-xl font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" id="form-dish-name" placeholder="e.g. Wood-Fired Smoked Trout Tartine" type="text" value="Artisanal Crispy Chicken Brioche Burger"/>
+</div>
+<!-- Field 2: Category & Station Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface">Culinary Line</label>
+<div class="relative">
+<select class="w-full appearance-none px-4 py-2.5 bg-surface-container-low rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer">
+<option selected="">Woodfire Hearth Line</option>
+<option>Botanical Salad Lab</option>
+<option>Rotisserie &amp; Grill</option>
+<option>Artisanal Bakery</option>
+<option>Juicery &amp; Beverages</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface">Prep Station Line</label>
+<div class="relative">
+<select class="w-full appearance-none px-4 py-2.5 bg-surface-container-low rounded-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer">
+<option selected="">Station Hearth #2 (Lead Chef)</option>
+<option>Station Hearth #1</option>
+<option>Salad Assembly Counter</option>
+<option>Pass-through Cold Rack</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Field 3: Pricing & Campus Subsidy -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface">Base Diner Price ($) <span class="text-error">*</span></label>
+<div class="relative">
+<span class="absolute left-3.5 top-1/2 -translate-y-1/2 font-label-lg text-label-lg text-outline">$</span>
+<input class="w-full pl-8 pr-4 py-2.5 bg-surface-container-low rounded-xl font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" oninput="calculateSubsidy(this.value)" step="0.25" type="number" value="11.50"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface">Campus SmartCard Rate (-10%)</label>
+<div class="relative">
+<span class="absolute left-3.5 top-1/2 -translate-y-1/2 font-label-lg text-label-lg text-secondary">$</span>
+<input class="w-full pl-8 pr-4 py-2.5 bg-secondary-fixed/30 rounded-xl font-body-md text-body-md text-secondary font-bold cursor-not-allowed" id="calc-subsidy-rate" readonly="" type="text" value="10.35"/>
+</div>
+</div>
+</div>
+<!-- Field 4: Dropzone for Food Photography -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface">Artisanal Food Photography</label>
+<div class="p-space-md rounded-2xl bg-surface-container-low border-2 border-dashed border-outline-variant flex flex-col items-center justify-center text-center gap-space-xs hover:bg-surface-container transition-colors cursor-pointer group">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">add_photo_alternate</span>
+</div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">
+              Click to browse or drag &amp; drop high-res dish photo
+            </div>
+<span class="font-label-caps text-label-caps text-outline">PNG, JPG, or WebP up to 5MB (16:10 ratio recommended)</span>
+</div>
+</div>
+<!-- Field 5: Quota & Low-stock Alerts -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface">Initial Batch Stock</label>
+<input class="w-full px-4 py-2.5 bg-surface-container-low rounded-xl font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" type="number" value="45"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface">Low-Stock Alert Threshold</label>
+<input class="w-full px-4 py-2.5 bg-surface-container-low rounded-xl font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" type="number" value="5"/>
+</div>
+</div>
+<!-- Field 6: Cooking Latency / SLA -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface">Prep Latency Benchmark (Cooking SLA)</label>
+<div class="flex items-center gap-space-sm">
+<input class="w-24 px-4 py-2.5 bg-surface-container-low rounded-xl font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" type="number" value="10"/>
+<span class="font-body-md text-body-md text-on-surface-variant">minutes from order receipt to locker dispatch</span>
+</div>
+</div>
+<!-- Field 7: Live Status Selector -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface">Initial Publication State</label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+<label class="flex flex-col items-center justify-center p-2.5 rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container has-[:checked]:bg-secondary-fixed/60 has-[:checked]:text-secondary text-center">
+<input class="hidden" name="item_state" type="radio" value="available"/>
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span class="font-label-caps text-label-caps mt-1">Available</span>
+</label>
+<label class="flex flex-col items-center justify-center p-2.5 rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container has-[:checked]:bg-primary-fixed has-[:checked]:text-on-primary-fixed text-center">
+<input class="hidden" name="item_state" type="radio" value="limited"/>
+<span class="material-symbols-outlined text-[18px]">warning</span>
+<span class="font-label-caps text-label-caps mt-1">Limited</span>
+</label>
+<label class="flex flex-col items-center justify-center p-2.5 rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container has-[:checked]:bg-error-container has-[:checked]:text-on-error-container text-center">
+<input checked="" class="hidden" name="item_state" type="radio" value="86"/>
+<span class="material-symbols-outlined text-[18px]">block</span>
+<span class="font-label-caps text-label-caps mt-1">86'd Sold Out</span>
+</label>
+<label class="flex flex-col items-center justify-center p-2.5 rounded-xl bg-surface-container-low cursor-pointer hover:bg-surface-container has-[:checked]:bg-surface-container-high text-center">
+<input class="hidden" name="item_state" type="radio" value="draft"/>
+<span class="material-symbols-outlined text-[18px]">draft</span>
+<span class="font-label-caps text-label-caps mt-1">Draft</span>
+</label>
+</div>
+</div>
+<!-- Field 8: Allergens Checkbox Matrix -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface">Dietary &amp; Allergen Declarations</label>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+<label class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-low text-on-surface cursor-pointer text-body-sm font-body-sm">
+<input checked="" class="rounded accent-primary" type="checkbox"/>
+<span>Gluten</span>
+</label>
+<label class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-low text-on-surface cursor-pointer text-body-sm font-body-sm">
+<input checked="" class="rounded accent-primary" type="checkbox"/>
+<span>Dairy</span>
+</label>
+<label class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-low text-on-surface cursor-pointer text-body-sm font-body-sm">
+<input class="rounded accent-primary" type="checkbox"/>
+<span>Nut-Free</span>
+</label>
+<label class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-low text-on-surface cursor-pointer text-body-sm font-body-sm">
+<input class="rounded accent-primary" type="checkbox"/>
+<span>Halal Certified</span>
+</label>
+<label class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-low text-on-surface cursor-pointer text-body-sm font-body-sm">
+<input class="rounded accent-primary" type="checkbox"/>
+<span>Vegetarian</span>
+</label>
+<label class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-low text-on-surface cursor-pointer text-body-sm font-body-sm">
+<input class="rounded accent-primary" type="checkbox"/>
+<span>Vegan</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Drawer Actions Footer -->
+<div class="p-space-lg bg-surface-container-low flex items-center justify-between gap-space-sm border-t-0">
+<button class="px-space-md py-2.5 rounded-full text-on-surface hover:bg-surface-container font-label-lg text-label-lg transition-colors" onclick="closeDrawer()">
+          Cancel
+        </button>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-colors" onclick="saveDraft()">
+            Save Draft
+          </button>
+<button class="px-space-lg py-2.5 rounded-full bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg transition-all shadow-md" onclick="publishItem()">
+            Publish Item to Menu
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- MODAL: CREATE / ADJUST PICKUP SLOT -->
+<div class="fixed inset-0 z-50 pointer-events-none hidden items-center justify-center p-space-md" id="modal-slot">
+<div class="absolute inset-0 bg-inverse-surface/40 backdrop-blur-xs pointer-events-auto" onclick="closeSlotModal()"></div>
+<div class="relative w-full max-w-lg bg-surface-container-lowest rounded-2xl shadow-2xl p-space-lg z-10 pointer-events-auto flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">more_time</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Adjust Pickup Window Quota</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface flex items-center justify-center" onclick="closeSlotModal()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Window Start</label>
+<input class="px-3 py-2 bg-surface-container-low rounded-xl font-body-sm text-body-sm" type="text" value="1:00 PM"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Window End</label>
+<input class="px-3 py-2 bg-surface-container-low rounded-xl font-body-sm text-body-sm" type="text" value="1:15 PM"/>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface">Maximum Order Inflow Cap</label>
+<span class="font-label-lg text-label-lg font-bold text-primary" id="slot-slider-val">20 orders</span>
+</div>
+<input class="w-full accent-primary" max="45" min="10" oninput="document.getElementById('slot-slider-val').innerText = this.value + ' orders'" type="range" value="20"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Locker Dispatch Allocation</label>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-2.5 rounded-xl bg-surface-container-low flex flex-col">
+<span class="font-label-caps text-label-caps text-outline">Hub A Thermal</span>
+<span class="font-headline-sm text-[16px] text-on-surface font-bold">12 Lockers</span>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container-low flex flex-col">
+<span class="font-label-caps text-label-caps text-outline">Hub B Express</span>
+<span class="font-headline-sm text-[16px] text-on-surface font-bold">8 Lockers</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-4 py-2 rounded-xl text-on-surface font-label-md text-label-md hover:bg-surface-container" onclick="closeSlotModal()">Cancel</button>
+<button class="px-5 py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md shadow-sm hover:bg-primary/90" onclick="saveSlotAdjust()">Apply Capacity Update</button>
+</div>
+</div>
+</div>
+<!-- TOAST NOTIFICATION -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 bg-inverse-surface text-inverse-on-surface px- space-md py-3 rounded-2xl shadow-xl flex items-center gap-space-sm font-label-lg text-label-lg" id="toast">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]" id="toast-icon">check_circle</span>
+<span id="toast-message">Menu item synchronized successfully.</span>
+</div>
+</div>
+<!-- INTERACTIVE SCRIPTS -->
+<script>
+  function switchTab(tabId) {
+    // Hide all views
+    document.getElementById('view-catalog').classList.add('hidden');
+    document.getElementById('view-capacity').classList.add('hidden');
+    document.getElementById('view-matrix').classList.add('hidden');
+
+    // Reset tab buttons
+    const btnCatalog = document.getElementById('tab-btn-catalog');
+    const btnCapacity = document.getElementById('tab-btn-capacity');
+    const btnMatrix = document.getElementById('tab-btn-matrix');
+
+    [btnCatalog, btnCapacity, btnMatrix].forEach(btn => {
+      btn.className = "flex items-center gap-space-xs px-space-md py-2 rounded-xl text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-all";
+    });
+
+    if (tabId === 'catalog') {
+      document.getElementById('view-catalog').classList.remove('hidden');
+      btnCatalog.className = "flex items-center gap-space-xs px-space-md py-2 rounded-xl bg-surface-container-lowest text-primary font-label-lg text-label-lg shadow-sm transition-all";
+    } else if (tabId === 'capacity') {
+      document.getElementById('view-capacity').classList.remove('hidden');
+      btnCapacity.className = "flex items-center gap-space-xs px-space-md py-2 rounded-xl bg-surface-container-lowest text-primary font-label-lg text-label-lg shadow-sm transition-all";
+    } else if (tabId === 'matrix') {
+      document.getElementById('view-matrix').classList.remove('hidden');
+      btnMatrix.className = "flex items-center gap-space-xs px-space-md py-2 rounded-xl bg-surface-container-lowest text-primary font-label-lg text-label-lg shadow-sm transition-all";
+    }
+  }
+
+  function setViewMode(mode) {
+    const tableView = document.getElementById('catalog-table-view');
+    const gridView = document.getElementById('catalog-grid-view');
+    const btnTable = document.getElementById('btn-toggle-table');
+    const btnGrid = document.getElementById('btn-toggle-grid');
+
+    if (mode === 'grid') {
+      tableView.classList.add('hidden');
+      gridView.classList.remove('hidden');
+      btnGrid.className = "p-1.5 rounded-lg bg-surface-container-lowest text-primary shadow-xs";
+      btnTable.className = "p-1.5 rounded-lg text-outline hover:text-on-surface transition-colors";
+    } else {
+      gridView.classList.add('hidden');
+      tableView.classList.remove('hidden');
+      btnTable.className = "p-1.5 rounded-lg bg-surface-container-lowest text-primary shadow-xs";
+      btnGrid.className = "p-1.5 rounded-lg text-outline hover:text-on-surface transition-colors";
+    }
+  }
+
+  function openDrawer(mode) {
+    const container = document.getElementById('drawer-container');
+    const backdrop = document.getElementById('drawer-backdrop');
+    const panel = document.getElementById('drawer-panel');
+    const title = document.getElementById('drawer-title');
+
+    container.classList.remove('pointer-events-none');
+    backdrop.classList.remove('pointer-events-none');
+    backdrop.classList.add('opacity-100');
+    panel.classList.remove('translate-x-full');
+
+    if (mode === 'new-dish') {
+      title.innerText = "+ Add New Menu Item";
+      document.getElementById('form-dish-name').value = "";
+    }
+  }
+
+  function closeDrawer() {
+    const container = document.getElementById('drawer-container');
+    const backdrop = document.getElementById('drawer-backdrop');
+    const panel = document.getElementById('drawer-panel');
+
+    backdrop.classList.remove('opacity-100');
+    panel.classList.add('translate-x-full');
+    setTimeout(() => {
+      container.classList.add('pointer-events-none');
+      backdrop.classList.add('pointer-events-none');
+    }, 300);
+  }
+
+  function editDish(name) {
+    openDrawer();
+    document.getElementById('drawer-title').innerText = "Edit: " + name;
+    document.getElementById('form-dish-name').value = name;
+  }
+
+  function calculateSubsidy(val) {
+    const num = parseFloat(val) || 0;
+    const discounted = (num * 0.90).toFixed(2);
+    document.getElementById('calc-subsidy-rate').value = discounted;
+  }
+
+  function restockDish(sku, qty) {
+    showToast(`Restocked ${sku} with +${qty} portions. Syncing to Hub.`);
+  }
+
+  function emergency86(sku) {
+    showToast(`Emergency 86 invoked for ${sku}. Broadcasted to online kiosks!`, "block");
+  }
+
+  function toggleDishStatus(button) {
+    const knob = button.querySelector('div');
+    if (button.classList.contains('bg-secondary')) {
+      button.classList.remove('bg-secondary');
+      button.classList.add('bg-surface-container-high');
+      knob.classList.remove('translate-x-4');
+      knob.classList.add('translate-x-0');
+      showToast("Dish marked Unavailable offline.");
+    } else {
+      button.classList.remove('bg-surface-container-high');
+      button.classList.add('bg-secondary');
+      knob.classList.remove('translate-x-0');
+      knob.classList.add('translate-x-4');
+      showToast("Dish enabled & live on digital menus.");
+    }
+  }
+
+  function toggleThrottle(button) {
+    const knob = button.querySelector('div');
+    if (button.classList.contains('bg-primary')) {
+      button.classList.remove('bg-primary');
+      button.classList.add('bg-surface-container-high');
+      knob.classList.remove('translate-x-5');
+      knob.classList.add('translate-x-0');
+      showToast("Kiosk pacing throttle paused.");
+    } else {
+      button.classList.remove('bg-surface-container-high');
+      button.classList.add('bg-primary');
+      knob.classList.remove('translate-x-0');
+      knob.classList.add('translate-x-5');
+      showToast("Kiosk pacing throttle broadcasted (+4 min).");
+    }
+  }
+
+  function syncKiosks() {
+    const btnText = document.getElementById('sync-text');
+    btnText.innerText = "Syncing across 8 hubs...";
+    setTimeout(() => {
+      btnText.innerText = "Synced (Instant)";
+      showToast("All station quotas synced to 8 South Atrium kiosks!");
+      setTimeout(() => {
+        btnText.innerText = "Sync to Kiosks & Mobile";
+      }, 2500);
+    }, 700);
+  }
+
+  function openSlotModal() {
+    const modal = document.getElementById('modal-slot');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeSlotModal() {
+    const modal = document.getElementById('modal-slot');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  function increaseSlotCapacity(slotTime, amount) {
+    showToast(`Increased ${slotTime} slot capacity by +${amount} orders.`);
+  }
+
+  function viewSlotOrders(slot) {
+    showToast(`Displaying manifest for ${slot} on Station Screen #2`);
+  }
+
+  function autoBalanceSlots() {
+    showToast("Rebalanced peak slots 12:45–2:00 PM based on oven queue rate!");
+  }
+
+  function saveSlotAdjust() {
+    closeSlotModal();
+    showToast("Slot capacity allocation successfully updated!");
+  }
+
+  function saveDraft() {
+    closeDrawer();
+    showToast("Item configuration saved to local draft queue.");
+  }
+
+  function publishItem() {
+    closeDrawer();
+    showToast("Item published and live on South Atrium digital boards!");
+  }
+
+  function showToast(msg, icon = "check_circle") {
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toast-message');
+    const toastIcon = document.getElementById('toast-icon');
+
+    toastMsg.innerText = msg;
+    toastIcon.innerText = icon;
+
+    toast.classList.remove('translate-y-24', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    setTimeout(() => {
+      toast.classList.add('translate-y-24', 'opacity-0');
+      toast.classList.remove('translate-y-0', 'opacity-100');
+    }, 3200);
+  }
+</script></main></div></body></html>

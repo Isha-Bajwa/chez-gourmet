@@ -854,10 +854,8 @@
         <button class="nav-btn" id="btnNavQueue" onclick="switchTab('queue-tab')">Kitchen Queue (KDS)</button>
         <button class="nav-btn" id="btnNavVerify" onclick="switchTab('verify-tab')">Counter Handover</button>
         <button class="nav-btn" id="btnNavAnalytics" onclick="switchTab('analytics-tab')">AI Dashboard</button>
-        <a href="/html/chez_gourmet_administrator_panel_governance_center.html" target="_blank" class="nav-btn"
-          id="btnNavAdmin" style="display:none; text-decoration:none;">Admin Panel</a>
-        <a href="/stitch/chez_gourmet_canteen_manager_dashboard/code.html"
-          target="_blank" class="nav-btn" id="btnNavManager" style="display:none; text-decoration:none;">Manager Dashboard</a>
+        <button class="nav-btn" id="btnNavManager" style="display:none;" onclick="switchTab('manager-tab')">Manager Dashboard</button>
+        <button class="nav-btn" id="btnNavAdmin" style="display:none;" onclick="switchTab('admin-tab')">Admin Governance</button>
       </div>
     </div>
   </header>
@@ -1159,6 +1157,164 @@
       </div>
     </div>
 
+    <!-- 8. CANTEEN MANAGER DASHBOARD VIEW -->
+    <div id="manager-tab" class="view-panel">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; flex-wrap:wrap; gap:12px;">
+        <div>
+          <h2 style="font-family:'Playfair Display', serif; font-size:2rem;">Canteen Manager Operations</h2>
+          <p style="color:var(--text-muted);">Manage food menu catalog, pricing, availability, and real-time pickup slots.</p>
+        </div>
+        <div style="display:flex; gap:10px;">
+          <button onclick="openAddMenuModal()" class="btn-submit" style="padding:10px 18px;">+ Add New Menu Item</button>
+        </div>
+      </div>
+
+      <!-- MENU CATALOG & PRICING TABLE -->
+      <div style="background:var(--card-bg); border:1px solid var(--card-border); border-radius:18px; padding:24px; margin-bottom:28px;">
+        <h3 style="font-family:'Playfair Display', serif; margin-bottom:16px; display:flex; justify-content:space-between; align-items:center;">
+          <span>Menu Catalog & Pricing Control</span>
+          <span id="mgrMenuCount" style="font-size:0.9rem; color:var(--text-muted); font-weight:normal;">0 items</span>
+        </h3>
+        <div style="overflow-x:auto;">
+          <table style="width:100%; border-collapse:collapse; text-align:left; font-size:0.9rem;">
+            <thead>
+              <tr style="border-bottom:2px solid var(--card-border); color:var(--text-muted);">
+                <th style="padding:12px;">Item</th>
+                <th style="padding:12px;">Category</th>
+                <th style="padding:12px;">Price</th>
+                <th style="padding:12px;">Stock Qty</th>
+                <th style="padding:12px;">Prep Time</th>
+                <th style="padding:12px;">Status</th>
+                <th style="padding:12px; text-align:right;">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="mgrMenuTableBody">
+              <tr><td colspan="7" style="padding:20px; text-align:center; color:var(--text-muted);">Loading menu items...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- PICKUP SLOTS SECTION -->
+      <div style="background:var(--card-bg); border:1px solid var(--card-border); border-radius:18px; padding:24px;">
+        <h3 style="font-family:'Playfair Display', serif; margin-bottom:16px;">Daily Pickup Time Slots & Booking Capacity</h3>
+        <div id="mgrSlotsGrid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:16px;">
+          <div style="color:var(--text-muted);">Loading slots...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9. ADMINISTRATOR GOVERNANCE PANEL VIEW -->
+    <div id="admin-tab" class="view-panel">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; flex-wrap:wrap; gap:12px;">
+        <div>
+          <h2 style="font-family:'Playfair Display', serif; font-size:2rem;">System Governance & Administration</h2>
+          <p style="color:var(--text-muted);">Manage user accounts, assign roles, enforce governance policies, and monitor audit logs.</p>
+        </div>
+      </div>
+
+      <!-- ACCESS CONTROL POLICY NOTICE -->
+      <div style="background:#eff6ff; border:1px solid #bfdbfe; color:#1e40af; padding:14px 20px; border-radius:12px; margin-bottom:24px; font-size:0.9rem; display:flex; align-items:center; gap:12px;">
+        <span style="font-size:1.4rem;">ℹ️</span>
+        <div>
+          <strong>Operational Access Policy:</strong> Operational food menus and pickup slots are managed exclusively by <strong>Canteen Managers</strong>. Administrators oversee User Accounts, Role Assignments, System Security, and Audit Logs.
+        </div>
+      </div>
+
+      <!-- USER MANAGEMENT TABLE -->
+      <div style="background:var(--card-bg); border:1px solid var(--card-border); border-radius:18px; padding:24px; margin-bottom:28px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; flex-wrap:wrap; gap:12px;">
+          <h3 style="font-family:'Playfair Display', serif;">User Accounts & Role Governance</h3>
+          <input type="text" id="adminUserSearch" placeholder="Search user by name or email..." oninput="filterAdminUsers()" style="padding:8px 14px; border-radius:8px; border:1px solid var(--card-border); min-width:240px; font-size:0.9rem;">
+        </div>
+        <div style="overflow-x:auto;">
+          <table style="width:100%; border-collapse:collapse; text-align:left; font-size:0.9rem;">
+            <thead>
+              <tr style="border-bottom:2px solid var(--card-border); color:var(--text-muted);">
+                <th style="padding:12px;">User</th>
+                <th style="padding:12px;">Email</th>
+                <th style="padding:12px;">Current Role</th>
+                <th style="padding:12px;">Account Status</th>
+                <th style="padding:12px; text-align:right;">Governance Actions</th>
+              </tr>
+            </thead>
+            <tbody id="adminUsersTableBody">
+              <tr><td colspan="5" style="padding:20px; text-align:center; color:var(--text-muted);">Loading system users...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- SYSTEM LOGS & AUDIT TRAIL -->
+      <div style="background:var(--card-bg); border:1px solid var(--card-border); border-radius:18px; padding:24px;">
+        <h3 style="font-family:'Playfair Display', serif; margin-bottom:16px;">System Activity & Audit Logs</h3>
+        <div id="adminLogsContainer" style="background:#f8fafc; border:1px solid var(--card-border); border-radius:12px; padding:16px; font-family:monospace; font-size:0.85rem; max-height:280px; overflow-y:auto; color:var(--text-dark);">
+          Loading audit logs...
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ADD / EDIT MENU ITEM MODAL -->
+  <div class="modal-overlay" id="menuItemModal" style="display:none;">
+    <div class="receipt-modal" style="max-width:500px; text-align:left;">
+      <h3 style="font-family:'Playfair Display', serif; font-size:1.4rem; margin-bottom:16px;" id="menuModalTitle">Add New Menu Item</h3>
+      <form id="menuItemForm" onsubmit="saveMenuItem(event)">
+        <input type="hidden" id="editItemId">
+        <div class="form-group">
+          <label>Item Name</label>
+          <input type="text" id="menuItemName" class="form-control" required placeholder="e.g. Artisanal Truffle Pasta">
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+          <div class="form-group">
+            <label>Category</label>
+            <select id="menuItemCategory" class="form-control">
+              <option value="Burgers">Burgers</option>
+              <option value="Pizzas & Pastas">Pizzas & Pastas</option>
+              <option value="Wraps & Bowls">Wraps & Bowls</option>
+              <option value="Snacks & Sides">Snacks & Sides</option>
+              <option value="Beverages">Beverages</option>
+              <option value="Desserts">Desserts</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Price (PKR)</label>
+            <input type="number" id="menuItemPrice" class="form-control" required min="1" placeholder="450">
+          </div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+          <div class="form-group">
+            <label>Stock / Qty</label>
+            <input type="number" id="menuItemStock" class="form-control" required min="0" placeholder="25">
+          </div>
+          <div class="form-group">
+            <label>Prep Time (mins)</label>
+            <input type="number" id="menuItemPrepTime" class="form-control" required min="1" placeholder="10">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Status</label>
+          <select id="menuItemStatus" class="form-control">
+            <option value="Available">Available</option>
+            <option value="Limited">Limited</option>
+            <option value="Sold Out">Sold Out</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Image URL</label>
+          <input type="url" id="menuItemImage" class="form-control" placeholder="https://images.unsplash.com/..." required>
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <textarea id="menuItemDesc" class="form-control" rows="2" placeholder="Delicious recipe description..."></textarea>
+        </div>
+        <div style="display:flex; justify-content:flex-end; gap:10px; margin-top:20px;">
+          <button type="button" onclick="closeMenuModal()" class="btn-submit" style="background:var(--card-border); color:var(--text-dark);">Cancel</button>
+          <button type="submit" class="btn-submit">Save Item</button>
+        </div>
+      </form>
+    </div>
   </div>
 
   <script>
@@ -1221,7 +1377,27 @@
 
       const role = (currentUser.role || '').toLowerCase();
 
-      if (role.includes('staff')) {
+      if (role.includes('admin') || role.includes('administrator')) {
+        document.getElementById('btnNavMenu').style.display = 'inline-flex';
+        document.getElementById('btnNavOrders').style.display = 'none';
+        document.getElementById('btnNavQueue').style.display = 'inline-flex';
+        document.getElementById('btnNavVerify').style.display = 'inline-flex';
+        document.getElementById('btnNavAnalytics').style.display = 'inline-flex';
+        document.getElementById('btnNavAdmin').style.display = 'inline-flex';
+        document.getElementById('btnNavManager').style.display = 'none'; // Admin cannot modify menu/slots
+        document.getElementById('cartHeaderBtn').style.display = 'none';
+        switchTab('admin-tab');
+      } else if (role.includes('manager')) {
+        document.getElementById('btnNavMenu').style.display = 'inline-flex';
+        document.getElementById('btnNavOrders').style.display = 'none';
+        document.getElementById('btnNavQueue').style.display = 'inline-flex';
+        document.getElementById('btnNavVerify').style.display = 'inline-flex';
+        document.getElementById('btnNavAnalytics').style.display = 'inline-flex';
+        document.getElementById('btnNavAdmin').style.display = 'none';
+        document.getElementById('btnNavManager').style.display = 'inline-flex';
+        document.getElementById('cartHeaderBtn').style.display = 'inline-flex';
+        switchTab('manager-tab');
+      } else if (role.includes('staff')) {
         document.getElementById('btnNavMenu').style.display = 'inline-flex';
         document.getElementById('btnNavOrders').style.display = 'none';
         document.getElementById('btnNavQueue').style.display = 'inline-flex';
@@ -1231,16 +1407,6 @@
         document.getElementById('btnNavManager').style.display = 'none';
         document.getElementById('cartHeaderBtn').style.display = 'none';
         switchTab('queue-tab');
-      } else if (role.includes('manager') || role.includes('admin')) {
-        document.getElementById('btnNavMenu').style.display = 'inline-flex';
-        document.getElementById('btnNavOrders').style.display = 'none';
-        document.getElementById('btnNavQueue').style.display = 'inline-flex';
-        document.getElementById('btnNavVerify').style.display = 'inline-flex';
-        document.getElementById('btnNavAnalytics').style.display = 'inline-flex';
-        document.getElementById('btnNavAdmin').style.display = role.includes('admin') ? 'inline-flex' : 'none';
-        document.getElementById('btnNavManager').style.display = 'inline-flex';
-        document.getElementById('cartHeaderBtn').style.display = 'inline-flex';
-        switchTab('analytics-tab');
       } else {
         // Customer Role
         document.getElementById('btnNavMenu').style.display = 'inline-flex';
@@ -1279,6 +1445,346 @@
       if (tabId === 'orders-tab') loadMyOrders();
       if (tabId === 'queue-tab') loadQueue();
       if (tabId === 'analytics-tab') loadAnalytics();
+      if (tabId === 'manager-tab') loadManagerDashboard();
+      if (tabId === 'admin-tab') loadAdminPanel();
+    }
+
+    // ==========================================
+    // CANTEEN MANAGER DASHBOARD JS LOGIC
+    // ==========================================
+    async function loadManagerDashboard() {
+      await loadManagerMenuTable();
+      await loadManagerSlots();
+    }
+
+    async function loadManagerMenuTable() {
+      const tbody = document.getElementById('mgrMenuTableBody');
+      const countEl = document.getElementById('mgrMenuCount');
+      try {
+        const res = await fetch('/api/menu');
+        const data = await res.json();
+        if (data.success) {
+          const items = data.data;
+          countEl.textContent = `${items.length} items cataloged`;
+          if (items.length === 0) {
+            tbody.innerHTML = `<tr><td colspan="7" style="padding:20px; text-align:center;">No menu items found. Click "+ Add New Menu Item".</td></tr>`;
+            return;
+          }
+          tbody.innerHTML = items.map(item => {
+            const id = item.item_id || item.id;
+            const statusClass = item.status === 'Available' ? 'badge-available' : item.status === 'Limited' ? 'badge-limited' : 'badge-soldout';
+            return `
+              <tr style="border-bottom:1px solid var(--card-border);">
+                <td style="padding:12px; display:flex; align-items:center; gap:10px;">
+                  <img src="${item.image}" style="width:40px; height:40px; border-radius:8px; object-fit:cover;">
+                  <div>
+                    <strong>${item.item_name}</strong>
+                    <div style="font-size:0.75rem; color:var(--text-muted);">${(item.description || '').substring(0, 40)}...</div>
+                  </div>
+                </td>
+                <td style="padding:12px;">${item.category}</td>
+                <td style="padding:12px; font-weight:700;">PKR ${item.price}</td>
+                <td style="padding:12px;">${item.available_quantity ?? 0}</td>
+                <td style="padding:12px;">${item.preparation_time}m</td>
+                <td style="padding:12px;"><span class="badge ${statusClass}">${item.status}</span></td>
+                <td style="padding:12px; text-align:right;">
+                  <button onclick="openEditMenuModal('${id}')" style="background:none; border:1px solid var(--card-border); padding:4px 10px; border-radius:6px; cursor:pointer; font-size:0.8rem; margin-right:4px;">Edit</button>
+                  <button onclick="toggleMenuStatus('${id}', '${item.status}')" style="background:none; border:1px solid var(--card-border); padding:4px 10px; border-radius:6px; cursor:pointer; font-size:0.8rem; margin-right:4px;">Toggle Status</button>
+                  <button onclick="deleteMenuItem('${id}')" style="background:#fee2e2; color:#dc2626; border:none; padding:4px 10px; border-radius:6px; cursor:pointer; font-size:0.8rem;">Delete</button>
+                </td>
+              </tr>
+            `;
+          }).join('');
+        }
+      } catch (err) {
+        tbody.innerHTML = `<tr><td colspan="7" style="padding:20px; text-align:center; color:#dc2626;">Error loading menu: ${err.message}</td></tr>`;
+      }
+    }
+
+    async function loadManagerSlots() {
+      const grid = document.getElementById('mgrSlotsGrid');
+      try {
+        const res = await fetch('/api/queue/slots');
+        const data = await res.json();
+        if (data.success) {
+          const slots = data.data;
+          grid.innerHTML = slots.map(s => `
+            <div style="background:#f8fafc; border:1px solid var(--card-border); padding:16px; border-radius:12px;">
+              <div style="font-weight:700; font-size:1rem; margin-bottom:6px;">${s.slot_name}</div>
+              <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:10px;">Booked: ${s.current_orders} / ${s.max_limit} max</div>
+              <span class="badge ${s.status === 'Available' ? 'badge-available' : s.status === 'Full' ? 'badge-soldout' : 'badge-limited'}">${s.status}</span>
+            </div>
+          `).join('');
+        }
+      } catch (err) {
+        grid.innerHTML = `<div style="color:#dc2626;">Failed to load slots.</div>`;
+      }
+    }
+
+    function openAddMenuModal() {
+      document.getElementById('menuModalTitle').textContent = 'Add New Menu Item';
+      document.getElementById('editItemId').value = '';
+      document.getElementById('menuItemName').value = '';
+      document.getElementById('menuItemCategory').value = 'Burgers';
+      document.getElementById('menuItemPrice').value = '';
+      document.getElementById('menuItemStock').value = '25';
+      document.getElementById('menuItemPrepTime').value = '10';
+      document.getElementById('menuItemStatus').value = 'Available';
+      document.getElementById('menuItemImage').value = '';
+      document.getElementById('menuItemDesc').value = '';
+      document.getElementById('menuItemModal').style.display = 'flex';
+    }
+
+    function openEditMenuModal(id) {
+      const item = allMenuItems.find(i => (i.item_id || i.id) === id);
+      if (!item) return;
+      document.getElementById('menuModalTitle').textContent = 'Edit Menu Item';
+      document.getElementById('editItemId').value = id;
+      document.getElementById('menuItemName').value = item.item_name || '';
+      document.getElementById('menuItemCategory').value = item.category || 'Burgers';
+      document.getElementById('menuItemPrice').value = item.price || '';
+      document.getElementById('menuItemStock').value = item.available_quantity ?? 25;
+      document.getElementById('menuItemPrepTime').value = item.preparation_time || 10;
+      document.getElementById('menuItemStatus').value = item.status || 'Available';
+      document.getElementById('menuItemImage').value = item.image || '';
+      document.getElementById('menuItemDesc').value = item.description || '';
+      document.getElementById('menuItemModal').style.display = 'flex';
+    }
+
+    function closeMenuModal() {
+      document.getElementById('menuItemModal').style.display = 'none';
+    }
+
+    async function saveMenuItem(e) {
+      e.preventDefault();
+      const id = document.getElementById('editItemId').value;
+      const payload = {
+        item_name: document.getElementById('menuItemName').value,
+        category: document.getElementById('menuItemCategory').value,
+        price: Number(document.getElementById('menuItemPrice').value),
+        available_quantity: Number(document.getElementById('menuItemStock').value),
+        preparation_time: Number(document.getElementById('menuItemPrepTime').value),
+        status: document.getElementById('menuItemStatus').value,
+        image: document.getElementById('menuItemImage').value,
+        description: document.getElementById('menuItemDesc').value
+      };
+
+      const url = id ? `/api/menu/${id}` : '/api/menu';
+      const method = id ? 'PUT' : 'POST';
+
+      try {
+        const res = await fetch(url, {
+          method,
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${authToken}`
+          },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        if (data.success) {
+          closeMenuModal();
+          await loadMenu();
+          await loadManagerMenuTable();
+        } else {
+          alert(`Error: ${data.message}`);
+        }
+      } catch (err) {
+        alert(`Failed to save menu item: ${err.message}`);
+      }
+    }
+
+    async function toggleMenuStatus(id, currentStatus) {
+      const nextStatus = currentStatus === 'Available' ? 'Sold Out' : currentStatus === 'Sold Out' ? 'Limited' : 'Available';
+      try {
+        const res = await fetch(`/api/menu/${id}/status`, {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${authToken}`
+          },
+          body: JSON.stringify({ status: nextStatus })
+        });
+        const data = await res.json();
+        if (data.success) {
+          await loadMenu();
+          await loadManagerMenuTable();
+        }
+      } catch (err) {
+        alert(err.message);
+      }
+    }
+
+    async function deleteMenuItem(id) {
+      if (!confirm('Are you sure you want to delete this menu item?')) return;
+      try {
+        const res = await fetch(`/api/menu/${id}`, {
+          method: 'DELETE',
+          headers: { 'Authorization': `Bearer ${authToken}` }
+        });
+        const data = await res.json();
+        if (data.success) {
+          await loadMenu();
+          await loadManagerMenuTable();
+        } else {
+          alert(`Error: ${data.message}`);
+        }
+      } catch (err) {
+        alert(err.message);
+      }
+    }
+
+    // ==========================================
+    // ADMINISTRATOR GOVERNANCE JS LOGIC
+    // ==========================================
+    let adminUsersList = [];
+
+    async function loadAdminPanel() {
+      await loadAdminUsers();
+      await loadAdminLogs();
+    }
+
+    async function loadAdminUsers() {
+      const tbody = document.getElementById('adminUsersTableBody');
+      try {
+        const res = await fetch('/api/admin/users', {
+          headers: { 'Authorization': `Bearer ${authToken}` }
+        });
+        const data = await res.json();
+        if (data.success) {
+          adminUsersList = data.data || [];
+          renderAdminUsersTable(adminUsersList);
+        } else {
+          tbody.innerHTML = `<tr><td colspan="5" style="padding:20px; text-align:center; color:#dc2626;">${data.message}</td></tr>`;
+        }
+      } catch (err) {
+        tbody.innerHTML = `<tr><td colspan="5" style="padding:20px; text-align:center; color:#dc2626;">Error loading users: ${err.message}</td></tr>`;
+      }
+    }
+
+    function renderAdminUsersTable(users) {
+      const tbody = document.getElementById('adminUsersTableBody');
+      if (users.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="5" style="padding:20px; text-align:center;">No matching user accounts found.</td></tr>`;
+        return;
+      }
+      tbody.innerHTML = users.map(u => {
+        const userId = u.user_id || u.id || u.uid;
+        const currentRole = (u.role || 'customer').toLowerCase();
+        const currentStatus = u.account_status || 'active';
+        return `
+          <tr style="border-bottom:1px solid var(--card-border);">
+            <td style="padding:12px; font-weight:700;">${u.name || 'Unnamed User'}</td>
+            <td style="padding:12px; color:var(--text-muted);">${u.email}</td>
+            <td style="padding:12px;">
+              <select onchange="updateUserRole('${userId}', this.value)" style="padding:4px 8px; border-radius:6px; border:1px solid var(--card-border); font-size:0.85rem;">
+                <option value="customer" ${currentRole.includes('customer') ? 'selected' : ''}>Customer</option>
+                <option value="kitchen staff" ${currentRole.includes('staff') ? 'selected' : ''}>Kitchen Staff</option>
+                <option value="canteen manager" ${currentRole.includes('manager') ? 'selected' : ''}>Canteen Manager</option>
+                <option value="administrator" ${currentRole.includes('admin') ? 'selected' : ''}>Administrator</option>
+              </select>
+            </td>
+            <td style="padding:12px;">
+              <span class="badge ${currentStatus === 'active' ? 'badge-available' : 'badge-soldout'}">${currentStatus.toUpperCase()}</span>
+            </td>
+            <td style="padding:12px; text-align:right;">
+              <button onclick="toggleUserStatus('${userId}', '${currentStatus}')" style="background:none; border:1px solid var(--card-border); padding:4px 10px; border-radius:6px; cursor:pointer; font-size:0.8rem; margin-right:4px;">${currentStatus === 'active' ? 'Suspend' : 'Activate'}</button>
+              <button onclick="deleteUser('${userId}')" style="background:#fee2e2; color:#dc2626; border:none; padding:4px 10px; border-radius:6px; cursor:pointer; font-size:0.8rem;">Delete</button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function filterAdminUsers() {
+      const q = (document.getElementById('adminUserSearch').value || '').toLowerCase();
+      const filtered = adminUsersList.filter(u => 
+        (u.name || '').toLowerCase().includes(q) || (u.email || '').toLowerCase().includes(q)
+      );
+      renderAdminUsersTable(filtered);
+    }
+
+    async function updateUserRole(userId, newRole) {
+      try {
+        const res = await fetch(`/api/admin/users/${userId}/role`, {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${authToken}`
+          },
+          body: JSON.stringify({ role: newRole })
+        });
+        const data = await res.json();
+        if (data.success) {
+          await loadAdminUsers();
+        } else {
+          alert(`Error updating role: ${data.message}`);
+        }
+      } catch (err) {
+        alert(err.message);
+      }
+    }
+
+    async function toggleUserStatus(userId, currentStatus) {
+      const nextStatus = currentStatus === 'active' ? 'suspended' : 'active';
+      try {
+        const res = await fetch(`/api/admin/users/${userId}/status`, {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${authToken}`
+          },
+          body: JSON.stringify({ status: nextStatus })
+        });
+        const data = await res.json();
+        if (data.success) {
+          await loadAdminUsers();
+        } else {
+          alert(`Error updating status: ${data.message}`);
+        }
+      } catch (err) {
+        alert(err.message);
+      }
+    }
+
+    async function deleteUser(userId) {
+      if (!confirm('Are you sure you want to delete this user account?')) return;
+      try {
+        const res = await fetch(`/api/admin/users/${userId}`, {
+          method: 'DELETE',
+          headers: { 'Authorization': `Bearer ${authToken}` }
+        });
+        const data = await res.json();
+        if (data.success) {
+          await loadAdminUsers();
+        } else {
+          alert(`Error: ${data.message}`);
+        }
+      } catch (err) {
+        alert(err.message);
+      }
+    }
+
+    async function loadAdminLogs() {
+      const container = document.getElementById('adminLogsContainer');
+      try {
+        const res = await fetch('/api/admin/logs', {
+          headers: { 'Authorization': `Bearer ${authToken}` }
+        });
+        const data = await res.json();
+        if (data.success && data.logs && data.logs.length > 0) {
+          container.innerHTML = data.logs.map(log => `
+            <div style="border-bottom:1px solid #e2e8f0; padding:6px 0;">
+              <span style="color:#64748b;">[${new Date(log.timestamp || Date.now()).toLocaleTimeString()}]</span>
+              <strong style="color:#0f172a;">${log.type || 'SYSTEM'}:</strong> ${log.message}
+            </div>
+          `).join('');
+        } else {
+          container.innerHTML = `<div style="color:#64748b;">System operational. No critical error flags or security audit events.</div>`;
+        }
+      } catch (err) {
+        container.innerHTML = `<div style="color:#dc2626;">Failed to load logs: ${err.message}</div>`;
+      }
     }
 
     function toggleCart() {

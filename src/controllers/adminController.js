@@ -46,6 +46,45 @@ const updateUserRole = async (req, res) => {
 };
 
 /**
+ * Update user account status (Admin only)
+ */
+const updateUserStatus = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { status } = req.body; // 'active' or 'suspended'
+
+    const userRef = db.collection('users').doc(id);
+    const doc = await userRef.get();
+    if (!doc.exists) {
+      return res.status(404).json({ success: false, message: 'User not found.' });
+    }
+
+    await userRef.update({ account_status: status, updated_at: new Date().toISOString() });
+    return res.status(200).json({ success: true, message: `Account status updated to ${status}.` });
+  } catch (error) {
+    return res.status(500).json({ success: false, message: 'Failed to update account status.', error: error.message });
+  }
+};
+
+/**
+ * Delete a user (Admin only)
+ */
+const deleteUser = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const userRef = db.collection('users').doc(id);
+    const doc = await userRef.get();
+    if (!doc.exists) {
+      return res.status(404).json({ success: false, message: 'User not found.' });
+    }
+    await userRef.delete();
+    return res.status(200).json({ success: true, message: 'User deleted successfully.' });
+  } catch (error) {
+    return res.status(500).json({ success: false, message: 'Failed to delete user.', error: error.message });
+  }
+};
+
+/**
  * Get System Activity & Notification Logs
  */
 const getSystemLogs = async (req, res) => {
@@ -63,5 +102,7 @@ const getSystemLogs = async (req, res) => {
 module.exports = {
   getAllUsers,
   updateUserRole,
+  updateUserStatus,
+  deleteUser,
   getSystemLogs
 };

@@ -1,10 +1,12 @@
 const express = require('express');
 const { body } = require('express-validator');
-const { registerUser, loginUser, getProfile, googleLogin } = require('../controllers/authController');
+const { registerUser, loginUser, getProfile, googleLogin, getFirebaseConfig } = require('../controllers/authController');
 const { authenticateUser } = require('../middleware/authMiddleware');
 const validate = require('../middleware/validate');
 
 const router = express.Router();
+
+router.get('/config', getFirebaseConfig);
 
 router.post(
   '/register',

@@ -979,13 +979,24 @@
       // Initialize Firebase client app if not already initialized
       if (typeof firebase !== 'undefined' && !firebase.apps.length) {
         try {
-          firebase.initializeApp({
-            apiKey: "YOUR_FIREBASE_API_KEY", // <-- PASTE YOUR API KEY HERE
-            authDomain: "chez-gourmet-f78f8.firebaseapp.com",
-            projectId: "chez-gourmet-f78f8"
-          });
+          const configRes = await fetch('/api/auth/config');
+          const configData = await configRes.json();
+          if (configData.success && configData.data.apiKey) {
+            firebase.initializeApp({
+              apiKey: configData.data.apiKey,
+              authDomain: "chez-gourmet-f78f8.firebaseapp.com",
+              projectId: "chez-gourmet-f78f8"
+            });
+          } else {
+            throw new Error("Could not load Firebase configuration from server.");
+          }
         } catch(e) {
           console.warn('Firebase init notice:', e);
+          if (alertEl) {
+            alertEl.innerHTML = `Firebase configuration error.`;
+            alertEl.style.display = 'block';
+          }
+          return;
         }
       }
 

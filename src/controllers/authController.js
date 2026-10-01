@@ -266,9 +266,22 @@ const googleLogin = async (req, res) => {
   }
 };
 
+/**
+ * Get Public Firebase Config for Frontend
+ */
+const getFirebaseConfig = (req, res) => {
+  res.status(200).json({
+    success: true,
+    data: {
+      apiKey: process.env.FIREBASE_API_KEY || ""
+    }
+  });
+};
+
 module.exports = {
   registerUser,
   loginUser,
   getProfile,
-  googleLogin
+  googleLogin,
+  getFirebaseConfig
 };
